@@ -143,6 +143,7 @@ def build_report(transactions, surveys, trends, margins, closed_dates=None):
         active = {assignments[r["customer_id"].strip()] for r in identified if parse_dt(r["timestamp"]).date() == day and r["customer_id"].strip() in assignments}
         hooks = [code for code in active if metrics[code]["rows"] and lift["lift"] > 0]
         trend_rows.append({**trend, "lift": lift["lift"], "count": lift["count"], "baseline": lift["baseline"],
+                           "closed": lift["count"] == 0,
                            "responsive": max(hooks, key=lambda x: sum(1 for r in metrics[x]["rows"] if parse_dt(r["timestamp"]).date().weekday() == day.weekday()), default=""),
                            "hooks": hooks if len([t for t in trends if t["name"] == trend["name"]]) >= 3 else []})
     survey_rows = []
@@ -182,7 +183,7 @@ def render_html(data):
         m = d["metrics"][code]
         play = "<br>".join(f"<b>{k}:</b> {esc(v)}" for k, v in zip(("Goal", "Offer", "Channel", "Timing", "Avoid"), m["playbook"]))
         rows.append(f"<tr><td>{code} {esc(name)}</td><td>{m['customers']}</td><td>{m['revenue']/d['total_identified_revenue']:.1%}</td><td>{m['profit']/sum(x['profit'] for x in d['metrics'].values()):.1%}</td><td>{m['visits']}</td><td>{_money(m['basket'])}<br><small>in-store {_money(m['in_store_basket'])}</small></td><td>{m['median_days']}</td><td>{esc(m['peak'])}</td><td>{esc(m['top_category'])}</td><td>{m['weekend']:.1%}</td><td>{play}</td></tr>")
-    trend_html = "".join(f"<tr><td>{esc(t.get('date',''))}</td><td>{esc(t.get('name',''))}</td><td>{t['count']}</td><td>{t['baseline']:.1f}</td><td>{t['lift']:.1%}</td><td>{esc(t['responsive'] or '—') if len([x for x in d['trends'] if x.get('name') == t.get('name')]) >= 3 else '—'}</td><td>{', '.join(t['hooks']) or '—'}</td></tr>" for t in d["trend_rows"])
+    trend_html = "".join(f"<tr><td>{esc(t.get('date',''))}</td><td>{esc(t.get('name',''))}</td><td>{t['count']}</td><td>{t['baseline']:.1f}</td><td>{t['lift']:.1%}</td><td>{'closed' if t['closed'] else 'open'}</td><td>{esc(t['responsive'] or '—') if len([x for x in d['trends'] if x.get('name') == t.get('name')]) >= 3 else '—'}</td><td>{', '.join(t['hooks']) or '—'}</td></tr>" for t in d["trend_rows"])
     survey_html = "".join(f"<li>{esc(a)}: <b>{esc(b)}</b> ({n}/{total}, {share:.1%}) {esc(flag)}</li>" for a,b,n,total,share,flag in d["survey_rows"]) or "<li>No survey responses.</li>"
     return f"""<!doctype html><meta charset="utf-8"><title>Buyer Personas</title>
 <style>body{{font:14px system-ui;margin:2rem;color:#17202a}}table{{border-collapse:collapse;width:100%;margin:1rem 0}}th,td{{border:1px solid #ccd;padding:.45rem;text-align:left;vertical-align:top}}th{{background:#eef3f7}}.warning{{padding:1rem;background:#fff0c2;border:2px solid #d99b00}}small{{color:#586}} </style>
@@ -190,7 +191,7 @@ def render_html(data):
 <p><b>Rule priority:</b> P1 Fuel-and-Go → P2 Lunch → P3 Loyal Core → P4 Late-Night → P5 Occasional → P6 Lapsing. A customer is assigned only to the first matching rule.</p>
 <table><tr><th>Persona</th><th>Customers</th><th>Identified revenue</th><th>Gross profit</th><th>Visits</th><th>Avg basket</th><th>Median days since last</th><th>Peak daypart</th><th>Top category</th><th>Weekend</th><th>Playbook</th></tr>{''.join(rows)}</table>
 <h2>Trend lift</h2><p>Lift is transaction count versus the average of up to eight earlier dates with the same weekday; it is not revenue. Dates with no transactions are treated as closed. Short-hours/closed dates supplied by the input are flagged by the operator.</p>
-<table><tr><th>Date</th><th>Trend</th><th>Transactions</th><th>Same-weekday baseline</th><th>Lift</th><th>Most responsive (3+ events)</th><th>Persona hooks</th></tr>{trend_html}</table>
+<table><tr><th>Date</th><th>Trend</th><th>Transactions</th><th>Same-weekday baseline</th><th>Lift</th><th>Store status</th><th>Most responsive (3+ events)</th><th>Persona hooks</th></tr>{trend_html}</table>
 <h2>Survey signals</h2><p>Sample size is shown; signals below 50% are marked weak. Compare survey claims with observed peak dayparts before activation.</p><ul>{survey_html}</ul>
 """
 
