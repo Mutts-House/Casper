@@ -1,0 +1,70 @@
+loyalty_id,email,age_band,household,weekly_routine
+LOY0000,,25-34,couple,commute
+LOY0001,,25-34,couple,shift work
+LOY0002,,18-24,single,commute
+LOY0003,,45-54,single,stay home
+LOY0004,,25-34,single,shift work
+,loy0006@example.com,25-34,couple,stay home
+LOY0007,,55+,family,shift work
+LOY0008,,35-44,couple,stay home
+LOY0009,,45-54,couple,commute
+LOY0010,,35-44,single,student
+,loy0011@example.com,45-54,single,stay home
+,loy0013@example.com,25-34,single,student
+LOY0014,,25-34,couple,stay home
+LOY0015,,45-54,couple,stay home
+,loy0017@example.com,25-34,single,student
+,loy0018@example.com,25-34,couple,shift work
+,loy0019@example.com,18-24,family,stay home
+LOY0020,,35-44,family,shift work
+LOY0021,,45-54,single,commute
+LOY0022,,45-54,couple,student
+,loy0023@example.com,45-54,family,stay home
+LOY0024,,18-24,couple,commute
+,loy0025@example.com,35-44,family,student
+LOY0026,,18-24,single,stay home
+LOY0027,,35-44,single,shift work
+LOY0028,,35-44,single,stay home
+LOY0029,,45-54,family,commute
+LOY0031,,25-34,single,student
+,loy0033@example.com,55+,single,stay home
+LOY0034,,18-24,couple,student
+LOY0037,,25-34,family,shift work
+LOY0038,,35-44,single,student
+LOY0039,,18-24,single,stay home
+FUE0000,,55+,family,commute
+FUE0001,,55+,family,student
+FUE0002,,35-44,single,stay home
+FUE0003,,35-44,family,student
+FUE0004,,35-44,family,student
+FUE0006,,35-44,family,stay home
+FUE0007,,18-24,single,commute
+,fue0008@example.com,25-34,single,shift work
+FUE0009,,45-54,family,commute
+FUE0011,,18-24,couple,commute
+,fue0012@example.com,25-34,single,commute
+,fue0013@example.com,55+,couple,shift work
+,fue0014@example.com,18-24,couple,commute
+,fue0015@example.com,25-34,single,student
+,fue0016@example.com,55+,single,commute
+FUE0017,,35-44,family,shift work
+FUE0018,,25-34,single,commute
+FUE0019,,55+,family,commute
+FUE0020,,25-34,family,shift work
+FUE0021,,25-34,single,commute
+FUE0022,,18-24,couple,student
+FUE0023,,25-34,family,stay home
+FUE0024,,45-54,single,shift work
+,fue0025@example.com,18-24,family,commute
+FUE0026,,45-54,family,student
+FUE0027,,18-24,family,stay home
+FUE0028,,25-34,family,student
+FUE0030,,18-24,couple,stay home
+FUE0031,,25-34,single,student
+FUE0032,,18-24,couple,student
+FUE0033,,35-44,couple,commute
+FUE0034,,18-24,single,student
+FUE0035,,35-44,couple,student
+FUE0036,,55+,family,student
+,fue0037@example.com,18-24,couple,student
+FUE0038,,35-44,single,shift work
