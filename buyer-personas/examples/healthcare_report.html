@@ -1,0 +1,100 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<title>Outpatient Clinic (demo) · healthcare_outpatient</title><style>
+body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;background:#f6f7f9;color:#1d2330;margin:0;padding:32px}
+h1{margin:0 0 4px;font-size:26px} .sub{color:#5b6475;margin-bottom:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:18px}
+.card{background:#fff;border-radius:12px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.card h2{margin:0 0 4px;font-size:18px} .tag{display:inline-block;font-size:11px;padding:2px 7px;border-radius:99px;margin-left:6px;vertical-align:middle}
+.observed{background:#e3f1ff;color:#0a5aa6}.stated{background:#e6f7ea;color:#1e7a3a}.inferred{background:#fff3dd;color:#8a5a00}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:10px} td,th{text-align:left;padding:6px 4px;border-bottom:1px solid #eceef2}
+.kpi{font-size:22px;font-weight:600} .label{font-size:12px;color:#5b6475}
+.narr{font-size:14px;line-height:1.5;background:#f6f7f9;padding:12px;border-radius:8px;margin-top:10px}
+.warn{background:#fff3dd;padding:10px 14px;border-radius:8px;font-size:13px;margin-bottom:16px}
+
+.pill{display:inline-block;font-size:12px;padding:3px 9px;border-radius:99px;background:#eef1f6;margin:2px 4px 2px 0}
+.disclaimer{background:#fff3dd;padding:10px 14px;border-radius:8px;font-size:13px;margin-bottom:16px}
+.rules{font-size:13px;color:#2c3446;margin:6px 0 0;padding-left:18px}
+h2.section{margin-top:32px;font-size:18px}
+</style></head><body>
+<h1>Outpatient Clinic (demo)</h1>
+<div class="sub">Outpatient clinic scheduling and visit data. Operational segments only (visit patterns, never clinical conditions). Synthetic demo data.</div>
+<div class="sub">Period 2024-05-29 to 2026-11-15 · 300 patients · as of 2026-11-15 · pack healthcare_outpatient v1 · No geographic intake</div>
+<div class='disclaimer'>Synthetic demo data generated for this showcase. Not real customers, patients, participants, or sales.</div>
+<h2 class="section">Segments</h2>
+<div class="card"><table><tr><th>ID</th><th>Segment</th><th>Patients</th></tr><tr><td>P1</td><td>Follow-up Cohort</td><td>60</td></tr><tr><td>P2</td><td>Urgent-Care Users</td><td>40</td></tr><tr><td>P3</td><td>Lapsed Patients</td><td>63</td></tr><tr><td>P4</td><td>New or Occasional Patients</td><td>97</td></tr><tr><td>P5</td><td>Preventive Care Due</td><td>40</td></tr></table></div>
+<h2 class="section">Personas</h2>
+<div class="grid">
+<div class="card">
+  <h2>P1 · Follow-up Cohort</h2>
+  <div class="label">Regular scheduled follow-up visits.</div>
+  <table>
+    <tr><td>Patients</td><td><b>60</b></td></tr>
+    <tr><td>Share of charges</td><td><b>28.0%</b></td></tr>
+  </table>
+  <h3 style='font-size:14px;margin:14px 0 0'>Behavior (observed)</h3>
+  <table><tr><td>Visits (total)</td><td>7.93</td></tr><tr><td>Visits 180–365 days ago</td><td>1.55</td></tr><tr><td>Days since last visit</td><td>2.73</td></tr><tr><td>Charges</td><td>495.2</td></tr><tr><td>Share of visits, urgent</td><td>0%</td></tr><tr><td>Share of visits, preventive</td><td>0%</td></tr><tr><td>Share of visits, follow-up</td><td>100%</td></tr></table>
+  <h3 style='font-size:14px;margin:14px 0 0'>Playbook</h3><table><tr><td>Goal</td><td>Keep scheduled follow-up appointments on time.</td></tr><tr><td>Outreach offer</td><td>Reminder with a rescheduling link and transport information.</td></tr><tr><td>Channel</td><td>Automated text reminder</td></tr><tr><td>Timing</td><td>Three days before each scheduled visit</td></tr><tr><td>Avoid</td><td>Reminders that arrive on the day of the visit.</td></tr></table><div style='margin-top:6px'><span class='label'>Trigger tags:</span> <span class='pill'>school calendar</span><span class='pill'>seasonal</span><span class='pill'>weather</span></div>
+  <h3 style='font-size:14px;margin:14px 0 0'>Trend hooks</h3>
+  <ul style='font-size:13px;padding-left:18px'><li>Week of heavy rain <span class='label'>(2026-10-10, local)</span></li><li>Daylight saving time ends <span class='label'>(2026-11-01, local)</span></li></ul>
+  <div class="narr">Follow-up Cohort make up 28.0% of recorded charges (60 patients). They average 7.9 visits over the period and $495.20 in charges each. Goal: Keep scheduled follow-up appointments on time. Suggested outreach: Reminder with a rescheduling link and transport information. Channel: Automated text reminder, timing: Three days before each scheduled visit.</div>
+</div>
+<div class="card">
+  <h2>P2 · Urgent-Care Users</h2>
+  <div class="label">Repeated same-day or walk-in visits.</div>
+  <table>
+    <tr><td>Patients</td><td><b>40</b></td></tr>
+    <tr><td>Share of charges</td><td><b>25.2%</b></td></tr>
+  </table>
+  <h3 style='font-size:14px;margin:14px 0 0'>Behavior (observed)</h3>
+  <table><tr><td>Visits (total)</td><td>3.02</td></tr><tr><td>Visits 180–365 days ago</td><td>0.03</td></tr><tr><td>Days since last visit</td><td>39.65</td></tr><tr><td>Charges</td><td>668.02</td></tr><tr><td>Share of visits, urgent</td><td>100%</td></tr><tr><td>Share of visits, preventive</td><td>0%</td></tr><tr><td>Share of visits, follow-up</td><td>0%</td></tr></table>
+  <h3 style='font-size:14px;margin:14px 0 0'>Playbook</h3><table><tr><td>Goal</td><td>Offer a primary-care scheduling option to urgent-care users.</td></tr><tr><td>Outreach offer</td><td>Information on booking a primary-care appointment and after-hours options.</td></tr><tr><td>Channel</td><td>Printed handout at check-out and a portal message</td></tr><tr><td>Timing</td><td>Within seven days of an urgent visit</td></tr><tr><td>Avoid</td><td>Blame or cost-shaming language.</td></tr></table><div style='margin-top:6px'><span class='label'>Trigger tags:</span> <span class='pill'>weather</span><span class='pill'>flu season</span><span class='pill'>holiday</span></div>
+  <h3 style='font-size:14px;margin:14px 0 0'>Trend hooks</h3>
+  <ul style='font-size:13px;padding-left:18px'><li>Week of heavy rain <span class='label'>(2026-10-10, local)</span></li></ul>
+  <div class="narr">Urgent-Care Users make up 25.2% of recorded charges (40 patients). They average 3.0 visits over the period and $668.02 in charges each. Goal: Offer a primary-care scheduling option to urgent-care users. Suggested outreach: Information on booking a primary-care appointment and after-hours options. Channel: Printed handout at check-out and a portal message, timing: Within seven days of an urgent visit.</div>
+</div>
+<div class="card">
+  <h2>P3 · Lapsed Patients</h2>
+  <div class="label">Seen regularly in the past year, no visit in the last six months.</div>
+  <table>
+    <tr><td>Patients</td><td><b>63</b></td></tr>
+    <tr><td>Share of charges</td><td><b>19.7%</b></td></tr>
+  </table>
+  <h3 style='font-size:14px;margin:14px 0 0'>Behavior (observed)</h3>
+  <table><tr><td>Visits (total)</td><td>2.87</td></tr><tr><td>Visits 180–365 days ago</td><td>2.86</td></tr><tr><td>Days since last visit</td><td>234.76</td></tr><tr><td>Charges</td><td>330.92</td></tr><tr><td>Share of visits, urgent</td><td>0%</td></tr><tr><td>Share of visits, preventive</td><td>0%</td></tr><tr><td>Share of visits, follow-up</td><td>49%</td></tr></table>
+  <h3 style='font-size:14px;margin:14px 0 0'>Playbook</h3><table><tr><td>Goal</td><td>Re-open scheduling for patients who have not been seen in six months.</td></tr><tr><td>Outreach offer</td><td>Offer an open appointment in the next two weeks.</td></tr><tr><td>Channel</td><td>Patient portal message or front-desk phone call</td></tr><tr><td>Timing</td><td>Day 180 after the last visit</td></tr><tr><td>Avoid</td><td>Any message that implies something is wrong with the patient.</td></tr></table><div style='margin-top:6px'><span class='label'>Trigger tags:</span> <span class='pill'>seasonal</span><span class='pill'>flu season</span><span class='pill'>health awareness</span></div>
+  <h3 style='font-size:14px;margin:14px 0 0'>Trend hooks</h3>
+  <ul style='font-size:13px;padding-left:18px'><li>Week of heavy rain <span class='label'>(2026-10-10, local)</span></li><li>Daylight saving time ends <span class='label'>(2026-11-01, local)</span></li></ul>
+  <div class="narr">Lapsed Patients make up 19.7% of recorded charges (63 patients). They average 2.9 visits over the period and $330.92 in charges each. Goal: Re-open scheduling for patients who have not been seen in six months. Suggested outreach: Offer an open appointment in the next two weeks. Channel: Patient portal message or front-desk phone call, timing: Day 180 after the last visit.</div>
+</div>
+<div class="card">
+  <h2>P4 · New or Occasional Patients</h2>
+  <div class="label">One or two visits so far, no pattern yet.</div>
+  <table>
+    <tr><td>Patients</td><td><b>97</b></td></tr>
+    <tr><td>Share of charges</td><td><b>15.1%</b></td></tr>
+  </table>
+  <h3 style='font-size:14px;margin:14px 0 0'>Behavior (observed)</h3>
+  <table><tr><td>Visits (total)</td><td>1.47</td></tr><tr><td>Visits 180–365 days ago</td><td>0.29</td></tr><tr><td>Days since last visit</td><td>288.32</td></tr><tr><td>Charges</td><td>164.63</td></tr><tr><td>Share of visits, urgent</td><td>0%</td></tr><tr><td>Share of visits, preventive</td><td>0%</td></tr><tr><td>Share of visits, follow-up</td><td>0%</td></tr></table>
+  <h3 style='font-size:14px;margin:14px 0 0'>Playbook</h3><table><tr><td>Goal</td><td>Turn a first visit into a return visit.</td></tr><tr><td>Outreach offer</td><td>Welcome message with how to book the next visit online.</td></tr><tr><td>Channel</td><td>Portal welcome message</td></tr><tr><td>Timing</td><td>Within seven days of the first visit</td></tr><tr><td>Avoid</td><td>Sales-style language.</td></tr></table><div style='margin-top:6px'><span class='label'>Trigger tags:</span> <span class='pill'>new</span><span class='pill'>community</span></div>
+  <h3 style='font-size:14px;margin:14px 0 0'>Trend hooks</h3>
+  <ul style='font-size:13px;padding-left:18px'><li class='label'>No matching trends in the window</li></ul>
+  <div class="narr">New or Occasional Patients make up 15.1% of recorded charges (97 patients). They average 1.5 visits over the period and $164.63 in charges each. Goal: Turn a first visit into a return visit. Suggested outreach: Welcome message with how to book the next visit online. Channel: Portal welcome message, timing: Within seven days of the first visit.</div>
+</div>
+<div class="card">
+  <h2>P5 · Preventive Care Due</h2>
+  <div class="label">Mostly preventive visits, none recently.</div>
+  <table>
+    <tr><td>Patients</td><td><b>40</b></td></tr>
+    <tr><td>Share of charges</td><td><b>12.0%</b></td></tr>
+  </table>
+  <h3 style='font-size:14px;margin:14px 0 0'>Behavior (observed)</h3>
+  <table><tr><td>Visits (total)</td><td>2.12</td></tr><tr><td>Visits 180–365 days ago</td><td>0.17</td></tr><tr><td>Days since last visit</td><td>523.35</td></tr><tr><td>Charges</td><td>318.75</td></tr><tr><td>Share of visits, urgent</td><td>0%</td></tr><tr><td>Share of visits, preventive</td><td>100%</td></tr><tr><td>Share of visits, follow-up</td><td>0%</td></tr></table>
+  <h3 style='font-size:14px;margin:14px 0 0'>Playbook</h3><table><tr><td>Goal</td><td>Help patients book their next routine preventive visit.</td></tr><tr><td>Outreach offer</td><td>Scheduling reminder with two available times.</td></tr><tr><td>Channel</td><td>Portal reminder and mailed letter</td></tr><tr><td>Timing</td><td>Once, at day 300 without a preventive visit</td></tr><tr><td>Avoid</td><td>Claims about specific conditions or medical advice.</td></tr></table><div style='margin-top:6px'><span class='label'>Trigger tags:</span> <span class='pill'>health awareness</span><span class='pill'>seasonal</span></div>
+  <h3 style='font-size:14px;margin:14px 0 0'>Trend hooks</h3>
+  <ul style='font-size:13px;padding-left:18px'><li>Week of heavy rain <span class='label'>(2026-10-10, local)</span></li><li>Daylight saving time ends <span class='label'>(2026-11-01, local)</span></li></ul>
+  <div class="narr">Preventive Care Due make up 12.0% of recorded charges (40 patients). They average 2.1 visits over the period and $318.75 in charges each. Goal: Help patients book their next routine preventive visit. Suggested outreach: Scheduling reminder with two available times. Channel: Portal reminder and mailed letter, timing: Once, at day 300 without a preventive visit.</div>
+</div></div>
+<h2 class='section'>Segment rules</h2><div class='card'><div class='label'>Checked in priority order; the first match wins.</div><ul class='rules'><li><b>Lapsed Patients</b>: Visits 180–365 days ago at least 2 and Days since last visit at least 180</li><li><b>Preventive Care Due</b>: Share of visits, preventive at least 50% and Days since last visit at least 300</li><li><b>Follow-up Cohort</b>: Visits (total) at least 3 and Share of visits, follow-up at least 50% and Days since last visit less than 180</li><li><b>Urgent-Care Users</b>: Visits (total) at least 2 and Share of visits, urgent at least 50%</li><li><b>New or Occasional Patients</b>: Everyone not matched above</li></ul></div>
+<h2 class='section'>Intake fields</h2><div class='card'><table><tr><th>Field</th><th>Type</th><th>Used in segment rules</th></tr><tr><td>Preferred contact</td><td>category</td><td>No, collected for planning only</td></tr></table></div>
+<h2 class='section'>Trend triggers</h2><div class='card'><div class='label'>Measured on: <b>Visits (total)</b> · baseline: same weekday, excluding trend dates · match: trend tags overlap the segment&#x27;s playbook tags · minimum events: 3 · z threshold: 2.0</div><table><tr><th>Trend</th><th>Events</th><th>Avg lift</th><th>Most responsive segment</th><th>Evidence</th></tr><tr><td>Daylight saving time ends</td><td>1</td><td>100.0%</td><td></td><td>too few events</td></tr><tr><td>Flu season peak</td><td>1</td><td>100.0%</td><td></td><td>too few events</td></tr><tr><td>Memorial Day weekend</td><td>1</td><td>100.0%</td><td></td><td>too few events</td></tr><tr><td>Spring break week</td><td>1</td><td>100.0%</td><td></td><td>too few events</td></tr><tr><td>Week of heavy rain</td><td>1</td><td>0.0%</td><td></td><td>too few events</td></tr></table><div class='label' style='margin-top:10px'>Fewer events than the minimum is anecdote, not evidence. A correlation on a few days does not show the trend caused the change.</div></div>
+</body></html>

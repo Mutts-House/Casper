@@ -1,0 +1,114 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<title>Store · retail</title><style>
+body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;background:#f6f7f9;color:#1d2330;margin:0;padding:32px}
+h1{margin:0 0 4px;font-size:26px} .sub{color:#5b6475;margin-bottom:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:18px}
+.card{background:#fff;border-radius:12px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.card h2{margin:0 0 4px;font-size:18px} .tag{display:inline-block;font-size:11px;padding:2px 7px;border-radius:99px;margin-left:6px;vertical-align:middle}
+.observed{background:#e3f1ff;color:#0a5aa6}.stated{background:#e6f7ea;color:#1e7a3a}.inferred{background:#fff3dd;color:#8a5a00}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:10px} td,th{text-align:left;padding:6px 4px;border-bottom:1px solid #eceef2}
+.kpi{font-size:22px;font-weight:600} .label{font-size:12px;color:#5b6475}
+.narr{font-size:14px;line-height:1.5;background:#f6f7f9;padding:12px;border-radius:8px;margin-top:10px}
+.warn{background:#fff3dd;padding:10px 14px;border-radius:8px;font-size:13px;margin-bottom:16px}
+
+.pill{display:inline-block;font-size:12px;padding:3px 9px;border-radius:99px;background:#eef1f6;margin:2px 4px 2px 0}
+.disclaimer{background:#fff3dd;padding:10px 14px;border-radius:8px;font-size:13px;margin-bottom:16px}
+.rules{font-size:13px;color:#2c3446;margin:6px 0 0;padding-left:18px}
+h2.section{margin-top:32px;font-size:18px}
+</style></head><body>
+<h1>Store</h1>
+<div class="sub">Convenience-store point-of-sale data. Loyalty-identified shoppers segmented by visit pattern, time of day, and category mix.</div>
+<div class="sub">Period 2026-06-01 to 2026-11-14 · 495 customers · as of 2026-11-14 · pack retail v1 · No geographic intake</div>
+<div class='disclaimer'>Synthetic demo data generated for this showcase. Not real customers, patients, participants, or sales.</div>
+<h2 class="section">Segments</h2>
+<div class="card"><table><tr><th>ID</th><th>Segment</th><th>Customers</th></tr><tr><td>P1</td><td>Fuel-and-Go Commuters</td><td>88</td></tr><tr><td>P2</td><td>Loyal Core</td><td>42</td></tr><tr><td>P3</td><td>Lunch Grab-and-Go</td><td>64</td></tr><tr><td>P4</td><td>Late-Night Regulars</td><td>49</td></tr><tr><td>P5</td><td>Occasional Visitors</td><td>187</td></tr><tr><td>P6</td><td>Lapsing Regulars</td><td>65</td></tr></table></div>
+<h2 class="section">Personas</h2>
+<div class="grid">
+<div class="card">
+  <h2>P1 · Fuel-and-Go Commuters</h2>
+  <div class="label">Fill up and grab something on the way to or from work.</div>
+  <table>
+    <tr><td>Customers</td><td><b>88</b></td></tr>
+    <tr><td>Share of spend</td><td><b>79.1%</b></td></tr>
+  </table>
+  <h3 style='font-size:14px;margin:14px 0 0'>Behavior (observed)</h3>
+  <table><tr><td>Visits (total)</td><td>8.92</td></tr><tr><td>Visits 30–120 days ago</td><td>4.41</td></tr><tr><td>Days since last visit</td><td>7.02</td></tr><tr><td>Spend</td><td>462.39</td></tr><tr><td>Gross profit (placeholder margins)</td><td>45.85</td></tr><tr><td>Share of visits, late night</td><td>0%</td></tr><tr><td>Share of visits, commute hours</td><td>88%</td></tr><tr><td>Share of visits, midday</td><td>12%</td></tr><tr><td>Share of spend, fuel</td><td>97%</td></tr><tr><td>Share of spend, food service</td><td>0%</td></tr><tr><td>Visits per day (event count)</td><td>8.92</td></tr></table>
+  <h3 style='font-size:14px;margin:14px 0 0'>Playbook</h3><table><tr><td>Goal</td><td>Turn fuel visits into in-store purchases.</td></tr><tr><td>Offer angle</td><td>Fuel-plus-item bundle (coffee or drink with a fill-up); commute-time offers.</td></tr><tr><td>Channel</td><td>Pump-side screens, app offers at fueling</td></tr><tr><td>Timing</td><td>Weekday mornings and evenings</td></tr><tr><td>Avoid</td><td>Long-form messaging; they decide in seconds.</td></tr></table><div style='margin-top:6px'><span class='label'>Trigger tags:</span> <span class='pill'>commute</span><span class='pill'>gas prices</span><span class='pill'>traffic</span><span class='pill'>weather</span></div>
+  <h3 style='font-size:14px;margin:14px 0 0'>Trend hooks</h3>
+  <ul style='font-size:13px;padding-left:18px'><li>Gas price spike <span class='label'>(2026-09-14, mainstream)</span></li><li>Week of heavy rain <span class='label'>(2026-10-10, local)</span></li></ul>
+  <div class="narr">Fuel-and-Go Commuters make up 79.1% of identified revenue (88 customers). They average 8.9 visits in the window, with a $462.39 average basket, and most often shop during weekday morning commute. Goal: Turn fuel visits into in-store purchases. Suggested offer: Fuel-plus-item bundle (coffee or drink with a fill-up); commute-time offers. Channel: Pump-side screens, app offers at fueling, timing: Weekday mornings and evenings.</div>
+</div>
+<div class="card">
+  <h2>P2 · Loyal Core</h2>
+  <div class="label">High-frequency, recent visitors who already trust the store.</div>
+  <table>
+    <tr><td>Customers</td><td><b>42</b></td></tr>
+    <tr><td>Share of spend</td><td><b>7.4%</b></td></tr>
+  </table>
+  <h3 style='font-size:14px;margin:14px 0 0'>Behavior (observed)</h3>
+  <table><tr><td>Visits (total)</td><td>17.86</td></tr><tr><td>Visits 30–120 days ago</td><td>9.4</td></tr><tr><td>Days since last visit</td><td>2.02</td></tr><tr><td>Spend</td><td>91.1</td></tr><tr><td>Gross profit (placeholder margins)</td><td>25.07</td></tr><tr><td>Share of visits, late night</td><td>2%</td></tr><tr><td>Share of visits, commute hours</td><td>67%</td></tr><tr><td>Share of visits, midday</td><td>31%</td></tr><tr><td>Share of spend, fuel</td><td>4%</td></tr><tr><td>Share of spend, food service</td><td>30%</td></tr><tr><td>Visits per day (event count)</td><td>17.86</td></tr></table>
+  <h3 style='font-size:14px;margin:14px 0 0'>Playbook</h3><table><tr><td>Goal</td><td>Protect frequency and grow basket size.</td></tr><tr><td>Offer angle</td><td>Reward loyalty: bonus points on their most-bought category, early access to promotions.</td></tr><tr><td>Channel</td><td>App push / loyalty SMS</td></tr><tr><td>Timing</td><td>Weekly, aligned to their peak daypart</td></tr><tr><td>Avoid</td><td>Deep discounts that train them to wait for offers.</td></tr></table><div style='margin-top:6px'><span class='label'>Trigger tags:</span> <span class='pill'>loyalty</span><span class='pill'>routine</span><span class='pill'>rewards</span></div>
+  <h3 style='font-size:14px;margin:14px 0 0'>Trend hooks</h3>
+  <ul style='font-size:13px;padding-left:18px'><li class='label'>No matching trends in the window</li></ul>
+  <div class="narr">Loyal Core make up 7.4% of identified revenue (42 customers). They average 17.9 visits in the window, with a $91.10 average basket, and most often shop during weekday morning commute. Goal: Protect frequency and grow basket size. Suggested offer: Reward loyalty: bonus points on their most-bought category, early access to promotions. Channel: App push / loyalty SMS, timing: Weekly, aligned to their peak daypart.</div>
+</div>
+<div class="card">
+  <h2>P3 · Lunch Grab-and-Go</h2>
+  <div class="label">Buy food-service items at midday.</div>
+  <table>
+    <tr><td>Customers</td><td><b>64</b></td></tr>
+    <tr><td>Share of spend</td><td><b>4.8%</b></td></tr>
+  </table>
+  <h3 style='font-size:14px;margin:14px 0 0'>Behavior (observed)</h3>
+  <table><tr><td>Visits (total)</td><td>8.02</td></tr><tr><td>Visits 30–120 days ago</td><td>3.97</td></tr><tr><td>Days since last visit</td><td>10.97</td></tr><tr><td>Spend</td><td>38.92</td></tr><tr><td>Gross profit (placeholder margins)</td><td>19.82</td></tr><tr><td>Share of visits, late night</td><td>0%</td></tr><tr><td>Share of visits, commute hours</td><td>2%</td></tr><tr><td>Share of visits, midday</td><td>98%</td></tr><tr><td>Share of spend, fuel</td><td>0%</td></tr><tr><td>Share of spend, food service</td><td>73%</td></tr><tr><td>Visits per day (event count)</td><td>8.02</td></tr></table>
+  <h3 style='font-size:14px;margin:14px 0 0'>Playbook</h3><table><tr><td>Goal</td><td>Make the store the default lunch option on workdays.</td></tr><tr><td>Offer angle</td><td>Lunch combo or meal deal; hot-food availability and speed messaging.</td></tr><tr><td>Channel</td><td>In-store menu boards, nearby-office digital ads</td></tr><tr><td>Timing</td><td>Weekdays 10 am to 1 pm</td></tr><tr><td>Avoid</td><td>Weekend-only promos for a weekday audience.</td></tr></table><div style='margin-top:6px'><span class='label'>Trigger tags:</span> <span class='pill'>lunch</span><span class='pill'>office</span><span class='pill'>work week</span><span class='pill'>food trend</span></div>
+  <h3 style='font-size:14px;margin:14px 0 0'>Trend hooks</h3>
+  <ul style='font-size:13px;padding-left:18px'><li class='label'>No matching trends in the window</li></ul>
+  <div class="narr">Lunch Grab-and-Go make up 4.8% of identified revenue (64 customers). They average 8.0 visits in the window, with a $38.92 average basket, and most often shop during midday. Goal: Make the store the default lunch option on workdays. Suggested offer: Lunch combo or meal deal; hot-food availability and speed messaging. Channel: In-store menu boards, nearby-office digital ads, timing: Weekdays 10 am to 1 pm.</div>
+</div>
+<div class="card">
+  <h2>P4 · Late-Night Regulars</h2>
+  <div class="label">Shop after 10 pm; likely shift workers, students, or night drivers.</div>
+  <table>
+    <tr><td>Customers</td><td><b>49</b></td></tr>
+    <tr><td>Share of spend</td><td><b>4.0%</b></td></tr>
+  </table>
+  <h3 style='font-size:14px;margin:14px 0 0'>Behavior (observed)</h3>
+  <table><tr><td>Visits (total)</td><td>6.98</td></tr><tr><td>Visits 30–120 days ago</td><td>3.2</td></tr><tr><td>Days since last visit</td><td>6.1</td></tr><tr><td>Spend</td><td>41.87</td></tr><tr><td>Gross profit (placeholder margins)</td><td>18.68</td></tr><tr><td>Share of visits, late night</td><td>100%</td></tr><tr><td>Share of visits, commute hours</td><td>0%</td></tr><tr><td>Share of visits, midday</td><td>0%</td></tr><tr><td>Share of spend, fuel</td><td>0%</td></tr><tr><td>Share of spend, food service</td><td>37%</td></tr><tr><td>Visits per day (event count)</td><td>6.98</td></tr></table>
+  <h3 style='font-size:14px;margin:14px 0 0'>Playbook</h3><table><tr><td>Goal</td><td>Own the late-night occasion.</td></tr><tr><td>Offer angle</td><td>Late-night bundles (drink + snack), hot-food timing, safety and convenience messaging.</td></tr><tr><td>Channel</td><td>In-store signage, app geofence near closing hours</td></tr><tr><td>Timing</td><td>Evenings and weekends, 9 pm to close</td></tr><tr><td>Avoid</td><td>Daytime-oriented promotions that hit when they are asleep.</td></tr></table><div style='margin-top:6px'><span class='label'>Trigger tags:</span> <span class='pill'>late night</span><span class='pill'>shift work</span><span class='pill'>nightlife</span><span class='pill'>event</span></div>
+  <h3 style='font-size:14px;margin:14px 0 0'>Trend hooks</h3>
+  <ul style='font-size:13px;padding-left:18px'><li>Halloween <span class='label'>(2026-10-31, mainstream)</span></li></ul>
+  <div class="narr">Late-Night Regulars make up 4.0% of identified revenue (49 customers). They average 7.0 visits in the window, with a $41.87 average basket, and most often shop during late night. Goal: Own the late-night occasion. Suggested offer: Late-night bundles (drink + snack), hot-food timing, safety and convenience messaging. Channel: In-store signage, app geofence near closing hours, timing: Evenings and weekends, 9 pm to close.</div>
+</div>
+<div class="card">
+  <h2>P5 · Occasional Visitors</h2>
+  <div class="label">Visit a few times, with no dominant pattern yet.</div>
+  <table>
+    <tr><td>Customers</td><td><b>187</b></td></tr>
+    <tr><td>Share of spend</td><td><b>2.6%</b></td></tr>
+  </table>
+  <h3 style='font-size:14px;margin:14px 0 0'>Behavior (observed)</h3>
+  <table><tr><td>Visits (total)</td><td>1.83</td></tr><tr><td>Visits 30–120 days ago</td><td>0.91</td></tr><tr><td>Days since last visit</td><td>61.84</td></tr><tr><td>Spend</td><td>7.29</td></tr><tr><td>Gross profit (placeholder margins)</td><td>2.31</td></tr><tr><td>Share of visits, late night</td><td>0%</td></tr><tr><td>Share of visits, commute hours</td><td>42%</td></tr><tr><td>Share of visits, midday</td><td>35%</td></tr><tr><td>Share of spend, fuel</td><td>0%</td></tr><tr><td>Share of spend, food service</td><td>34%</td></tr><tr><td>Visits per day (event count)</td><td>1.83</td></tr></table>
+  <h3 style='font-size:14px;margin:14px 0 0'>Playbook</h3><table><tr><td>Goal</td><td>Convert to a second and third visit.</td></tr><tr><td>Offer angle</td><td>Sign-up incentive for the loyalty program; first-visit-to-second-visit reward.</td></tr><tr><td>Channel</td><td>Receipt QR code, in-store sign-up</td></tr><tr><td>Timing</td><td>Within 7 days of first visit</td></tr><tr><td>Avoid</td><td>Heavy discounting to people who would have paid full price.</td></tr></table><div style='margin-top:6px'><span class='label'>Trigger tags:</span> <span class='pill'>new</span><span class='pill'>sign up</span><span class='pill'>community</span><span class='pill'>local event</span></div>
+  <h3 style='font-size:14px;margin:14px 0 0'>Trend hooks</h3>
+  <ul style='font-size:13px;padding-left:18px'><li class='label'>No matching trends in the window</li></ul>
+  <div class="narr">Occasional Visitors make up 2.6% of identified revenue (187 customers). They average 1.8 visits in the window, with a $7.29 average basket, and most often shop during midday. Goal: Convert to a second and third visit. Suggested offer: Sign-up incentive for the loyalty program; first-visit-to-second-visit reward. Channel: Receipt QR code, in-store sign-up, timing: Within 7 days of first visit.</div>
+</div>
+<div class="card">
+  <h2>P6 · Lapsing Regulars</h2>
+  <div class="label">Were visiting regularly but have gone quiet.</div>
+  <table>
+    <tr><td>Customers</td><td><b>65</b></td></tr>
+    <tr><td>Share of spend</td><td><b>2.0%</b></td></tr>
+  </table>
+  <h3 style='font-size:14px;margin:14px 0 0'>Behavior (observed)</h3>
+  <table><tr><td>Visits (total)</td><td>4.22</td></tr><tr><td>Visits 30–120 days ago</td><td>4.2</td></tr><tr><td>Days since last visit</td><td>58.95</td></tr><tr><td>Spend</td><td>16</td></tr><tr><td>Gross profit (placeholder margins)</td><td>5.36</td></tr><tr><td>Share of visits, late night</td><td>0%</td></tr><tr><td>Share of visits, commute hours</td><td>27%</td></tr><tr><td>Share of visits, midday</td><td>51%</td></tr><tr><td>Share of spend, fuel</td><td>0%</td></tr><tr><td>Share of spend, food service</td><td>35%</td></tr><tr><td>Visits per day (event count)</td><td>4.22</td></tr></table>
+  <h3 style='font-size:14px;margin:14px 0 0'>Playbook</h3><table><tr><td>Goal</td><td>Win back within 30 to 60 days before they become one-time visitors.</td></tr><tr><td>Offer angle</td><td>Win-back offer on the product they bought most, time-limited.</td></tr><tr><td>Channel</td><td>SMS or email with a reason to return</td></tr><tr><td>Timing</td><td>Trigger on day 30 without a visit</td></tr><tr><td>Avoid</td><td>Generic &#x27;we miss you&#x27; messages with no offer.</td></tr></table><div style='margin-top:6px'><span class='label'>Trigger tags:</span> <span class='pill'>comeback</span><span class='pill'>value</span><span class='pill'>deal</span></div>
+  <h3 style='font-size:14px;margin:14px 0 0'>Trend hooks</h3>
+  <ul style='font-size:13px;padding-left:18px'><li>Halloween <span class='label'>(2026-10-31, mainstream)</span></li></ul>
+  <div class="narr">Lapsing Regulars make up 2.0% of identified revenue (65 customers). They average 4.2 visits in the window, with a $16.00 average basket, and most often shop during midday. Goal: Win back within 30 to 60 days before they become one-time visitors. Suggested offer: Win-back offer on the product they bought most, time-limited. Channel: SMS or email with a reason to return, timing: Trigger on day 30 without a visit.</div>
+</div></div>
+<h2 class='section'>Segment rules</h2><div class='card'><div class='label'>Checked in priority order; the first match wins.</div><ul class='rules'><li><b>Lapsing Regulars</b>: Visits 30–120 days ago at least 3 and Days since last visit at least 30</li><li><b>Loyal Core</b>: Visits (total) at least 12 and Days since last visit less than 30</li><li><b>Late-Night Regulars</b>: Visits (total) at least 3 and Share of visits, late night at least 35%</li><li><b>Fuel-and-Go Commuters</b>: Visits (total) at least 3 and Share of spend, fuel at least 40% and Share of visits, commute hours at least 50%</li><li><b>Lunch Grab-and-Go</b>: Visits (total) at least 3 and Share of spend, food service at least 40% and Share of visits, midday at least 40%</li><li><b>Occasional Visitors</b>: Everyone not matched above</li></ul></div>
+<h2 class='section'>Intake fields</h2><div class='card'><table><tr><th>Field</th><th>Type</th><th>Used in segment rules</th></tr><tr><td>Age band</td><td>category</td><td>No, collected for planning only</td></tr><tr><td>Household</td><td>category</td><td>No, collected for planning only</td></tr><tr><td>Weekly routine</td><td>category</td><td>No, collected for planning only</td></tr></table></div>
+<h2 class='section'>Trend triggers</h2><div class='card'><div class='label'>Measured on: <b>Spend</b> · baseline: same weekday, excluding trend dates · match: trend tags overlap the segment&#x27;s playbook tags · minimum events: 3 · z threshold: 2.0</div><table><tr><th>Trend</th><th>Events</th><th>Avg lift</th><th>Most responsive segment</th><th>Evidence</th></tr><tr><td>Halloween</td><td>1</td><td>342.1%</td><td>Occasional Visitors</td><td>too few events</td></tr><tr><td>Week of heavy rain</td><td>1</td><td>137.8%</td><td>Late-Night Regulars</td><td>too few events</td></tr><tr><td>Local sports home game</td><td>1</td><td>32.1%</td><td>Occasional Visitors</td><td>too few events</td></tr><tr><td>Gas price spike</td><td>1</td><td>23.0%</td><td>Fuel-and-Go Commuters</td><td>too few events</td></tr><tr><td>Fourth of July</td><td>1</td><td>-65.9%</td><td>Occasional Visitors</td><td>too few events</td></tr></table><div class='label' style='margin-top:10px'>Fewer events than the minimum is anecdote, not evidence. A correlation on a few days does not show the trend caused the change.</div></div>
+</body></html>

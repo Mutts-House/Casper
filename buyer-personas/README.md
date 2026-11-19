@@ -215,3 +215,10 @@ python -m personas pack-run --pack packs/healthcare.json --input visits.csv --tr
   Packs run through `pack-run` produce `personas.json` only, with no HTML report yet.
 - Trend lift can measure dollars (`sum` of amount) or event counts (`count_transactions`),
   selected by `triggers.correlate.metric`.
+
+## Showcase reports (`examples/`)
+
+`python -m personas examples` rebuilds one HTML report per pack from the synthetic demo
+data: `retail_report.html`, `healthcare_report.html`, `community_report.html`. All three use
+the same config-driven renderer (`personas/report_pack.py`), and every label on the page comes
+from the pack. The retail pipeline (`python -m personas demo`) keeps its own retail report.

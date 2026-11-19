@@ -1,7 +1,7 @@
 {
   "pack_id": "retail",
   "pack_version": 1,
-  "description": "Convenience-store POS data. Segments and playbook mirror the original hardcoded retail engine.",
+  "description": "Convenience-store point-of-sale data. Loyalty-identified shoppers segmented by visit pattern, time of day, and category mix.",
   "workspace": {
     "name": "Store",
     "domain": "retail",
@@ -85,7 +85,8 @@
         "extended_price",
         "net_sales"
       ]
-    }
+    },
+    "amount_label": "Spend"
   },
   "category_normalization": {
     "default": "other",
@@ -171,38 +172,45 @@
     {
       "label": "late_night",
       "start": 22,
-      "end": 24
+      "end": 24,
+      "display": "late night"
     },
     {
       "label": "late_night",
       "start": 0,
-      "end": 5
+      "end": 5,
+      "display": "late night"
     },
     {
       "label": "commute_am",
       "start": 5,
-      "end": 9
+      "end": 9,
+      "display": "weekday morning commute"
     },
     {
       "label": "midday",
       "start": 9,
-      "end": 14
+      "end": 14,
+      "display": "midday"
     },
     {
       "label": "afternoon",
       "start": 14,
-      "end": 17
+      "end": 17,
+      "display": "afternoon"
     },
     {
       "label": "commute_pm",
       "start": 17,
-      "end": 22
+      "end": 22,
+      "display": "evening commute"
     }
   ],
   "metrics": [
     {
       "id": "visits",
-      "agg": "count_transactions"
+      "agg": "count_transactions",
+      "label": "Visits (total)"
     },
     {
       "id": "visits_regular_period",
@@ -210,28 +218,33 @@
       "window_days": {
         "from": 120,
         "to": 30
-      }
+      },
+      "label": "Visits 30\u2013120 days ago"
     },
     {
       "id": "recency_days",
-      "agg": "days_since_last"
+      "agg": "days_since_last",
+      "label": "Days since last visit"
     },
     {
       "id": "spend",
       "agg": "sum",
-      "of": "amount"
+      "of": "amount",
+      "label": "Spend"
     },
     {
       "id": "gross_profit",
       "agg": "sum_margin_weighted",
-      "of": "amount"
+      "of": "amount",
+      "label": "Gross profit (placeholder margins)"
     },
     {
       "id": "share_late_night",
       "agg": "share_of_transactions",
       "where": {
         "daypart": "late_night"
-      }
+      },
+      "label": "Share of visits, late night"
     },
     {
       "id": "share_commute",
@@ -241,32 +254,37 @@
           "commute_am",
           "commute_pm"
         ]
-      }
+      },
+      "label": "Share of visits, commute hours"
     },
     {
       "id": "share_midday",
       "agg": "share_of_transactions",
       "where": {
         "daypart": "midday"
-      }
+      },
+      "label": "Share of visits, midday"
     },
     {
       "id": "share_fuel",
       "agg": "share_of_amount",
       "where": {
         "category": "fuel"
-      }
+      },
+      "label": "Share of spend, fuel"
     },
     {
       "id": "share_food_service",
       "agg": "share_of_amount",
       "where": {
         "category": "food_service"
-      }
+      },
+      "label": "Share of spend, food service"
     },
     {
       "id": "event_count",
-      "agg": "count_transactions"
+      "agg": "count_transactions",
+      "label": "Visits per day (event count)"
     }
   ],
   "entity_types": [

@@ -39,7 +39,8 @@ def map_columns(df: pd.DataFrame, ws: Workspace) -> pd.DataFrame:
             continue
         if canon == "category" and "category" not in fields:
             continue
-        found = next((lookup[_norm(a)] for a in fields.get(canon, []) if _norm(a) in lookup), None)
+        candidates = list(fields.get(canon, [])) + [canon]
+        found = next((lookup[_norm(a)] for a in candidates if _norm(a) in lookup), None)
         if found is None:
             if canon in ("amount", "category"):
                 continue
@@ -55,8 +56,11 @@ def normalize_categories(values: pd.Series, ws: Workspace) -> pd.Series:
     rules = [(r["category"], [k.lower() for k in r["keywords"]])
              for r in ws.raw["category_normalization"]["rules"]]
     default = ws.raw["category_normalization"]["default"]
+    known = {label for label, _ in rules} | {default}
 
     def one(text) -> str:
+        if not pd.isna(text) and str(text).strip() in known:
+            return str(text).strip()
         t = "" if pd.isna(text) else str(text).lower()
         for label, keywords in rules:
             if any(k in t for k in keywords):
@@ -150,6 +154,16 @@ def summarize(rows: pd.DataFrame, ws: Workspace, entity_id: str = "customer", as
 
     plural = engine.entity_plural(ws, entity_id)
     template = engine.narrative_template(ws)
+    dp_map = _daypart_labels(ws)
+    dp_display = {d["label"]: d.get("display", d["label"].replace("_", " ")) for d in ws.raw["dayparts"]}
+    row_dp = rows.assign(
+        daypart=rows["timestamp"].dt.hour.map(dp_map).fillna("other"),
+        segment=rows["entity_id"].map(metrics["segment"]),
+    )
+    peak_by_segment = {
+        label: (dp_display.get(g["daypart"].mode().iloc[0], "") if not g.empty else "")
+        for label, g in row_dp.groupby("segment")
+    }
     personas = []
     ordered = metrics.groupby("segment")["amount"].sum().sort_values(ascending=False).index
     for i, label in enumerate(ordered, start=1):
@@ -169,7 +183,7 @@ def summarize(rows: pd.DataFrame, ws: Workspace, entity_id: str = "customer", as
             "timing": pb.get("timing", ""),
         }
         facts["avg_basket"] = facts["avg_amount"]
-        facts["peak_daypart"] = ""
+        facts["peak_daypart"] = peak_by_segment.get(label, "")
         personas.append({
             "id": f"P{i}",
             "segment": label,

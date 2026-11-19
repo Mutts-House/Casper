@@ -121,6 +121,14 @@ def _pack_demo_cmd(args: argparse.Namespace) -> int:
     return 0
 
 
+def _examples_cmd(args: argparse.Namespace) -> int:
+    from .examples import build_examples
+    written = build_examples(args.out, args.data_dir)
+    for name, path in written.items():
+        print(f"{name:<11} {path}")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="personas", description="Buyer persona engine")
     sub = parser.add_subparsers(dest="cmd", required=True)
@@ -169,6 +177,11 @@ def main(argv: list[str] | None = None) -> int:
     pd_.add_argument("--data-dir", default="sample_data")
     pd_.add_argument("--out", help="Output folder (default: output_<pack>)")
     pd_.set_defaults(func=_pack_demo_cmd)
+
+    ex = sub.add_parser("examples", help="Build showcase HTML reports for all packs from synthetic data")
+    ex.add_argument("--out", default="examples", help="Output folder")
+    ex.add_argument("--data-dir", default="sample_data")
+    ex.set_defaults(func=_examples_cmd)
 
     args = parser.parse_args(argv)
     try:

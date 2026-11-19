@@ -35,7 +35,8 @@
       "amount": [
         "charge_amount"
       ]
-    }
+    },
+    "amount_label": "Charges"
   },
   "category_normalization": {
     "default": "routine",
@@ -94,7 +95,8 @@
   "metrics": [
     {
       "id": "visits",
-      "agg": "count_transactions"
+      "agg": "count_transactions",
+      "label": "Visits (total)"
     },
     {
       "id": "visits_in_window",
@@ -102,37 +104,43 @@
       "window_days": {
         "from": 365,
         "to": 180
-      }
+      },
+      "label": "Visits 180\u2013365 days ago"
     },
     {
       "id": "recency_days",
-      "agg": "days_since_last"
+      "agg": "days_since_last",
+      "label": "Days since last visit"
     },
     {
       "id": "charges",
       "agg": "sum",
-      "of": "amount"
+      "of": "amount",
+      "label": "Charges"
     },
     {
       "id": "share_urgent",
       "agg": "share_of_transactions",
       "where": {
         "category": "urgent"
-      }
+      },
+      "label": "Share of visits, urgent"
     },
     {
       "id": "share_preventive",
       "agg": "share_of_transactions",
       "where": {
         "category": "preventive"
-      }
+      },
+      "label": "Share of visits, preventive"
     },
     {
       "id": "share_follow_up",
       "agg": "share_of_transactions",
       "where": {
         "category": "follow_up"
-      }
+      },
+      "label": "Share of visits, follow-up"
     }
   ],
   "entity_types": [
