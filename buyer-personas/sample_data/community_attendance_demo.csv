@@ -1,0 +1,1575 @@
+attendance_id,session_date,participant_id,program_type,hours
+A000001,2026-06-20 18:15,CP0001,Adult education class,1.7
+A000002,2026-07-23 10:00,CP0001,Adult education class,1.5
+A000003,2026-07-29 08:45,CP0001,General workshop,1.1
+A000004,2026-11-08 10:00,CP0001,General workshop,1.9
+A000005,2026-07-04 19:45,CP0001,General workshop,1.9
+A000006,2026-07-07 11:45,CP0001,General workshop,1.9
+A000007,2026-04-10 14:30,CP0001,General workshop,1.7
+A000008,2026-05-22 19:45,CP0001,General workshop,1.6
+A000009,2026-09-07 18:45,CP0001,General workshop,1.5
+A000010,2026-06-18 10:30,CP0001,Adult education class,1.3
+A000011,2026-03-25 17:30,CP0001,General workshop,1.4
+A000012,2026-09-10 16:15,CP0001,General workshop,1.6
+A000013,2026-08-08 10:00,CP0001,General workshop,1.4
+A000014,2026-03-23 08:45,CP0001,General workshop,1.9
+A000015,2026-10-24 10:45,CP0001,Adult education class,1.8
+A000016,2026-04-02 10:45,CP0001,General workshop,1.7
+A000017,2026-07-10 11:30,CP0001,General workshop,1.5
+A000018,2026-09-06 19:45,CP0001,Adult education class,1.2
+A000019,2026-10-25 13:30,CP0001,Adult education class,1.2
+A000020,2026-08-09 18:00,CP0001,Adult education class,1.9
+A000021,2026-10-11 18:00,CP0002,General workshop,2.0
+A000022,2026-05-24 16:00,CP0002,Adult education class,1.1
+A000023,2026-06-09 14:30,CP0002,Adult education class,1.9
+A000024,2026-10-07 16:30,CP0002,General workshop,1.9
+A000025,2026-10-28 13:30,CP0002,Adult education class,1.2
+A000026,2026-02-24 11:15,CP0002,General workshop,1.3
+A000027,2026-10-30 16:15,CP0002,General workshop,1.7
+A000028,2026-07-06 18:15,CP0002,General workshop,1.3
+A000029,2026-07-18 11:30,CP0002,General workshop,1.4
+A000030,2026-05-20 08:30,CP0002,General workshop,1.4
+A000031,2026-10-02 08:00,CP0002,Adult education class,1.7
+A000032,2026-06-12 15:45,CP0002,Adult education class,2.0
+A000033,2026-04-30 08:30,CP0002,General workshop,1.5
+A000034,2026-09-06 08:00,CP0002,Adult education class,1.4
+A000035,2026-08-27 12:30,CP0002,Adult education class,1.6
+A000036,2026-06-20 13:15,CP0002,Adult education class,1.1
+A000037,2026-03-09 17:45,CP0002,General workshop,1.0
+A000038,2026-06-17 08:30,CP0003,Adult education class,1.2
+A000039,2026-09-12 11:15,CP0003,Adult education class,1.1
+A000040,2026-05-09 13:30,CP0003,Adult education class,1.8
+A000041,2026-07-29 19:15,CP0003,Adult education class,1.7
+A000042,2026-07-16 11:45,CP0003,General workshop,1.6
+A000043,2026-10-20 17:15,CP0003,Adult education class,1.9
+A000044,2026-05-10 12:15,CP0003,General workshop,2.0
+A000045,2026-06-16 09:30,CP0003,General workshop,1.1
+A000046,2026-10-31 19:00,CP0003,Adult education class,1.1
+A000047,2026-06-30 13:45,CP0003,Adult education class,1.2
+A000048,2026-06-20 09:00,CP0003,Adult education class,1.3
+A000049,2026-05-01 14:30,CP0003,General workshop,1.2
+A000050,2026-08-31 12:00,CP0003,General workshop,1.5
+A000051,2026-07-06 13:15,CP0003,General workshop,1.9
+A000052,2026-07-12 14:15,CP0003,General workshop,2.0
+A000053,2026-03-13 12:15,CP0003,General workshop,1.5
+A000054,2026-03-23 14:45,CP0003,Adult education class,1.8
+A000055,2026-11-01 15:15,CP0003,Adult education class,1.1
+A000056,2026-11-13 12:00,CP0003,Adult education class,1.9
+A000057,2026-03-06 11:45,CP0003,Adult education class,1.0
+A000058,2026-11-04 12:15,CP0003,Adult education class,1.7
+A000059,2026-03-04 12:15,CP0003,General workshop,1.5
+A000060,2026-09-28 13:00,CP0003,Adult education class,1.6
+A000061,2026-05-25 17:00,CP0003,Adult education class,1.5
+A000062,2026-04-11 16:00,CP0003,Adult education class,1.1
+A000063,2026-09-01 13:15,CP0003,General workshop,1.7
+A000064,2026-07-22 17:00,CP0003,General workshop,1.3
+A000065,2026-09-08 19:15,CP0003,Adult education class,1.6
+A000066,2026-10-18 17:00,CP0003,Adult education class,1.8
+A000067,2026-05-04 17:45,CP0004,General workshop,1.1
+A000068,2026-04-02 13:45,CP0004,General workshop,1.7
+A000069,2026-08-02 14:00,CP0004,General workshop,1.8
+A000070,2026-04-17 08:45,CP0004,General workshop,1.4
+A000071,2026-03-14 09:30,CP0004,Adult education class,1.2
+A000072,2026-09-02 12:15,CP0004,General workshop,1.4
+A000073,2026-06-18 11:00,CP0004,Adult education class,1.7
+A000074,2026-09-11 16:45,CP0004,Adult education class,1.6
+A000075,2026-06-08 08:15,CP0004,Adult education class,1.7
+A000076,2026-10-21 11:45,CP0004,Adult education class,1.6
+A000077,2026-08-16 19:00,CP0004,General workshop,1.8
+A000078,2026-02-26 09:00,CP0004,Adult education class,1.3
+A000079,2026-10-20 09:45,CP0004,Adult education class,1.3
+A000080,2026-06-16 12:30,CP0004,Adult education class,1.8
+A000081,2026-04-16 12:15,CP0004,General workshop,1.1
+A000082,2026-10-03 08:00,CP0004,Adult education class,2.0
+A000083,2026-07-08 11:30,CP0004,Adult education class,1.1
+A000084,2026-03-08 17:00,CP0004,General workshop,1.0
+A000085,2026-04-14 19:45,CP0004,Adult education class,1.2
+A000086,2026-05-30 09:00,CP0004,General workshop,1.7
+A000087,2026-03-10 19:00,CP0004,Adult education class,1.8
+A000088,2026-07-01 08:45,CP0004,General workshop,1.9
+A000089,2026-11-15 11:30,CP0004,Adult education class,1.2
+A000090,2026-11-06 13:30,CP0005,General workshop,1.8
+A000091,2026-08-09 10:15,CP0005,Adult education class,1.6
+A000092,2026-04-11 17:45,CP0005,Adult education class,1.8
+A000093,2026-03-09 16:15,CP0005,General workshop,1.8
+A000094,2026-05-07 14:45,CP0005,Adult education class,1.3
+A000095,2026-04-10 12:00,CP0005,General workshop,1.6
+A000096,2026-04-24 17:00,CP0005,Adult education class,1.8
+A000097,2026-04-04 16:45,CP0005,Adult education class,1.7
+A000098,2026-10-24 08:15,CP0005,Adult education class,2.0
+A000099,2026-10-24 12:45,CP0005,General workshop,1.0
+A000100,2026-05-20 19:45,CP0005,Adult education class,1.4
+A000101,2026-08-26 11:45,CP0005,General workshop,1.8
+A000102,2026-04-28 14:45,CP0005,Adult education class,1.2
+A000103,2026-08-10 11:00,CP0005,General workshop,1.0
+A000104,2026-11-07 16:45,CP0005,General workshop,1.4
+A000105,2026-03-02 15:00,CP0005,Adult education class,1.5
+A000106,2026-03-10 09:00,CP0005,General workshop,1.1
+A000107,2026-03-10 11:00,CP0005,Adult education class,1.0
+A000108,2026-08-03 15:00,CP0005,General workshop,1.4
+A000109,2026-10-25 12:45,CP0005,Adult education class,1.5
+A000110,2026-08-31 10:00,CP0005,Adult education class,1.2
+A000111,2026-10-12 10:45,CP0005,General workshop,2.0
+A000112,2026-03-08 17:15,CP0005,Adult education class,1.1
+A000113,2026-09-17 19:00,CP0005,Adult education class,1.4
+A000114,2026-08-16 17:00,CP0005,Adult education class,1.7
+A000115,2026-08-02 18:30,CP0006,General workshop,1.1
+A000116,2026-08-18 11:00,CP0006,Adult education class,1.5
+A000117,2026-04-10 14:45,CP0006,Adult education class,1.2
+A000118,2026-06-10 15:00,CP0006,General workshop,1.1
+A000119,2026-04-03 11:15,CP0006,General workshop,1.3
+A000120,2026-03-23 16:30,CP0006,Adult education class,1.6
+A000121,2026-11-15 14:30,CP0006,Adult education class,1.2
+A000122,2026-04-04 19:45,CP0006,Adult education class,1.3
+A000123,2026-09-06 13:45,CP0006,Adult education class,1.0
+A000124,2026-10-08 13:00,CP0006,Adult education class,1.6
+A000125,2026-08-17 17:45,CP0006,General workshop,1.6
+A000126,2026-11-15 16:00,CP0006,General workshop,2.0
+A000127,2026-05-26 09:45,CP0006,General workshop,1.8
+A000128,2026-10-04 13:15,CP0006,Adult education class,1.1
+A000129,2026-08-28 14:30,CP0006,Adult education class,1.7
+A000130,2026-06-22 11:45,CP0006,General workshop,1.2
+A000131,2026-05-03 08:00,CP0006,General workshop,1.3
+A000132,2026-08-06 08:00,CP0006,General workshop,1.4
+A000133,2026-10-10 17:30,CP0006,General workshop,1.2
+A000134,2026-09-14 08:30,CP0006,General workshop,1.9
+A000135,2026-11-05 16:30,CP0006,Adult education class,1.0
+A000136,2026-06-19 08:45,CP0006,General workshop,1.1
+A000137,2026-04-13 13:15,CP0006,Adult education class,1.2
+A000138,2026-05-13 11:30,CP0006,General workshop,1.9
+A000139,2026-03-15 08:00,CP0007,Adult education class,1.3
+A000140,2026-08-21 11:15,CP0007,Adult education class,1.3
+A000141,2026-04-25 08:00,CP0007,General workshop,1.7
+A000142,2026-08-10 09:15,CP0007,General workshop,1.1
+A000143,2026-04-16 15:30,CP0007,General workshop,1.3
+A000144,2026-07-08 19:45,CP0007,Adult education class,1.3
+A000145,2026-07-22 09:45,CP0007,General workshop,1.9
+A000146,2026-09-23 11:00,CP0007,Adult education class,1.3
+A000147,2026-08-21 18:30,CP0007,Adult education class,1.4
+A000148,2026-08-10 09:00,CP0007,General workshop,1.7
+A000149,2026-04-19 19:45,CP0007,General workshop,1.4
+A000150,2026-10-08 17:45,CP0007,General workshop,1.5
+A000151,2026-07-05 19:45,CP0007,General workshop,1.5
+A000152,2026-10-12 09:30,CP0007,Adult education class,1.7
+A000153,2026-11-09 13:45,CP0007,General workshop,1.6
+A000154,2026-04-17 10:00,CP0007,General workshop,1.7
+A000155,2026-04-26 17:15,CP0007,Adult education class,1.1
+A000156,2026-04-27 15:15,CP0007,General workshop,1.4
+A000157,2026-10-10 15:45,CP0007,General workshop,1.0
+A000158,2026-08-10 15:30,CP0007,General workshop,2.0
+A000159,2026-05-08 19:30,CP0007,General workshop,1.9
+A000160,2026-07-04 08:30,CP0007,Adult education class,1.9
+A000161,2026-09-01 18:30,CP0007,Adult education class,1.9
+A000162,2026-05-12 15:00,CP0007,Adult education class,1.2
+A000163,2026-05-05 14:30,CP0007,General workshop,2.0
+A000164,2026-09-26 12:15,CP0007,Adult education class,2.0
+A000165,2026-10-11 08:00,CP0007,Adult education class,1.4
+A000166,2026-08-19 15:15,CP0007,Adult education class,2.0
+A000167,2026-09-22 16:00,CP0008,General workshop,1.1
+A000168,2026-04-25 15:30,CP0008,Adult education class,1.1
+A000169,2026-06-09 11:00,CP0008,General workshop,1.5
+A000170,2026-10-09 08:30,CP0008,General workshop,1.7
+A000171,2026-04-03 13:45,CP0008,Adult education class,1.8
+A000172,2026-08-06 15:45,CP0008,General workshop,1.7
+A000173,2026-07-01 10:30,CP0008,General workshop,1.9
+A000174,2026-10-30 15:15,CP0008,Adult education class,1.8
+A000175,2026-06-19 14:15,CP0008,General workshop,1.4
+A000176,2026-10-21 14:00,CP0008,General workshop,1.8
+A000177,2026-05-30 12:00,CP0008,General workshop,1.6
+A000178,2026-10-05 12:15,CP0008,Adult education class,1.7
+A000179,2026-07-31 16:45,CP0008,Adult education class,1.0
+A000180,2026-03-24 11:00,CP0008,General workshop,1.0
+A000181,2026-08-14 16:15,CP0008,Adult education class,1.3
+A000182,2026-06-16 19:45,CP0008,Adult education class,2.0
+A000183,2026-04-02 12:45,CP0008,Adult education class,1.2
+A000184,2026-10-28 15:30,CP0008,Adult education class,1.8
+A000185,2026-03-16 10:15,CP0008,Adult education class,1.1
+A000186,2026-05-25 08:30,CP0008,Adult education class,1.9
+A000187,2026-06-26 18:45,CP0008,General workshop,1.4
+A000188,2026-07-31 16:15,CP0008,General workshop,1.3
+A000189,2026-05-04 08:15,CP0009,Adult education class,1.9
+A000190,2026-08-04 15:30,CP0009,General workshop,1.0
+A000191,2026-10-17 18:30,CP0009,Adult education class,1.9
+A000192,2026-09-26 18:30,CP0009,General workshop,1.3
+A000193,2026-11-02 13:30,CP0009,Adult education class,1.2
+A000194,2026-05-03 13:45,CP0009,General workshop,1.5
+A000195,2026-04-22 11:00,CP0009,Adult education class,1.2
+A000196,2026-03-21 16:45,CP0009,Adult education class,1.1
+A000197,2026-09-02 13:15,CP0009,Adult education class,2.0
+A000198,2026-05-26 19:45,CP0009,Adult education class,1.9
+A000199,2026-02-26 08:15,CP0009,General workshop,1.0
+A000200,2026-02-23 16:30,CP0009,General workshop,1.4
+A000201,2026-07-10 08:45,CP0009,Adult education class,1.7
+A000202,2026-06-02 09:00,CP0009,Adult education class,1.1
+A000203,2026-08-18 14:15,CP0010,Adult education class,1.4
+A000204,2026-07-05 19:00,CP0010,Adult education class,1.0
+A000205,2026-07-26 19:15,CP0010,General workshop,1.8
+A000206,2026-06-26 11:45,CP0010,General workshop,1.1
+A000207,2026-04-18 16:00,CP0010,General workshop,1.7
+A000208,2026-06-04 15:15,CP0010,General workshop,1.3
+A000209,2026-09-11 19:15,CP0010,General workshop,1.7
+A000210,2026-08-08 14:15,CP0010,General workshop,1.3
+A000211,2026-05-25 18:00,CP0010,General workshop,1.9
+A000212,2026-04-29 19:45,CP0010,General workshop,1.6
+A000213,2026-03-10 09:00,CP0010,Adult education class,1.5
+A000214,2026-03-05 11:00,CP0010,Adult education class,1.1
+A000215,2026-03-27 15:45,CP0010,Adult education class,1.5
+A000216,2026-09-14 16:15,CP0010,Adult education class,1.3
+A000217,2026-10-26 19:30,CP0010,General workshop,2.0
+A000218,2026-06-30 17:15,CP0010,Adult education class,1.8
+A000219,2026-04-24 10:15,CP0010,Adult education class,1.9
+A000220,2026-08-16 16:45,CP0010,General workshop,1.2
+A000221,2026-07-05 17:00,CP0010,General workshop,1.4
+A000222,2026-05-14 11:30,CP0010,Adult education class,1.2
+A000223,2026-09-18 11:00,CP0010,General workshop,1.5
+A000224,2026-11-09 08:00,CP0010,General workshop,1.2
+A000225,2026-10-24 10:30,CP0010,General workshop,1.7
+A000226,2026-09-30 13:15,CP0010,General workshop,1.8
+A000227,2026-05-25 10:00,CP0010,General workshop,1.3
+A000228,2026-07-26 08:00,CP0010,General workshop,1.1
+A000229,2026-03-31 18:00,CP0010,Adult education class,1.1
+A000230,2026-05-10 15:30,CP0011,General workshop,1.1
+A000231,2026-03-03 18:30,CP0011,Adult education class,1.5
+A000232,2026-09-27 18:00,CP0011,General workshop,1.9
+A000233,2026-09-18 16:00,CP0011,General workshop,1.9
+A000234,2026-03-12 19:00,CP0011,General workshop,1.2
+A000235,2026-10-20 19:45,CP0011,General workshop,1.5
+A000236,2026-06-16 12:00,CP0011,Adult education class,1.3
+A000237,2026-08-31 17:30,CP0011,General workshop,2.0
+A000238,2026-07-22 13:15,CP0011,Adult education class,1.1
+A000239,2026-07-31 09:30,CP0011,Adult education class,1.6
+A000240,2026-08-01 16:45,CP0011,Adult education class,1.8
+A000241,2026-06-15 14:45,CP0011,Adult education class,1.6
+A000242,2026-05-06 10:00,CP0011,General workshop,1.3
+A000243,2026-07-05 10:45,CP0011,Adult education class,1.6
+A000244,2026-09-13 11:15,CP0011,General workshop,1.4
+A000245,2026-05-12 19:15,CP0011,Adult education class,1.8
+A000246,2026-09-19 08:45,CP0011,General workshop,2.0
+A000247,2026-03-08 11:15,CP0011,General workshop,1.0
+A000248,2026-08-19 18:15,CP0012,Adult education class,1.2
+A000249,2026-05-31 15:15,CP0012,General workshop,1.5
+A000250,2026-09-04 12:30,CP0012,Adult education class,1.6
+A000251,2026-10-06 10:15,CP0012,Adult education class,1.6
+A000252,2026-06-18 18:30,CP0012,General workshop,1.8
+A000253,2026-03-17 10:00,CP0012,General workshop,1.6
+A000254,2026-05-14 15:30,CP0012,Adult education class,1.4
+A000255,2026-06-21 14:30,CP0012,General workshop,1.5
+A000256,2026-05-05 15:30,CP0012,Adult education class,1.7
+A000257,2026-04-05 11:00,CP0012,General workshop,1.6
+A000258,2026-11-08 17:00,CP0012,Adult education class,1.3
+A000259,2026-08-24 10:15,CP0012,Adult education class,1.7
+A000260,2026-10-04 11:00,CP0012,Adult education class,1.4
+A000261,2026-03-29 13:45,CP0012,General workshop,1.9
+A000262,2026-11-01 14:45,CP0012,Adult education class,1.8
+A000263,2026-08-21 13:00,CP0012,General workshop,1.7
+A000264,2026-08-26 13:45,CP0012,Adult education class,1.4
+A000265,2026-04-27 11:15,CP0012,Adult education class,1.4
+A000266,2026-10-02 12:00,CP0012,Adult education class,1.2
+A000267,2026-10-30 11:30,CP0012,Adult education class,1.0
+A000268,2026-08-13 16:15,CP0012,General workshop,1.9
+A000269,2026-05-02 13:30,CP0012,General workshop,1.4
+A000270,2026-10-23 09:00,CP0012,General workshop,1.1
+A000271,2026-10-24 17:45,CP0012,General workshop,1.9
+A000272,2026-10-20 14:45,CP0012,General workshop,1.6
+A000273,2026-09-21 15:30,CP0012,General workshop,1.5
+A000274,2026-03-04 14:30,CP0012,General workshop,1.5
+A000275,2026-06-23 17:30,CP0012,Adult education class,2.0
+A000276,2026-08-16 14:00,CP0013,General workshop,1.6
+A000277,2026-07-27 10:30,CP0013,Adult education class,1.5
+A000278,2026-03-21 12:30,CP0013,Adult education class,1.4
+A000279,2026-03-02 16:15,CP0013,Adult education class,1.3
+A000280,2026-09-28 16:00,CP0013,General workshop,1.9
+A000281,2026-04-30 12:45,CP0013,Adult education class,1.9
+A000282,2026-03-13 12:00,CP0013,General workshop,1.3
+A000283,2026-10-10 16:15,CP0013,General workshop,1.7
+A000284,2026-02-23 15:00,CP0013,General workshop,1.2
+A000285,2026-09-27 12:15,CP0013,General workshop,2.0
+A000286,2026-08-29 18:30,CP0013,Adult education class,1.3
+A000287,2026-09-15 14:45,CP0013,General workshop,1.4
+A000288,2026-07-31 16:15,CP0013,Adult education class,1.1
+A000289,2026-10-05 19:00,CP0013,General workshop,1.6
+A000290,2026-07-01 08:15,CP0013,General workshop,1.5
+A000291,2026-08-26 15:30,CP0013,Adult education class,1.8
+A000292,2026-08-26 17:15,CP0013,Adult education class,2.0
+A000293,2026-06-27 11:00,CP0013,General workshop,1.6
+A000294,2026-04-15 12:00,CP0013,General workshop,1.8
+A000295,2026-04-19 11:15,CP0013,General workshop,1.4
+A000296,2026-09-30 10:45,CP0013,Adult education class,1.4
+A000297,2026-09-08 19:15,CP0013,Adult education class,1.3
+A000298,2026-06-28 19:15,CP0013,General workshop,1.6
+A000299,2026-11-15 13:00,CP0013,Adult education class,1.9
+A000300,2026-02-27 16:15,CP0013,Adult education class,1.9
+A000301,2026-11-03 09:00,CP0013,General workshop,1.2
+A000302,2026-11-13 10:30,CP0013,Adult education class,1.8
+A000303,2026-04-24 08:45,CP0013,General workshop,1.9
+A000304,2026-04-29 18:30,CP0014,General workshop,1.9
+A000305,2026-07-05 10:00,CP0014,General workshop,1.1
+A000306,2026-05-15 13:30,CP0014,General workshop,1.9
+A000307,2026-04-25 14:00,CP0014,Adult education class,1.0
+A000308,2026-10-20 19:15,CP0014,General workshop,1.1
+A000309,2026-05-25 13:30,CP0014,Adult education class,1.3
+A000310,2026-03-15 18:15,CP0014,General workshop,1.2
+A000311,2026-11-08 15:00,CP0014,Adult education class,1.0
+A000312,2026-04-16 15:00,CP0014,General workshop,1.9
+A000313,2026-07-14 19:00,CP0014,Adult education class,1.2
+A000314,2026-08-30 10:30,CP0014,General workshop,1.3
+A000315,2026-04-27 10:00,CP0014,General workshop,1.5
+A000316,2026-04-19 15:15,CP0015,Adult education class,1.5
+A000317,2026-10-28 16:45,CP0015,General workshop,1.8
+A000318,2026-05-28 16:00,CP0015,Adult education class,1.4
+A000319,2026-06-21 12:30,CP0015,General workshop,1.1
+A000320,2026-04-29 11:45,CP0015,Adult education class,1.6
+A000321,2026-03-30 12:45,CP0015,Adult education class,1.4
+A000322,2026-09-11 15:15,CP0015,General workshop,1.1
+A000323,2026-03-09 09:15,CP0015,Adult education class,1.8
+A000324,2026-03-10 09:30,CP0015,Adult education class,1.3
+A000325,2026-08-02 19:45,CP0015,General workshop,1.6
+A000326,2026-06-21 11:45,CP0015,Adult education class,1.7
+A000327,2026-09-26 08:45,CP0015,General workshop,1.2
+A000328,2026-06-16 17:30,CP0015,Adult education class,1.1
+A000329,2026-05-23 08:45,CP0015,General workshop,1.4
+A000330,2026-06-11 13:30,CP0015,Adult education class,1.9
+A000331,2026-09-20 11:00,CP0015,Adult education class,1.2
+A000332,2026-04-13 08:15,CP0015,Adult education class,1.9
+A000333,2026-10-26 11:15,CP0015,Adult education class,1.8
+A000334,2026-08-29 12:45,CP0015,General workshop,1.5
+A000335,2026-05-19 08:00,CP0015,Adult education class,1.5
+A000336,2026-07-26 13:45,CP0015,General workshop,1.2
+A000337,2026-04-16 12:00,CP0016,General workshop,1.2
+A000338,2026-09-25 15:30,CP0016,Adult education class,1.5
+A000339,2026-10-12 10:30,CP0016,Adult education class,1.1
+A000340,2026-02-27 09:15,CP0016,General workshop,1.3
+A000341,2026-07-16 10:45,CP0016,General workshop,1.9
+A000342,2026-10-12 09:30,CP0016,General workshop,1.0
+A000343,2026-05-20 14:00,CP0016,Adult education class,1.2
+A000344,2026-03-25 13:30,CP0016,General workshop,1.3
+A000345,2026-08-25 14:45,CP0016,General workshop,1.4
+A000346,2026-06-02 19:15,CP0016,Adult education class,2.0
+A000347,2026-08-26 15:00,CP0016,Adult education class,1.6
+A000348,2026-04-18 19:30,CP0016,General workshop,1.3
+A000349,2026-10-27 18:45,CP0016,Adult education class,1.2
+A000350,2026-03-09 08:30,CP0016,General workshop,1.4
+A000351,2026-09-06 16:30,CP0016,Adult education class,1.9
+A000352,2026-05-30 19:15,CP0016,General workshop,1.3
+A000353,2026-06-24 16:00,CP0016,Adult education class,1.9
+A000354,2026-08-07 10:00,CP0016,General workshop,1.3
+A000355,2026-04-04 12:30,CP0016,Adult education class,1.7
+A000356,2026-08-28 19:00,CP0016,General workshop,1.1
+A000357,2026-08-26 14:45,CP0016,Adult education class,1.9
+A000358,2026-10-01 12:30,CP0016,General workshop,1.8
+A000359,2026-08-17 10:45,CP0016,General workshop,1.1
+A000360,2026-09-29 19:00,CP0016,General workshop,1.3
+A000361,2026-05-27 14:30,CP0016,Adult education class,2.0
+A000362,2026-08-28 14:15,CP0016,Adult education class,1.1
+A000363,2026-02-27 17:30,CP0016,General workshop,1.2
+A000364,2026-06-22 15:45,CP0016,General workshop,1.6
+A000365,2026-11-02 18:30,CP0016,Adult education class,2.0
+A000366,2026-03-05 11:15,CP0017,Adult education class,1.5
+A000367,2026-11-04 17:45,CP0017,Adult education class,1.5
+A000368,2026-10-30 19:45,CP0017,General workshop,1.7
+A000369,2026-04-27 16:45,CP0017,Adult education class,1.4
+A000370,2026-03-10 18:30,CP0017,General workshop,1.9
+A000371,2026-04-29 09:45,CP0017,Adult education class,1.6
+A000372,2026-03-25 17:45,CP0017,Adult education class,1.6
+A000373,2026-08-18 12:15,CP0017,Adult education class,1.1
+A000374,2026-11-15 09:15,CP0017,Adult education class,1.5
+A000375,2026-04-21 09:15,CP0017,General workshop,1.6
+A000376,2026-08-28 13:45,CP0017,General workshop,1.6
+A000377,2026-04-28 09:45,CP0017,General workshop,1.8
+A000378,2026-08-04 18:30,CP0017,Adult education class,1.0
+A000379,2026-05-22 08:45,CP0017,Adult education class,1.4
+A000380,2026-03-05 12:15,CP0017,General workshop,1.7
+A000381,2026-03-05 10:15,CP0017,General workshop,1.8
+A000382,2026-06-18 13:15,CP0018,General workshop,1.2
+A000383,2026-10-28 13:45,CP0018,General workshop,1.1
+A000384,2026-06-17 10:00,CP0018,General workshop,1.2
+A000385,2026-06-30 08:30,CP0018,Adult education class,1.5
+A000386,2026-07-12 08:30,CP0018,General workshop,1.8
+A000387,2026-07-23 16:00,CP0018,Adult education class,1.5
+A000388,2026-04-03 08:45,CP0018,Adult education class,1.9
+A000389,2026-10-04 17:00,CP0018,Adult education class,1.2
+A000390,2026-07-29 17:45,CP0018,Adult education class,1.6
+A000391,2026-07-09 16:45,CP0018,General workshop,1.7
+A000392,2026-09-20 13:30,CP0018,General workshop,1.6
+A000393,2026-10-10 10:15,CP0018,Adult education class,1.1
+A000394,2026-06-19 12:45,CP0018,General workshop,1.6
+A000395,2026-08-11 12:45,CP0018,General workshop,1.1
+A000396,2026-07-31 19:00,CP0018,Adult education class,1.1
+A000397,2026-05-18 14:15,CP0018,General workshop,1.5
+A000398,2026-09-08 14:15,CP0018,General workshop,2.0
+A000399,2026-09-02 19:00,CP0018,Adult education class,1.6
+A000400,2026-06-17 18:30,CP0018,General workshop,1.5
+A000401,2026-07-23 14:30,CP0018,Adult education class,1.7
+A000402,2026-06-06 16:15,CP0018,General workshop,1.8
+A000403,2026-08-07 13:00,CP0018,General workshop,1.9
+A000404,2026-07-17 19:00,CP0018,Adult education class,1.4
+A000405,2026-05-04 16:15,CP0018,General workshop,1.4
+A000406,2026-11-09 19:00,CP0018,General workshop,1.4
+A000407,2026-10-21 15:30,CP0019,Adult education class,1.4
+A000408,2026-07-13 12:15,CP0019,Adult education class,1.9
+A000409,2026-03-28 13:15,CP0019,Adult education class,1.4
+A000410,2026-05-25 16:00,CP0019,Adult education class,2.0
+A000411,2026-09-27 17:45,CP0019,Adult education class,1.0
+A000412,2026-08-03 16:45,CP0019,Adult education class,1.1
+A000413,2026-03-12 11:00,CP0019,Adult education class,1.5
+A000414,2026-03-28 11:00,CP0019,General workshop,1.7
+A000415,2026-05-19 17:30,CP0019,General workshop,1.6
+A000416,2026-04-18 10:45,CP0019,General workshop,1.4
+A000417,2026-07-14 16:45,CP0019,General workshop,1.9
+A000418,2026-06-08 16:00,CP0019,Adult education class,1.1
+A000419,2026-05-08 15:00,CP0019,General workshop,1.9
+A000420,2026-07-07 14:15,CP0019,General workshop,1.6
+A000421,2026-10-19 16:30,CP0019,General workshop,1.8
+A000422,2026-11-07 15:15,CP0019,General workshop,1.8
+A000423,2026-07-06 08:30,CP0019,General workshop,1.3
+A000424,2026-02-18 13:45,CP0019,Adult education class,1.1
+A000425,2026-06-28 14:00,CP0019,General workshop,1.1
+A000426,2026-06-16 16:30,CP0019,General workshop,1.6
+A000427,2026-10-23 08:00,CP0019,Adult education class,1.9
+A000428,2026-11-04 19:00,CP0019,Adult education class,1.4
+A000429,2026-07-24 18:15,CP0019,Adult education class,1.8
+A000430,2026-07-31 14:45,CP0019,General workshop,1.4
+A000431,2026-07-26 15:30,CP0019,Adult education class,1.1
+A000432,2026-09-15 16:30,CP0019,Adult education class,1.2
+A000433,2026-08-18 11:00,CP0019,General workshop,1.1
+A000434,2026-10-08 16:15,CP0019,Adult education class,1.6
+A000435,2026-07-20 12:15,CP0020,Adult education class,1.0
+A000436,2026-07-29 09:00,CP0020,General workshop,1.3
+A000437,2026-03-10 11:15,CP0020,Adult education class,1.9
+A000438,2026-11-08 09:30,CP0020,Adult education class,1.0
+A000439,2026-09-05 17:30,CP0020,General workshop,1.3
+A000440,2026-09-06 17:30,CP0020,General workshop,1.5
+A000441,2026-08-22 09:15,CP0020,Adult education class,1.4
+A000442,2026-05-21 17:45,CP0020,Adult education class,1.1
+A000443,2026-04-20 10:00,CP0020,Adult education class,1.7
+A000444,2026-11-11 10:45,CP0020,Adult education class,1.7
+A000445,2026-09-20 08:15,CP0020,General workshop,1.1
+A000446,2026-06-17 15:30,CP0020,General workshop,1.4
+A000447,2026-06-19 10:00,CP0020,General workshop,1.8
+A000448,2026-07-11 11:30,CP0020,Adult education class,1.9
+A000449,2026-03-18 15:15,CP0020,General workshop,1.9
+A000450,2026-06-10 15:00,CP0020,Adult education class,2.0
+A000451,2026-07-01 11:15,CP0020,Adult education class,1.1
+A000452,2026-08-31 12:15,CP0020,General workshop,1.3
+A000453,2026-10-27 10:15,CP0020,General workshop,1.8
+A000454,2026-03-12 15:45,CP0020,General workshop,2.0
+A000455,2026-09-22 09:15,CP0020,General workshop,1.8
+A000456,2026-09-24 13:00,CP0020,Adult education class,1.9
+A000457,2026-08-27 14:45,CP0020,Adult education class,1.2
+A000458,2026-05-07 08:30,CP0020,Adult education class,1.9
+A000459,2026-04-13 15:45,CP0020,General workshop,1.8
+A000460,2026-10-19 16:45,CP0020,Adult education class,2.0
+A000461,2026-07-28 16:45,CP0020,General workshop,2.0
+A000462,2026-06-26 12:15,CP0020,Adult education class,1.7
+A000463,2026-11-04 14:45,CP0021,General workshop,1.1
+A000464,2026-06-23 18:30,CP0021,General workshop,1.6
+A000465,2026-07-17 08:45,CP0021,Adult education class,1.2
+A000466,2026-04-15 16:00,CP0021,General workshop,2.0
+A000467,2026-09-03 13:15,CP0021,General workshop,1.5
+A000468,2026-06-02 10:15,CP0021,General workshop,1.6
+A000469,2026-09-16 13:00,CP0021,General workshop,1.4
+A000470,2026-09-16 15:30,CP0021,General workshop,1.2
+A000471,2026-10-31 15:00,CP0021,General workshop,1.1
+A000472,2026-08-29 08:45,CP0021,Adult education class,1.6
+A000473,2026-08-25 15:00,CP0021,General workshop,1.3
+A000474,2026-06-16 19:15,CP0021,Adult education class,1.7
+A000475,2026-06-24 18:30,CP0021,Adult education class,1.8
+A000476,2026-08-30 18:45,CP0021,General workshop,1.7
+A000477,2026-06-06 10:00,CP0021,Adult education class,1.2
+A000478,2026-07-20 18:30,CP0021,General workshop,1.2
+A000479,2026-08-03 12:15,CP0021,General workshop,1.6
+A000480,2026-03-29 13:45,CP0022,Adult education class,2.0
+A000481,2026-07-23 18:00,CP0022,General workshop,1.0
+A000482,2026-05-15 15:00,CP0022,General workshop,1.5
+A000483,2026-09-02 08:00,CP0022,General workshop,1.8
+A000484,2026-08-06 12:45,CP0022,General workshop,1.9
+A000485,2026-04-18 14:00,CP0022,Adult education class,1.1
+A000486,2026-07-19 09:30,CP0022,General workshop,1.8
+A000487,2026-03-02 18:45,CP0022,General workshop,1.6
+A000488,2026-09-17 13:00,CP0022,General workshop,1.3
+A000489,2026-09-02 12:15,CP0022,General workshop,2.0
+A000490,2026-10-25 12:45,CP0022,Adult education class,1.8
+A000491,2026-11-06 18:30,CP0022,General workshop,1.5
+A000492,2026-05-25 18:15,CP0023,Adult education class,1.1
+A000493,2026-02-26 11:30,CP0023,General workshop,1.0
+A000494,2026-10-21 17:00,CP0023,Adult education class,1.8
+A000495,2026-05-17 08:45,CP0023,General workshop,1.1
+A000496,2026-06-20 16:30,CP0023,Adult education class,1.3
+A000497,2026-03-09 13:15,CP0023,General workshop,1.8
+A000498,2026-04-15 09:30,CP0023,Adult education class,1.4
+A000499,2026-08-07 08:45,CP0023,Adult education class,1.4
+A000500,2026-04-07 08:00,CP0023,General workshop,1.4
+A000501,2026-04-01 19:00,CP0023,Adult education class,1.4
+A000502,2026-09-05 13:15,CP0023,General workshop,1.7
+A000503,2026-09-11 14:00,CP0023,General workshop,1.4
+A000504,2026-11-06 14:45,CP0023,General workshop,1.9
+A000505,2026-07-14 15:15,CP0023,General workshop,1.2
+A000506,2026-09-23 13:45,CP0023,Adult education class,1.5
+A000507,2026-11-04 19:30,CP0023,General workshop,1.9
+A000508,2026-07-10 14:00,CP0023,General workshop,1.3
+A000509,2026-04-21 10:15,CP0023,General workshop,1.2
+A000510,2026-04-21 11:15,CP0023,General workshop,1.5
+A000511,2026-08-27 13:30,CP0024,Adult education class,2.0
+A000512,2026-09-11 11:45,CP0024,Adult education class,2.0
+A000513,2026-04-06 09:45,CP0024,Adult education class,1.9
+A000514,2026-06-11 13:30,CP0024,Adult education class,1.4
+A000515,2026-09-02 16:45,CP0024,Adult education class,1.5
+A000516,2026-11-11 18:30,CP0024,Adult education class,1.1
+A000517,2026-06-19 17:30,CP0024,Adult education class,1.5
+A000518,2026-05-27 16:15,CP0024,General workshop,2.0
+A000519,2026-09-02 18:15,CP0024,Adult education class,1.0
+A000520,2026-10-04 19:45,CP0024,General workshop,1.6
+A000521,2026-08-28 17:15,CP0024,General workshop,1.0
+A000522,2026-04-09 09:00,CP0024,General workshop,1.3
+A000523,2026-07-11 14:15,CP0025,Adult education class,1.5
+A000524,2026-11-01 13:00,CP0025,Adult education class,1.9
+A000525,2026-09-19 14:00,CP0025,Adult education class,1.0
+A000526,2026-03-09 15:45,CP0025,Adult education class,1.6
+A000527,2026-05-06 10:00,CP0025,Adult education class,1.2
+A000528,2026-03-30 13:45,CP0025,Adult education class,1.3
+A000529,2026-05-31 09:00,CP0025,General workshop,1.5
+A000530,2026-07-16 10:45,CP0025,Adult education class,1.3
+A000531,2026-05-03 14:45,CP0025,Adult education class,1.5
+A000532,2026-04-07 09:45,CP0025,Adult education class,1.6
+A000533,2026-05-27 09:15,CP0025,General workshop,1.9
+A000534,2026-04-03 11:00,CP0025,General workshop,1.0
+A000535,2026-04-13 17:30,CP0025,General workshop,1.0
+A000536,2026-08-14 11:45,CP0025,Adult education class,1.7
+A000537,2026-06-17 17:45,CP0025,General workshop,1.6
+A000538,2026-04-29 08:30,CP0025,General workshop,1.0
+A000539,2026-10-08 13:30,CP0025,Adult education class,1.7
+A000540,2026-04-06 13:15,CP0026,General workshop,1.7
+A000541,2026-06-25 08:45,CP0026,Adult education class,1.1
+A000542,2026-11-13 08:30,CP0026,General workshop,1.0
+A000543,2026-05-14 11:45,CP0026,Adult education class,1.2
+A000544,2026-03-01 09:30,CP0026,Adult education class,1.7
+A000545,2026-08-30 14:00,CP0026,Adult education class,1.0
+A000546,2026-04-24 15:15,CP0026,General workshop,1.4
+A000547,2026-09-04 14:00,CP0026,General workshop,1.6
+A000548,2026-03-20 10:30,CP0026,Adult education class,1.9
+A000549,2026-07-14 18:30,CP0026,General workshop,1.9
+A000550,2026-08-14 19:30,CP0026,Adult education class,1.4
+A000551,2026-02-27 14:15,CP0026,General workshop,1.5
+A000552,2026-05-26 16:45,CP0027,Adult education class,1.5
+A000553,2026-04-03 11:00,CP0027,Adult education class,1.5
+A000554,2026-06-01 11:00,CP0027,General workshop,1.5
+A000555,2026-09-01 19:15,CP0027,General workshop,1.3
+A000556,2026-09-15 10:30,CP0027,Adult education class,1.4
+A000557,2026-10-19 13:45,CP0027,Adult education class,1.4
+A000558,2026-05-27 17:45,CP0027,Adult education class,1.5
+A000559,2026-03-26 13:00,CP0027,General workshop,1.3
+A000560,2026-04-02 19:30,CP0027,Adult education class,1.4
+A000561,2026-10-27 14:00,CP0027,Adult education class,1.8
+A000562,2026-10-22 18:45,CP0027,Adult education class,1.5
+A000563,2026-10-03 15:30,CP0027,General workshop,1.1
+A000564,2026-03-17 09:15,CP0027,Adult education class,1.9
+A000565,2026-07-14 10:30,CP0027,Adult education class,1.2
+A000566,2026-10-30 11:00,CP0027,Adult education class,1.9
+A000567,2026-02-22 10:45,CP0027,General workshop,1.4
+A000568,2026-05-31 16:15,CP0027,General workshop,1.9
+A000569,2026-11-10 14:15,CP0027,General workshop,1.6
+A000570,2026-06-29 19:00,CP0028,Adult education class,1.7
+A000571,2026-10-05 16:30,CP0028,General workshop,2.0
+A000572,2026-06-14 09:30,CP0028,Adult education class,1.8
+A000573,2026-08-06 13:45,CP0028,Adult education class,1.0
+A000574,2026-09-22 12:45,CP0028,General workshop,1.9
+A000575,2026-08-07 12:30,CP0028,Adult education class,1.3
+A000576,2026-03-30 12:45,CP0028,General workshop,1.4
+A000577,2026-10-13 10:30,CP0028,Adult education class,2.0
+A000578,2026-03-22 16:45,CP0028,General workshop,1.6
+A000579,2026-08-25 11:45,CP0028,Adult education class,1.1
+A000580,2026-10-24 10:30,CP0028,Adult education class,1.5
+A000581,2026-03-06 09:30,CP0028,Adult education class,1.1
+A000582,2026-08-25 18:15,CP0028,General workshop,1.4
+A000583,2026-04-19 18:30,CP0028,Adult education class,1.7
+A000584,2026-06-23 11:00,CP0028,Adult education class,1.2
+A000585,2026-09-11 10:00,CP0028,Adult education class,1.5
+A000586,2026-10-21 15:45,CP0028,General workshop,1.7
+A000587,2026-02-19 10:15,CP0028,Adult education class,1.1
+A000588,2026-10-27 19:00,CP0028,General workshop,1.8
+A000589,2026-10-26 10:30,CP0028,General workshop,2.0
+A000590,2026-06-20 19:30,CP0028,General workshop,1.6
+A000591,2026-11-11 09:15,CP0028,General workshop,1.1
+A000592,2026-03-27 11:15,CP0028,General workshop,1.3
+A000593,2026-10-24 08:45,CP0028,Adult education class,1.1
+A000594,2026-05-02 12:45,CP0028,General workshop,1.6
+A000595,2026-10-17 12:15,CP0028,Adult education class,1.4
+A000596,2026-02-19 16:15,CP0028,General workshop,1.7
+A000597,2026-08-25 15:00,CP0028,General workshop,1.6
+A000598,2026-07-26 17:15,CP0029,General workshop,1.8
+A000599,2026-08-11 17:00,CP0029,General workshop,1.5
+A000600,2026-08-11 18:30,CP0029,Adult education class,1.1
+A000601,2026-06-22 11:45,CP0029,General workshop,1.7
+A000602,2026-07-29 18:30,CP0029,General workshop,1.6
+A000603,2026-03-14 13:00,CP0029,General workshop,1.4
+A000604,2026-06-04 09:30,CP0029,General workshop,1.3
+A000605,2026-09-09 17:45,CP0029,Adult education class,1.4
+A000606,2026-06-05 17:45,CP0029,General workshop,1.9
+A000607,2026-07-11 09:30,CP0029,Adult education class,1.5
+A000608,2026-07-12 08:30,CP0029,Adult education class,1.6
+A000609,2026-10-23 10:30,CP0029,General workshop,1.9
+A000610,2026-03-05 11:15,CP0029,Adult education class,1.1
+A000611,2026-10-06 13:30,CP0029,General workshop,1.3
+A000612,2026-05-06 09:45,CP0029,Adult education class,1.3
+A000613,2026-05-28 11:00,CP0029,General workshop,1.1
+A000614,2026-06-24 10:45,CP0029,Adult education class,1.1
+A000615,2026-09-07 12:15,CP0029,Adult education class,1.8
+A000616,2026-02-27 19:30,CP0029,Adult education class,1.1
+A000617,2026-08-19 11:30,CP0029,Adult education class,1.0
+A000618,2026-05-14 18:00,CP0029,Adult education class,1.4
+A000619,2026-08-13 17:45,CP0029,Adult education class,1.1
+A000620,2026-08-07 08:30,CP0029,General workshop,2.0
+A000621,2026-07-17 14:45,CP0029,General workshop,1.9
+A000622,2026-10-18 12:15,CP0029,Adult education class,1.3
+A000623,2026-09-03 11:15,CP0029,Adult education class,1.5
+A000624,2026-09-19 18:15,CP0029,General workshop,1.4
+A000625,2026-05-22 15:15,CP0030,Adult education class,1.5
+A000626,2026-06-06 10:45,CP0030,Adult education class,1.4
+A000627,2026-05-16 15:00,CP0030,General workshop,1.1
+A000628,2026-10-31 19:15,CP0030,Adult education class,1.3
+A000629,2026-07-08 19:45,CP0030,General workshop,1.5
+A000630,2026-10-02 10:15,CP0030,Adult education class,1.9
+A000631,2026-07-08 08:15,CP0030,Adult education class,1.6
+A000632,2026-02-18 15:30,CP0030,Adult education class,1.1
+A000633,2026-04-16 11:45,CP0030,Adult education class,1.7
+A000634,2026-05-01 10:00,CP0030,Adult education class,1.8
+A000635,2026-04-28 17:30,CP0030,Adult education class,1.5
+A000636,2026-09-01 11:45,CP0030,General workshop,1.6
+A000637,2026-06-03 11:45,CP0030,General workshop,1.3
+A000638,2026-03-27 16:30,CP0030,Adult education class,1.6
+A000639,2026-08-10 09:15,CP0030,Adult education class,2.0
+A000640,2026-05-04 15:45,CP0030,Adult education class,2.0
+A000641,2026-06-27 10:15,CP0030,Adult education class,1.7
+A000642,2026-10-17 10:45,CP0030,Adult education class,1.2
+A000643,2026-07-12 14:45,CP0030,General workshop,1.6
+A000644,2026-08-04 14:15,CP0030,General workshop,1.9
+A000645,2026-04-06 11:00,CP0031,Adult education class,1.7
+A000646,2026-07-28 17:00,CP0031,Adult education class,1.9
+A000647,2026-08-04 19:30,CP0031,Adult education class,1.2
+A000648,2026-11-09 08:45,CP0031,General workshop,1.7
+A000649,2026-04-14 17:00,CP0031,Adult education class,1.5
+A000650,2026-06-18 14:15,CP0031,General workshop,1.5
+A000651,2026-03-18 14:15,CP0031,General workshop,1.3
+A000652,2026-08-23 16:15,CP0031,Adult education class,1.8
+A000653,2026-07-12 14:15,CP0031,Adult education class,2.0
+A000654,2026-05-13 13:00,CP0031,General workshop,1.6
+A000655,2026-08-06 16:30,CP0031,Adult education class,1.6
+A000656,2026-09-27 11:30,CP0031,Adult education class,1.4
+A000657,2026-05-12 17:15,CP0031,General workshop,1.3
+A000658,2026-10-07 11:30,CP0031,Adult education class,1.3
+A000659,2026-03-15 10:15,CP0031,General workshop,1.9
+A000660,2026-04-29 13:45,CP0031,Adult education class,1.8
+A000661,2026-06-14 09:45,CP0031,Adult education class,1.8
+A000662,2026-09-25 19:15,CP0031,Adult education class,1.8
+A000663,2026-03-22 15:30,CP0031,General workshop,1.4
+A000664,2026-05-31 15:00,CP0031,Adult education class,1.5
+A000665,2026-04-14 15:30,CP0031,Adult education class,1.1
+A000666,2026-05-31 12:00,CP0031,Adult education class,1.5
+A000667,2026-10-15 15:15,CP0031,Adult education class,1.4
+A000668,2026-10-03 17:30,CP0032,General workshop,1.5
+A000669,2026-03-06 15:45,CP0032,Adult education class,1.5
+A000670,2026-09-15 11:15,CP0032,Adult education class,1.8
+A000671,2026-04-30 16:00,CP0032,Adult education class,1.7
+A000672,2026-10-06 13:45,CP0032,General workshop,1.6
+A000673,2026-11-10 11:30,CP0032,Adult education class,1.3
+A000674,2026-11-04 08:45,CP0032,Adult education class,1.8
+A000675,2026-07-03 17:15,CP0032,Adult education class,1.3
+A000676,2026-09-27 12:45,CP0032,Adult education class,1.1
+A000677,2026-06-16 12:30,CP0032,Adult education class,1.7
+A000678,2026-04-07 09:15,CP0032,Adult education class,1.0
+A000679,2026-04-25 16:00,CP0032,Adult education class,1.8
+A000680,2026-04-01 19:45,CP0032,General workshop,1.4
+A000681,2026-09-29 08:45,CP0032,General workshop,1.5
+A000682,2026-10-12 11:45,CP0032,General workshop,1.1
+A000683,2026-10-22 08:00,CP0032,Adult education class,1.6
+A000684,2026-05-10 11:00,CP0032,General workshop,1.3
+A000685,2026-11-09 13:15,CP0032,Adult education class,1.9
+A000686,2026-10-15 19:45,CP0032,General workshop,1.7
+A000687,2026-06-30 18:15,CP0032,General workshop,1.5
+A000688,2026-06-08 19:15,CP0032,Adult education class,1.4
+A000689,2026-09-08 18:30,CP0032,Adult education class,1.8
+A000690,2026-05-31 15:45,CP0032,General workshop,1.5
+A000691,2026-08-29 16:45,CP0032,General workshop,1.3
+A000692,2026-02-23 18:30,CP0033,Adult education class,1.8
+A000693,2026-03-21 19:00,CP0033,General workshop,1.0
+A000694,2026-10-03 11:15,CP0033,General workshop,1.9
+A000695,2026-11-03 08:45,CP0033,Adult education class,1.0
+A000696,2026-05-30 11:30,CP0033,Adult education class,1.6
+A000697,2026-09-09 16:30,CP0033,General workshop,1.2
+A000698,2026-11-12 11:00,CP0033,Adult education class,1.7
+A000699,2026-09-28 13:30,CP0033,Adult education class,1.3
+A000700,2026-08-01 16:15,CP0033,Adult education class,1.9
+A000701,2026-09-29 15:30,CP0033,Adult education class,1.8
+A000702,2026-07-22 09:45,CP0033,Adult education class,1.7
+A000703,2026-04-12 10:00,CP0033,General workshop,1.2
+A000704,2026-07-16 18:45,CP0033,General workshop,1.7
+A000705,2026-08-31 09:00,CP0033,Adult education class,1.2
+A000706,2026-04-16 11:45,CP0033,Adult education class,1.1
+A000707,2026-06-01 11:00,CP0033,General workshop,1.1
+A000708,2026-09-11 09:15,CP0033,Adult education class,1.2
+A000709,2026-10-11 09:00,CP0034,General workshop,1.5
+A000710,2026-04-04 15:00,CP0034,Adult education class,1.3
+A000711,2026-06-10 15:15,CP0034,General workshop,1.7
+A000712,2026-05-09 09:15,CP0034,General workshop,1.7
+A000713,2026-03-29 11:30,CP0034,General workshop,1.1
+A000714,2026-09-26 18:30,CP0034,General workshop,1.1
+A000715,2026-11-01 12:00,CP0034,Adult education class,1.7
+A000716,2026-10-05 11:15,CP0034,Adult education class,1.1
+A000717,2026-06-15 17:45,CP0034,Adult education class,1.8
+A000718,2026-08-13 17:00,CP0034,Adult education class,1.3
+A000719,2026-10-28 12:30,CP0034,General workshop,1.7
+A000720,2026-07-24 12:45,CP0034,General workshop,1.5
+A000721,2026-11-09 13:15,CP0034,Adult education class,1.1
+A000722,2026-04-05 09:30,CP0034,Adult education class,1.6
+A000723,2026-03-15 11:00,CP0034,Adult education class,1.5
+A000724,2026-06-17 12:45,CP0034,Adult education class,1.5
+A000725,2026-05-18 16:45,CP0035,General workshop,1.8
+A000726,2026-10-23 09:00,CP0035,Adult education class,1.3
+A000727,2026-04-20 17:45,CP0035,Adult education class,1.7
+A000728,2026-03-05 13:30,CP0035,General workshop,1.2
+A000729,2026-09-12 12:30,CP0035,Adult education class,1.4
+A000730,2026-04-24 11:00,CP0035,General workshop,1.7
+A000731,2026-05-13 12:00,CP0035,General workshop,1.4
+A000732,2026-08-04 16:00,CP0035,General workshop,1.4
+A000733,2026-04-18 17:30,CP0035,Adult education class,1.8
+A000734,2026-09-28 14:00,CP0035,Adult education class,1.2
+A000735,2026-04-21 17:00,CP0035,Adult education class,1.9
+A000736,2026-07-09 11:45,CP0035,Adult education class,1.1
+A000737,2026-10-13 10:30,CP0035,Adult education class,1.5
+A000738,2026-09-24 14:00,CP0035,General workshop,1.7
+A000739,2026-08-16 12:30,CP0035,General workshop,1.5
+A000740,2026-03-28 14:15,CP0035,Adult education class,1.7
+A000741,2026-09-02 14:45,CP0035,General workshop,1.7
+A000742,2026-11-12 10:45,CP0035,General workshop,1.7
+A000743,2026-04-14 15:15,CP0035,Adult education class,1.3
+A000744,2026-10-27 18:00,CP0035,General workshop,1.7
+A000745,2026-08-20 18:00,CP0036,Adult education class,1.7
+A000746,2026-08-18 09:00,CP0036,Adult education class,1.0
+A000747,2026-09-24 13:00,CP0036,General workshop,1.8
+A000748,2026-03-27 14:45,CP0036,General workshop,1.9
+A000749,2026-11-13 11:30,CP0036,General workshop,1.3
+A000750,2026-08-20 09:15,CP0036,Adult education class,1.1
+A000751,2026-11-12 09:15,CP0036,Adult education class,1.3
+A000752,2026-11-06 13:45,CP0036,Adult education class,2.0
+A000753,2026-05-26 14:15,CP0036,General workshop,1.0
+A000754,2026-03-24 12:30,CP0036,General workshop,1.3
+A000755,2026-08-31 08:00,CP0036,Adult education class,2.0
+A000756,2026-05-07 17:45,CP0036,General workshop,1.9
+A000757,2026-06-13 15:45,CP0036,General workshop,1.4
+A000758,2026-08-03 08:00,CP0036,General workshop,1.3
+A000759,2026-07-07 13:45,CP0036,Adult education class,1.1
+A000760,2026-10-15 08:00,CP0036,General workshop,1.3
+A000761,2026-10-18 08:45,CP0036,Adult education class,1.5
+A000762,2026-10-01 19:45,CP0036,Adult education class,1.5
+A000763,2026-10-02 13:45,CP0036,Adult education class,1.8
+A000764,2026-03-30 08:15,CP0036,Adult education class,1.8
+A000765,2026-06-06 08:15,CP0036,Adult education class,1.1
+A000766,2026-07-13 16:30,CP0036,Adult education class,1.2
+A000767,2026-07-11 13:45,CP0036,General workshop,1.1
+A000768,2026-05-24 08:00,CP0036,General workshop,1.3
+A000769,2026-07-10 17:45,CP0037,Adult education class,1.3
+A000770,2026-06-03 12:15,CP0037,Adult education class,1.6
+A000771,2026-03-21 11:45,CP0037,General workshop,1.3
+A000772,2026-08-02 17:30,CP0037,Adult education class,1.1
+A000773,2026-05-01 15:00,CP0037,Adult education class,1.8
+A000774,2026-10-26 12:15,CP0037,Adult education class,1.8
+A000775,2026-02-23 12:30,CP0037,Adult education class,1.9
+A000776,2026-05-17 19:45,CP0037,General workshop,1.8
+A000777,2026-10-01 13:15,CP0037,Adult education class,1.6
+A000778,2026-11-04 16:00,CP0037,Adult education class,1.8
+A000779,2026-04-04 09:45,CP0037,General workshop,1.2
+A000780,2026-11-07 15:00,CP0037,General workshop,1.7
+A000781,2026-07-19 13:30,CP0037,Adult education class,1.5
+A000782,2026-05-03 18:15,CP0037,General workshop,2.0
+A000783,2026-07-28 14:00,CP0037,General workshop,1.8
+A000784,2026-04-22 10:45,CP0037,Adult education class,1.4
+A000785,2026-10-28 14:45,CP0037,General workshop,1.9
+A000786,2026-02-19 13:30,CP0037,General workshop,1.8
+A000787,2026-10-06 08:00,CP0037,Adult education class,2.0
+A000788,2026-09-18 08:15,CP0037,Adult education class,1.4
+A000789,2026-08-07 13:30,CP0037,Adult education class,1.3
+A000790,2026-10-22 11:15,CP0037,Adult education class,1.7
+A000791,2026-10-24 13:30,CP0037,Adult education class,1.0
+A000792,2026-08-12 09:30,CP0037,Adult education class,1.0
+A000793,2026-07-07 12:30,CP0037,Adult education class,1.4
+A000794,2026-10-04 11:00,CP0037,Adult education class,1.6
+A000795,2026-09-28 09:15,CP0037,Adult education class,1.9
+A000796,2026-07-12 16:45,CP0037,General workshop,1.3
+A000797,2026-07-26 19:45,CP0037,General workshop,1.1
+A000798,2026-06-26 14:00,CP0037,Adult education class,2.0
+A000799,2026-05-18 15:45,CP0038,General workshop,1.2
+A000800,2026-03-16 13:30,CP0038,General workshop,1.1
+A000801,2026-05-23 14:30,CP0038,General workshop,1.7
+A000802,2026-06-18 13:30,CP0038,Adult education class,1.4
+A000803,2026-03-18 08:15,CP0038,General workshop,1.6
+A000804,2026-03-29 17:15,CP0038,General workshop,1.6
+A000805,2026-05-06 14:30,CP0038,Adult education class,1.1
+A000806,2026-04-27 17:00,CP0038,Adult education class,2.0
+A000807,2026-08-11 15:45,CP0038,Adult education class,1.1
+A000808,2026-09-03 10:00,CP0038,General workshop,1.1
+A000809,2026-07-26 17:00,CP0038,Adult education class,1.1
+A000810,2026-05-02 13:15,CP0038,Adult education class,1.7
+A000811,2026-10-09 11:30,CP0038,General workshop,1.1
+A000812,2026-07-07 12:45,CP0038,Adult education class,1.8
+A000813,2026-03-10 08:00,CP0038,General workshop,1.5
+A000814,2026-08-15 12:00,CP0038,General workshop,1.2
+A000815,2026-02-28 10:15,CP0038,General workshop,1.0
+A000816,2026-02-26 13:15,CP0038,Adult education class,1.5
+A000817,2026-07-10 18:30,CP0038,Adult education class,1.8
+A000818,2026-10-25 08:00,CP0038,General workshop,1.8
+A000819,2026-05-14 17:15,CP0038,Adult education class,1.6
+A000820,2026-03-10 08:45,CP0038,General workshop,1.1
+A000821,2026-07-11 12:45,CP0038,General workshop,1.4
+A000822,2026-07-08 17:15,CP0038,Adult education class,1.4
+A000823,2026-03-09 11:45,CP0039,Adult education class,1.3
+A000824,2026-07-24 15:45,CP0039,Adult education class,1.7
+A000825,2026-10-02 15:00,CP0039,General workshop,1.5
+A000826,2026-06-18 13:00,CP0039,Adult education class,1.4
+A000827,2026-11-12 17:15,CP0039,General workshop,1.4
+A000828,2026-09-13 11:15,CP0039,General workshop,1.4
+A000829,2026-06-01 11:45,CP0039,General workshop,1.8
+A000830,2026-07-16 10:15,CP0039,Adult education class,1.6
+A000831,2026-07-08 18:15,CP0039,General workshop,1.7
+A000832,2026-08-28 13:00,CP0039,General workshop,1.5
+A000833,2026-02-23 10:00,CP0039,General workshop,1.2
+A000834,2026-03-11 10:30,CP0039,Adult education class,1.4
+A000835,2026-06-08 09:45,CP0039,General workshop,1.2
+A000836,2026-06-23 14:30,CP0039,General workshop,1.8
+A000837,2026-06-19 08:15,CP0039,Adult education class,1.6
+A000838,2026-07-25 15:15,CP0039,General workshop,1.8
+A000839,2026-05-06 10:45,CP0039,General workshop,1.0
+A000840,2026-11-05 13:15,CP0039,General workshop,1.2
+A000841,2026-03-21 13:45,CP0039,Adult education class,1.3
+A000842,2026-08-29 08:30,CP0039,General workshop,1.6
+A000843,2026-10-03 09:30,CP0039,General workshop,1.4
+A000844,2026-06-19 14:30,CP0040,Adult education class,1.6
+A000845,2026-05-23 12:30,CP0040,General workshop,1.5
+A000846,2026-09-26 18:45,CP0040,Adult education class,1.4
+A000847,2026-06-16 13:45,CP0040,Adult education class,1.2
+A000848,2026-09-22 12:30,CP0040,Adult education class,1.1
+A000849,2026-07-22 15:45,CP0040,Adult education class,1.4
+A000850,2026-07-20 17:45,CP0040,General workshop,1.2
+A000851,2026-08-22 11:00,CP0040,Adult education class,1.9
+A000852,2026-06-29 10:00,CP0040,Adult education class,1.8
+A000853,2026-06-02 14:45,CP0040,Adult education class,1.5
+A000854,2026-05-30 08:45,CP0040,General workshop,1.3
+A000855,2026-04-12 12:00,CP0040,General workshop,1.3
+A000856,2026-09-06 09:00,CP0040,General workshop,1.9
+A000857,2026-04-21 16:45,CP0040,Adult education class,1.7
+A000858,2025-12-15 12:30,CP0041,Adult education class,1.6
+A000859,2026-03-24 17:45,CP0041,Adult education class,1.2
+A000860,2026-07-26 14:30,CP0041,Adult education class,1.9
+A000861,2026-07-31 08:30,CP0041,Adult education class,1.1
+A000862,2026-05-30 11:15,CP0042,Adult education class,1.3
+A000863,2025-11-21 14:15,CP0042,General workshop,1.2
+A000864,2026-03-23 15:30,CP0042,General workshop,1.8
+A000865,2026-06-07 18:15,CP0042,Adult education class,1.7
+A000866,2026-02-25 10:45,CP0043,General workshop,1.7
+A000867,2026-02-20 15:30,CP0043,Adult education class,1.6
+A000868,2026-02-11 08:30,CP0043,Adult education class,1.9
+A000869,2026-05-09 11:30,CP0044,Adult education class,1.6
+A000870,2025-12-26 14:45,CP0044,Adult education class,1.3
+A000871,2026-03-25 15:45,CP0044,Adult education class,1.8
+A000872,2025-11-27 08:30,CP0044,Adult education class,1.4
+A000873,2026-01-21 15:15,CP0044,General workshop,1.5
+A000874,2026-06-27 13:30,CP0044,Adult education class,1.9
+A000875,2026-07-01 12:15,CP0045,Adult education class,1.9
+A000876,2026-05-15 09:00,CP0045,Adult education class,1.8
+A000877,2025-11-28 15:15,CP0045,Adult education class,1.6
+A000878,2026-07-17 16:00,CP0045,General workshop,1.5
+A000879,2025-12-20 10:30,CP0046,Adult education class,1.6
+A000880,2026-03-09 18:00,CP0046,General workshop,1.4
+A000881,2026-04-02 19:30,CP0046,Adult education class,1.7
+A000882,2026-03-08 17:30,CP0046,General workshop,2.0
+A000883,2026-01-05 13:00,CP0047,General workshop,1.3
+A000884,2026-03-08 19:30,CP0047,Adult education class,1.8
+A000885,2025-12-01 14:00,CP0047,Adult education class,1.4
+A000886,2025-12-14 17:15,CP0047,Adult education class,2.0
+A000887,2026-05-22 19:30,CP0047,Adult education class,1.2
+A000888,2026-01-08 16:45,CP0048,Adult education class,1.8
+A000889,2026-06-19 17:00,CP0048,General workshop,1.4
+A000890,2026-01-19 18:45,CP0048,General workshop,2.0
+A000891,2026-07-17 15:15,CP0048,General workshop,1.2
+A000892,2026-08-02 18:30,CP0049,Adult education class,1.7
+A000893,2025-11-20 18:30,CP0049,General workshop,1.9
+A000894,2026-05-04 14:00,CP0049,Adult education class,1.5
+A000895,2026-03-04 14:00,CP0050,General workshop,1.0
+A000896,2026-01-23 18:30,CP0050,General workshop,1.2
+A000897,2026-05-26 11:30,CP0050,Adult education class,1.4
+A000898,2026-08-04 12:00,CP0051,General workshop,1.7
+A000899,2026-07-28 14:00,CP0051,Adult education class,1.4
+A000900,2026-07-08 11:45,CP0051,General workshop,1.8
+A000901,2026-01-11 12:30,CP0051,Adult education class,1.5
+A000902,2025-12-11 19:30,CP0052,Adult education class,1.1
+A000903,2026-04-15 09:15,CP0052,General workshop,1.7
+A000904,2026-07-19 12:15,CP0052,Adult education class,1.3
+A000905,2026-03-10 13:15,CP0053,Adult education class,1.5
+A000906,2026-06-03 18:30,CP0053,Adult education class,2.0
+A000907,2026-07-14 09:30,CP0053,Adult education class,1.8
+A000908,2026-08-09 18:00,CP0053,Adult education class,1.9
+A000909,2026-07-11 08:45,CP0053,General workshop,1.8
+A000910,2026-03-02 18:30,CP0054,Adult education class,1.8
+A000911,2026-05-01 17:30,CP0054,General workshop,1.6
+A000912,2026-02-19 11:45,CP0054,General workshop,1.8
+A000913,2026-07-23 13:15,CP0055,General workshop,1.9
+A000914,2025-11-25 19:15,CP0055,General workshop,1.2
+A000915,2026-08-05 09:45,CP0055,General workshop,1.1
+A000916,2026-05-10 12:45,CP0055,Adult education class,1.8
+A000917,2026-04-02 08:45,CP0056,Adult education class,1.6
+A000918,2026-04-09 10:15,CP0056,General workshop,1.5
+A000919,2025-11-24 16:00,CP0056,General workshop,1.1
+A000920,2026-08-10 15:30,CP0056,Adult education class,1.5
+A000921,2026-01-07 19:30,CP0056,General workshop,1.5
+A000922,2026-07-23 19:00,CP0056,Adult education class,1.3
+A000923,2026-08-03 17:15,CP0057,Adult education class,1.8
+A000924,2026-07-23 17:45,CP0057,Adult education class,1.3
+A000925,2026-01-31 11:45,CP0057,Adult education class,1.1
+A000926,2026-04-28 19:30,CP0058,General workshop,1.1
+A000927,2025-12-02 09:30,CP0058,Adult education class,1.7
+A000928,2026-06-30 09:15,CP0058,Adult education class,1.2
+A000929,2026-08-09 15:45,CP0059,General workshop,1.1
+A000930,2026-04-27 08:15,CP0059,General workshop,1.0
+A000931,2026-03-12 18:45,CP0059,Adult education class,1.0
+A000932,2026-01-27 08:00,CP0059,General workshop,1.5
+A000933,2025-11-29 11:45,CP0059,General workshop,1.9
+A000934,2026-04-20 10:00,CP0060,General workshop,1.1
+A000935,2026-04-14 08:15,CP0060,Adult education class,1.2
+A000936,2026-01-26 11:30,CP0060,General workshop,2.0
+A000937,2025-12-05 16:45,CP0060,Adult education class,1.5
+A000938,2026-03-07 19:15,CP0061,General workshop,1.2
+A000939,2026-07-26 16:30,CP0061,General workshop,1.4
+A000940,2026-07-31 11:30,CP0061,Adult education class,1.0
+A000941,2026-08-08 14:45,CP0061,Adult education class,1.8
+A000942,2025-12-18 19:00,CP0062,Adult education class,1.7
+A000943,2026-07-02 19:15,CP0062,Adult education class,1.2
+A000944,2026-06-06 09:45,CP0062,General workshop,1.2
+A000945,2026-03-21 13:15,CP0063,General workshop,1.4
+A000946,2026-03-07 09:45,CP0063,General workshop,1.3
+A000947,2026-07-26 14:15,CP0063,Adult education class,1.3
+A000948,2026-05-30 15:15,CP0064,Adult education class,1.8
+A000949,2026-05-07 18:30,CP0064,Adult education class,1.1
+A000950,2026-01-21 18:00,CP0064,Adult education class,1.5
+A000951,2026-01-24 12:45,CP0065,General workshop,1.0
+A000952,2026-03-08 11:00,CP0065,Adult education class,1.7
+A000953,2025-12-02 08:00,CP0065,General workshop,2.0
+A000954,2026-07-16 18:00,CP0065,Adult education class,1.4
+A000955,2026-01-18 13:30,CP0065,General workshop,1.2
+A000956,2026-02-13 10:30,CP0065,Adult education class,1.3
+A000957,2025-11-27 11:00,CP0066,General workshop,1.9
+A000958,2026-03-14 09:15,CP0066,General workshop,1.8
+A000959,2026-02-13 11:00,CP0066,Adult education class,1.2
+A000960,2025-12-20 16:30,CP0066,Adult education class,1.5
+A000961,2026-01-19 16:15,CP0067,Adult education class,1.2
+A000962,2026-06-13 18:30,CP0067,Adult education class,1.5
+A000963,2026-01-01 11:15,CP0067,Adult education class,1.6
+A000964,2026-06-09 19:00,CP0067,Adult education class,1.6
+A000965,2025-12-31 15:30,CP0067,Adult education class,1.0
+A000966,2026-01-19 10:00,CP0068,Adult education class,1.0
+A000967,2026-07-17 15:15,CP0068,Adult education class,1.5
+A000968,2026-07-18 11:00,CP0068,General workshop,1.7
+A000969,2026-06-17 08:30,CP0068,General workshop,1.8
+A000970,2026-01-01 10:30,CP0068,Adult education class,1.2
+A000971,2026-01-05 10:45,CP0068,Adult education class,1.4
+A000972,2026-05-25 09:15,CP0069,General workshop,1.3
+A000973,2026-01-21 09:45,CP0069,Adult education class,1.5
+A000974,2026-03-17 16:45,CP0069,Adult education class,1.1
+A000975,2026-06-07 16:45,CP0069,General workshop,1.8
+A000976,2026-03-11 19:15,CP0070,Adult education class,1.0
+A000977,2026-06-22 14:00,CP0070,Adult education class,1.4
+A000978,2026-02-27 17:45,CP0070,Adult education class,1.9
+A000979,2026-04-19 08:00,CP0070,General workshop,1.2
+A000980,2026-04-04 15:00,CP0071,General workshop,1.2
+A000981,2026-07-04 19:15,CP0071,Adult education class,2.0
+A000982,2026-03-19 18:45,CP0071,General workshop,1.9
+A000983,2026-04-13 11:30,CP0072,Adult education class,1.8
+A000984,2026-01-25 09:30,CP0072,General workshop,1.7
+A000985,2026-06-01 12:15,CP0072,Adult education class,1.8
+A000986,2026-05-01 18:00,CP0072,General workshop,1.3
+A000987,2026-03-15 10:00,CP0073,General workshop,1.9
+A000988,2026-08-08 08:15,CP0073,Adult education class,1.3
+A000989,2026-08-11 08:15,CP0073,General workshop,1.0
+A000990,2026-03-12 17:15,CP0073,General workshop,2.0
+A000991,2026-07-23 15:30,CP0073,Adult education class,1.8
+A000992,2026-04-02 17:45,CP0073,General workshop,1.5
+A000993,2025-12-23 10:15,CP0074,General workshop,1.0
+A000994,2026-03-09 16:45,CP0074,General workshop,1.1
+A000995,2026-05-08 11:00,CP0074,Adult education class,1.7
+A000996,2026-06-23 10:15,CP0075,General workshop,1.7
+A000997,2026-03-08 17:45,CP0075,General workshop,1.2
+A000998,2026-03-01 10:45,CP0075,Adult education class,1.2
+A000999,2026-04-11 11:30,CP0076,Adult education class,1.3
+A001000,2026-01-05 16:00,CP0076,Adult education class,1.4
+A001001,2026-05-17 13:15,CP0076,General workshop,1.6
+A001002,2026-01-17 19:45,CP0077,General workshop,1.8
+A001003,2025-11-23 10:30,CP0077,Adult education class,1.4
+A001004,2026-08-02 15:45,CP0077,General workshop,1.7
+A001005,2025-11-27 13:30,CP0078,Adult education class,1.9
+A001006,2026-04-03 14:30,CP0078,General workshop,1.9
+A001007,2026-05-28 15:30,CP0078,General workshop,1.9
+A001008,2025-12-12 17:15,CP0079,Adult education class,1.6
+A001009,2026-07-03 14:00,CP0079,General workshop,1.3
+A001010,2026-02-21 08:45,CP0079,Adult education class,1.9
+A001011,2026-01-30 16:15,CP0079,General workshop,1.3
+A001012,2026-07-22 18:15,CP0080,Adult education class,1.8
+A001013,2026-08-11 15:15,CP0080,Adult education class,1.9
+A001014,2025-12-28 10:45,CP0080,General workshop,1.8
+A001015,2026-05-19 11:30,CP0080,Adult education class,1.3
+A001016,2026-07-07 14:45,CP0081,Adult education class,1.4
+A001017,2026-04-25 08:45,CP0081,Adult education class,1.6
+A001018,2025-12-02 16:00,CP0081,General workshop,1.9
+A001019,2026-01-17 11:45,CP0081,General workshop,1.2
+A001020,2025-12-25 17:15,CP0081,Adult education class,1.2
+A001021,2025-12-14 09:00,CP0082,General workshop,1.5
+A001022,2026-06-20 09:00,CP0082,Adult education class,1.5
+A001023,2026-04-22 19:30,CP0082,Adult education class,1.5
+A001024,2026-07-02 12:15,CP0082,Adult education class,1.5
+A001025,2026-04-04 14:00,CP0083,Adult education class,1.4
+A001026,2026-07-28 10:30,CP0083,General workshop,1.4
+A001027,2026-01-02 09:00,CP0083,General workshop,1.8
+A001028,2026-01-20 18:00,CP0083,General workshop,1.3
+A001029,2026-02-06 18:45,CP0083,Adult education class,1.3
+A001030,2026-08-06 13:45,CP0084,Adult education class,1.5
+A001031,2026-05-25 08:30,CP0084,Adult education class,1.0
+A001032,2026-05-24 09:45,CP0084,Adult education class,1.3
+A001033,2025-12-28 16:30,CP0084,General workshop,1.3
+A001034,2025-11-27 10:15,CP0084,General workshop,1.5
+A001035,2026-07-30 08:45,CP0085,General workshop,1.9
+A001036,2026-03-13 18:45,CP0085,General workshop,1.3
+A001037,2026-01-15 11:30,CP0085,Adult education class,1.4
+A001038,2026-05-09 10:45,CP0085,Adult education class,1.0
+A001039,2025-12-01 18:00,CP0086,Adult education class,1.1
+A001040,2026-05-07 18:00,CP0086,Adult education class,1.5
+A001041,2026-01-09 10:45,CP0086,Adult education class,1.4
+A001042,2026-07-28 11:30,CP0086,General workshop,1.1
+A001043,2026-05-08 18:30,CP0086,Adult education class,1.0
+A001044,2026-01-19 12:15,CP0087,General workshop,1.7
+A001045,2025-12-03 12:00,CP0087,General workshop,1.5
+A001046,2026-07-23 12:15,CP0087,General workshop,1.4
+A001047,2026-04-27 11:30,CP0087,General workshop,1.4
+A001048,2026-02-13 14:00,CP0087,General workshop,1.1
+A001049,2025-12-17 18:15,CP0088,Adult education class,1.8
+A001050,2026-01-20 16:30,CP0088,General workshop,1.1
+A001051,2026-04-12 12:15,CP0088,Adult education class,1.0
+A001052,2026-04-18 19:30,CP0088,Adult education class,1.2
+A001053,2026-06-10 17:15,CP0088,Adult education class,1.7
+A001054,2026-04-01 09:30,CP0089,General workshop,1.2
+A001055,2026-05-20 14:45,CP0089,Adult education class,1.4
+A001056,2026-07-15 10:30,CP0089,General workshop,1.3
+A001057,2026-03-09 14:00,CP0089,General workshop,1.5
+A001058,2026-05-17 11:15,CP0089,General workshop,1.5
+A001059,2026-05-09 16:15,CP0089,General workshop,1.5
+A001060,2026-06-09 11:00,CP0090,Adult education class,1.7
+A001061,2025-12-11 08:00,CP0090,Adult education class,1.7
+A001062,2026-05-28 19:30,CP0090,Adult education class,1.4
+A001063,2026-09-01 16:45,CP0091,Youth after-school program,1.9
+A001064,2026-06-15 14:15,CP0091,Youth after-school program,1.0
+A001065,2026-08-28 19:30,CP0091,Youth after-school program,1.6
+A001066,2026-06-13 14:30,CP0092,Youth after-school program,1.2
+A001067,2026-10-25 13:30,CP0092,Youth after-school program,1.3
+A001068,2026-06-14 18:15,CP0092,Youth after-school program,1.8
+A001069,2026-10-11 08:15,CP0092,Youth after-school program,1.8
+A001070,2026-10-24 15:00,CP0092,Youth after-school program,1.3
+A001071,2026-10-31 11:15,CP0092,Youth after-school program,1.0
+A001072,2026-08-09 08:30,CP0092,Youth after-school program,2.0
+A001073,2026-06-27 15:45,CP0093,Youth after-school program,1.7
+A001074,2026-06-05 17:30,CP0093,Youth after-school program,1.9
+A001075,2026-10-11 12:15,CP0093,Youth after-school program,1.3
+A001076,2026-08-13 13:30,CP0094,Youth after-school program,1.9
+A001077,2026-10-28 18:30,CP0094,Youth after-school program,1.7
+A001078,2026-07-14 16:00,CP0094,Youth after-school program,1.5
+A001079,2026-06-01 12:15,CP0095,Youth after-school program,1.7
+A001080,2026-07-05 17:45,CP0095,Youth after-school program,1.4
+A001081,2026-08-06 17:45,CP0095,Youth after-school program,1.1
+A001082,2026-07-30 13:30,CP0095,Youth after-school program,1.1
+A001083,2026-09-07 16:45,CP0095,Youth after-school program,1.9
+A001084,2026-07-31 13:30,CP0095,Youth after-school program,1.2
+A001085,2026-09-02 12:00,CP0095,Youth after-school program,1.5
+A001086,2026-10-24 12:45,CP0095,Youth after-school program,1.4
+A001087,2026-08-04 08:45,CP0096,Youth after-school program,1.5
+A001088,2026-08-03 15:15,CP0096,Youth after-school program,1.2
+A001089,2026-11-15 15:45,CP0096,Youth after-school program,1.3
+A001090,2026-09-06 14:00,CP0096,Youth after-school program,1.8
+A001091,2026-11-07 14:30,CP0096,Youth after-school program,1.7
+A001092,2026-09-13 17:15,CP0097,Youth after-school program,1.6
+A001093,2026-05-31 11:15,CP0097,Youth after-school program,1.1
+A001094,2026-09-22 16:00,CP0097,Youth after-school program,1.2
+A001095,2026-11-05 15:00,CP0097,Youth after-school program,1.8
+A001096,2026-08-28 17:30,CP0097,Youth after-school program,1.9
+A001097,2026-10-27 15:30,CP0098,Youth after-school program,1.5
+A001098,2026-08-25 10:15,CP0098,Youth after-school program,1.5
+A001099,2026-09-25 12:00,CP0098,Youth after-school program,1.3
+A001100,2026-10-21 11:30,CP0098,Youth after-school program,1.8
+A001101,2026-07-21 15:30,CP0098,Youth after-school program,1.0
+A001102,2026-05-23 15:00,CP0098,Youth after-school program,1.8
+A001103,2026-06-11 18:45,CP0098,Youth after-school program,1.1
+A001104,2026-05-25 18:15,CP0098,Youth after-school program,1.4
+A001105,2026-08-29 10:45,CP0099,Youth after-school program,1.1
+A001106,2026-06-13 16:15,CP0099,Youth after-school program,1.9
+A001107,2026-10-26 14:45,CP0099,Youth after-school program,1.4
+A001108,2026-08-30 11:45,CP0100,Youth after-school program,1.8
+A001109,2026-08-11 13:30,CP0100,Youth after-school program,1.4
+A001110,2026-06-10 18:30,CP0100,Youth after-school program,1.6
+A001111,2026-07-06 11:30,CP0100,Youth after-school program,1.7
+A001112,2026-08-19 16:15,CP0100,Youth after-school program,1.4
+A001113,2026-11-05 17:00,CP0100,Youth after-school program,2.0
+A001114,2026-08-28 10:00,CP0100,Youth after-school program,1.4
+A001115,2026-07-20 17:15,CP0101,Youth after-school program,1.1
+A001116,2026-10-01 14:30,CP0101,Youth after-school program,1.1
+A001117,2026-10-27 10:15,CP0101,Youth after-school program,1.4
+A001118,2026-10-30 08:15,CP0101,Youth after-school program,1.3
+A001119,2026-06-18 12:00,CP0101,Youth after-school program,1.2
+A001120,2026-09-12 11:15,CP0102,Youth after-school program,1.9
+A001121,2026-07-14 12:30,CP0102,Youth after-school program,1.5
+A001122,2026-05-21 14:15,CP0102,Youth after-school program,1.6
+A001123,2026-08-18 09:45,CP0102,Youth after-school program,1.4
+A001124,2026-06-17 11:30,CP0102,Youth after-school program,1.3
+A001125,2026-06-11 19:15,CP0102,Youth after-school program,1.8
+A001126,2026-10-28 13:30,CP0103,Youth after-school program,2.0
+A001127,2026-05-30 09:45,CP0103,Youth after-school program,1.8
+A001128,2026-06-11 16:00,CP0103,Youth after-school program,1.6
+A001129,2026-07-04 14:00,CP0103,Youth after-school program,1.5
+A001130,2026-11-08 17:15,CP0103,Youth after-school program,1.6
+A001131,2026-08-11 17:00,CP0103,Youth after-school program,1.9
+A001132,2026-09-06 19:15,CP0104,Youth after-school program,1.8
+A001133,2026-08-12 10:45,CP0104,Youth after-school program,1.1
+A001134,2026-07-13 11:00,CP0104,Youth after-school program,1.6
+A001135,2026-08-20 16:30,CP0104,Youth after-school program,1.6
+A001136,2026-06-13 18:45,CP0104,Youth after-school program,2.0
+A001137,2026-10-03 08:15,CP0104,Youth after-school program,1.8
+A001138,2026-07-15 08:30,CP0105,Youth after-school program,1.5
+A001139,2026-10-12 08:45,CP0105,Youth after-school program,1.0
+A001140,2026-09-11 13:45,CP0105,Youth after-school program,1.2
+A001141,2026-08-25 10:00,CP0105,Youth after-school program,1.5
+A001142,2026-06-05 08:45,CP0106,Youth after-school program,1.2
+A001143,2026-08-23 19:00,CP0106,Youth after-school program,1.4
+A001144,2026-06-08 18:00,CP0106,Youth after-school program,1.4
+A001145,2026-06-16 19:15,CP0106,Youth after-school program,1.2
+A001146,2026-09-13 17:30,CP0106,Youth after-school program,1.9
+A001147,2026-06-07 17:15,CP0106,Youth after-school program,1.3
+A001148,2026-06-28 12:30,CP0107,Youth after-school program,1.6
+A001149,2026-07-19 08:00,CP0107,Youth after-school program,1.0
+A001150,2026-09-30 11:45,CP0107,Youth after-school program,1.1
+A001151,2026-07-23 10:45,CP0107,Youth after-school program,1.2
+A001152,2026-07-30 17:00,CP0107,Youth after-school program,1.4
+A001153,2026-07-16 09:00,CP0107,Youth after-school program,1.8
+A001154,2026-05-27 17:00,CP0108,Youth after-school program,1.3
+A001155,2026-10-26 16:00,CP0108,Youth after-school program,1.8
+A001156,2026-10-18 17:30,CP0108,Youth after-school program,1.1
+A001157,2026-06-07 14:00,CP0108,Youth after-school program,1.4
+A001158,2026-10-04 16:45,CP0109,Youth after-school program,1.4
+A001159,2026-11-13 17:00,CP0109,Youth after-school program,1.4
+A001160,2026-09-29 11:45,CP0109,Youth after-school program,1.9
+A001161,2026-10-08 08:45,CP0109,Youth after-school program,1.6
+A001162,2026-09-22 15:00,CP0109,Youth after-school program,1.2
+A001163,2026-07-31 14:45,CP0109,Youth after-school program,1.6
+A001164,2026-11-02 17:15,CP0109,Youth after-school program,1.5
+A001165,2026-09-28 15:45,CP0109,Youth after-school program,1.7
+A001166,2026-09-27 10:00,CP0110,Youth after-school program,1.7
+A001167,2026-11-05 16:30,CP0110,Youth after-school program,1.7
+A001168,2026-06-28 18:00,CP0110,Youth after-school program,1.4
+A001169,2026-06-09 15:00,CP0110,Youth after-school program,1.1
+A001170,2026-11-04 11:30,CP0110,Youth after-school program,1.6
+A001171,2026-10-29 12:30,CP0111,Youth after-school program,1.8
+A001172,2026-07-24 09:00,CP0111,Youth after-school program,1.3
+A001173,2026-06-04 12:00,CP0111,Youth after-school program,1.9
+A001174,2026-08-21 13:00,CP0111,Youth after-school program,1.8
+A001175,2026-10-12 08:15,CP0111,Youth after-school program,1.9
+A001176,2026-09-28 14:00,CP0111,Youth after-school program,2.0
+A001177,2026-06-09 13:15,CP0112,Youth after-school program,1.9
+A001178,2026-08-14 13:15,CP0112,Youth after-school program,1.1
+A001179,2026-06-25 13:15,CP0112,Youth after-school program,1.3
+A001180,2026-08-24 13:30,CP0112,Youth after-school program,1.2
+A001181,2026-10-11 16:00,CP0112,Youth after-school program,1.7
+A001182,2026-08-30 19:45,CP0112,Youth after-school program,1.8
+A001183,2026-05-29 09:30,CP0112,Youth after-school program,1.8
+A001184,2026-11-04 10:30,CP0112,Youth after-school program,1.6
+A001185,2026-10-03 09:00,CP0113,Youth after-school program,1.7
+A001186,2026-11-10 15:15,CP0113,Youth after-school program,1.9
+A001187,2026-08-14 18:45,CP0113,Youth after-school program,1.2
+A001188,2026-07-29 16:45,CP0113,Youth after-school program,1.6
+A001189,2026-11-03 18:15,CP0114,Youth after-school program,1.1
+A001190,2026-09-09 19:30,CP0114,Youth after-school program,1.8
+A001191,2026-06-15 09:30,CP0114,Youth after-school program,1.4
+A001192,2026-07-07 08:00,CP0114,Youth after-school program,1.3
+A001193,2026-10-21 12:30,CP0114,Youth after-school program,1.7
+A001194,2026-05-22 08:45,CP0114,Youth after-school program,1.9
+A001195,2026-10-31 08:00,CP0114,Youth after-school program,1.6
+A001196,2026-09-01 17:30,CP0114,Youth after-school program,1.8
+A001197,2026-09-30 16:15,CP0115,Youth after-school program,1.2
+A001198,2026-06-19 11:15,CP0115,Youth after-school program,1.7
+A001199,2026-08-12 12:45,CP0115,Youth after-school program,1.7
+A001200,2026-11-07 09:45,CP0115,Youth after-school program,1.9
+A001201,2026-06-06 14:30,CP0115,Youth after-school program,1.4
+A001202,2026-05-20 13:00,CP0115,Youth after-school program,1.2
+A001203,2026-09-30 19:45,CP0115,Youth after-school program,1.8
+A001204,2026-06-25 14:45,CP0116,Youth after-school program,1.9
+A001205,2026-08-21 10:30,CP0116,Youth after-school program,2.0
+A001206,2026-09-15 16:45,CP0116,Youth after-school program,1.5
+A001207,2026-05-27 15:30,CP0117,Youth after-school program,1.0
+A001208,2026-11-09 16:30,CP0117,Youth after-school program,1.4
+A001209,2026-11-15 14:30,CP0117,Youth after-school program,1.9
+A001210,2026-11-08 18:00,CP0118,Youth after-school program,1.4
+A001211,2026-05-26 19:00,CP0118,Youth after-school program,1.3
+A001212,2026-11-07 09:00,CP0118,Youth after-school program,1.7
+A001213,2026-05-20 15:45,CP0118,Youth after-school program,1.6
+A001214,2026-05-31 16:45,CP0118,Youth after-school program,1.7
+A001215,2026-06-22 09:00,CP0118,Youth after-school program,1.5
+A001216,2026-09-12 19:00,CP0118,Youth after-school program,1.1
+A001217,2026-05-29 12:30,CP0119,Youth after-school program,1.3
+A001218,2026-10-23 13:15,CP0119,Youth after-school program,1.2
+A001219,2026-06-12 19:00,CP0119,Youth after-school program,1.4
+A001220,2026-08-07 12:30,CP0119,Youth after-school program,1.3
+A001221,2026-06-16 11:30,CP0119,Youth after-school program,1.7
+A001222,2026-09-18 18:30,CP0119,Youth after-school program,1.7
+A001223,2026-10-24 10:30,CP0119,Youth after-school program,1.0
+A001224,2026-08-08 13:45,CP0119,Youth after-school program,1.3
+A001225,2026-06-19 13:45,CP0120,Youth after-school program,1.9
+A001226,2026-08-10 15:30,CP0120,Youth after-school program,1.5
+A001227,2026-08-08 13:15,CP0120,Youth after-school program,1.6
+A001228,2026-10-19 14:15,CP0120,Youth after-school program,1.4
+A001229,2026-10-06 14:30,CP0120,Youth after-school program,1.8
+A001230,2026-07-30 16:00,CP0120,Youth after-school program,1.2
+A001231,2026-07-28 08:45,CP0120,Youth after-school program,2.0
+A001232,2026-09-14 15:00,CP0121,Youth after-school program,1.0
+A001233,2026-10-20 12:15,CP0121,Youth after-school program,1.5
+A001234,2026-08-16 12:00,CP0121,Youth after-school program,1.4
+A001235,2026-11-11 08:30,CP0121,Youth after-school program,1.3
+A001236,2026-11-02 12:15,CP0121,Youth after-school program,1.6
+A001237,2026-09-16 15:45,CP0121,Youth after-school program,1.2
+A001238,2026-10-12 11:45,CP0121,Youth after-school program,1.4
+A001239,2026-10-23 12:45,CP0121,Youth after-school program,1.3
+A001240,2026-06-04 08:15,CP0122,Youth after-school program,1.7
+A001241,2026-10-27 08:00,CP0122,Youth after-school program,1.1
+A001242,2026-09-06 14:45,CP0122,Youth after-school program,1.4
+A001243,2026-09-30 08:45,CP0122,Youth after-school program,1.9
+A001244,2026-08-21 14:45,CP0122,Youth after-school program,1.7
+A001245,2026-10-03 09:45,CP0123,Youth after-school program,1.4
+A001246,2026-08-09 17:45,CP0123,Youth after-school program,1.4
+A001247,2026-08-07 13:15,CP0123,Youth after-school program,1.6
+A001248,2026-09-18 19:45,CP0123,Youth after-school program,1.8
+A001249,2026-11-02 15:30,CP0124,Youth after-school program,1.2
+A001250,2026-11-05 12:30,CP0124,Youth after-school program,1.2
+A001251,2026-07-29 18:45,CP0124,Youth after-school program,1.1
+A001252,2026-07-12 11:30,CP0124,Youth after-school program,1.5
+A001253,2026-08-13 16:45,CP0124,Youth after-school program,1.0
+A001254,2026-09-13 16:00,CP0124,Youth after-school program,1.9
+A001255,2026-10-11 17:30,CP0124,Youth after-school program,1.3
+A001256,2026-06-08 11:45,CP0125,Youth after-school program,1.3
+A001257,2026-10-17 14:30,CP0125,Youth after-school program,1.9
+A001258,2026-05-22 14:30,CP0125,Youth after-school program,1.5
+A001259,2026-06-07 17:15,CP0125,Youth after-school program,1.7
+A001260,2026-06-18 12:45,CP0125,Youth after-school program,1.3
+A001261,2026-07-26 09:00,CP0125,Youth after-school program,1.6
+A001262,2026-06-04 08:30,CP0125,Youth after-school program,1.6
+A001263,2026-08-07 15:45,CP0126,Youth after-school program,1.4
+A001264,2026-06-18 18:15,CP0126,Youth after-school program,1.4
+A001265,2026-09-25 15:00,CP0126,Youth after-school program,1.4
+A001266,2026-08-30 17:15,CP0126,Youth after-school program,1.0
+A001267,2026-06-29 10:45,CP0126,Youth after-school program,1.2
+A001268,2026-07-07 14:15,CP0126,Youth after-school program,1.3
+A001269,2026-08-03 09:45,CP0127,Youth after-school program,1.8
+A001270,2026-08-02 16:45,CP0127,Youth after-school program,1.8
+A001271,2026-11-10 15:15,CP0127,Youth after-school program,1.4
+A001272,2026-09-03 18:45,CP0127,Youth after-school program,1.5
+A001273,2026-10-23 16:15,CP0128,Youth after-school program,1.1
+A001274,2026-06-14 16:30,CP0128,Youth after-school program,1.2
+A001275,2026-08-02 14:15,CP0128,Youth after-school program,1.1
+A001276,2026-11-04 18:45,CP0129,Youth after-school program,1.5
+A001277,2026-10-26 18:45,CP0129,Youth after-school program,1.8
+A001278,2026-05-30 14:00,CP0129,Youth after-school program,1.3
+A001279,2026-09-01 08:45,CP0129,Youth after-school program,1.1
+A001280,2026-06-12 13:15,CP0129,Youth after-school program,1.9
+A001281,2026-11-15 10:15,CP0130,Youth after-school program,1.9
+A001282,2026-09-06 17:15,CP0130,Youth after-school program,1.6
+A001283,2026-06-03 16:15,CP0130,Youth after-school program,1.9
+A001284,2026-07-22 18:00,CP0130,Youth after-school program,1.9
+A001285,2026-10-26 12:15,CP0130,Youth after-school program,1.9
+A001286,2026-07-22 16:00,CP0131,Food pantry visit,1.4
+A001287,2026-06-07 14:45,CP0131,Food pantry visit,1.9
+A001288,2026-09-04 18:45,CP0131,Food pantry visit,1.2
+A001289,2026-11-01 13:45,CP0132,Food pantry visit,1.9
+A001290,2026-09-26 12:45,CP0132,Food pantry visit,1.8
+A001291,2026-10-13 15:15,CP0132,Food pantry visit,1.6
+A001292,2026-06-07 12:30,CP0132,Food pantry visit,1.8
+A001293,2026-06-23 10:15,CP0132,Food pantry visit,1.7
+A001294,2026-10-31 18:45,CP0133,Food pantry visit,2.0
+A001295,2026-06-28 08:30,CP0133,Food pantry visit,1.0
+A001296,2026-06-26 08:30,CP0133,Food pantry visit,1.4
+A001297,2026-06-18 10:30,CP0133,Food pantry visit,1.3
+A001298,2026-11-02 12:15,CP0134,Food pantry visit,1.7
+A001299,2026-11-07 16:15,CP0134,Food pantry visit,1.8
+A001300,2026-07-24 13:45,CP0134,Food pantry visit,1.1
+A001301,2026-08-21 11:00,CP0134,Food pantry visit,1.3
+A001302,2026-08-17 15:15,CP0134,Food pantry visit,1.8
+A001303,2026-06-29 08:00,CP0134,Food pantry visit,1.1
+A001304,2026-08-24 18:45,CP0135,Food pantry visit,1.9
+A001305,2026-05-26 18:30,CP0135,Food pantry visit,1.4
+A001306,2026-06-30 16:30,CP0135,Food pantry visit,1.0
+A001307,2026-06-04 14:30,CP0136,Food pantry visit,1.7
+A001308,2026-06-08 10:15,CP0136,Food pantry visit,1.8
+A001309,2026-07-06 17:15,CP0136,Food pantry visit,1.0
+A001310,2026-07-29 18:00,CP0136,Food pantry visit,1.3
+A001311,2026-09-04 16:00,CP0136,Food pantry visit,1.6
+A001312,2026-09-04 17:30,CP0136,Food pantry visit,1.7
+A001313,2026-11-12 18:30,CP0137,Food pantry visit,1.3
+A001314,2026-09-12 11:15,CP0137,Food pantry visit,1.7
+A001315,2026-08-27 10:15,CP0137,Food pantry visit,1.2
+A001316,2026-10-14 14:15,CP0137,Food pantry visit,1.7
+A001317,2026-09-27 10:45,CP0137,Food pantry visit,1.3
+A001318,2026-10-28 16:15,CP0137,Food pantry visit,1.8
+A001319,2026-06-23 18:15,CP0138,Food pantry visit,1.0
+A001320,2026-10-10 12:45,CP0138,Food pantry visit,1.9
+A001321,2026-06-09 11:00,CP0138,Food pantry visit,1.0
+A001322,2026-09-06 17:15,CP0139,Food pantry visit,1.7
+A001323,2026-07-11 09:00,CP0139,Food pantry visit,1.3
+A001324,2026-06-05 13:00,CP0139,Food pantry visit,1.2
+A001325,2026-09-27 17:00,CP0139,Food pantry visit,1.3
+A001326,2026-08-21 16:30,CP0140,Food pantry visit,1.9
+A001327,2026-11-06 16:30,CP0140,Food pantry visit,1.9
+A001328,2026-05-27 13:15,CP0141,Food pantry visit,1.1
+A001329,2026-06-30 19:15,CP0141,Food pantry visit,1.5
+A001330,2026-08-09 14:15,CP0141,Food pantry visit,1.3
+A001331,2026-08-12 08:45,CP0142,Food pantry visit,1.3
+A001332,2026-06-09 11:00,CP0142,Food pantry visit,1.8
+A001333,2026-10-23 09:15,CP0143,Food pantry visit,1.1
+A001334,2026-08-15 18:45,CP0143,Food pantry visit,1.5
+A001335,2026-07-30 14:15,CP0143,Food pantry visit,1.6
+A001336,2026-08-21 15:30,CP0143,Food pantry visit,1.8
+A001337,2026-08-05 12:30,CP0144,Food pantry visit,1.4
+A001338,2026-06-14 12:30,CP0144,Food pantry visit,2.0
+A001339,2026-07-25 09:00,CP0145,Food pantry visit,1.5
+A001340,2026-08-10 14:45,CP0145,Food pantry visit,1.1
+A001341,2026-09-24 11:00,CP0146,Food pantry visit,1.1
+A001342,2026-05-20 09:00,CP0146,Food pantry visit,1.1
+A001343,2026-06-03 10:30,CP0146,Food pantry visit,1.1
+A001344,2026-06-29 11:15,CP0147,Food pantry visit,1.6
+A001345,2026-09-28 09:30,CP0147,Food pantry visit,1.3
+A001346,2026-07-11 12:45,CP0147,Food pantry visit,1.2
+A001347,2026-08-10 11:00,CP0148,Food pantry visit,1.4
+A001348,2026-10-07 11:15,CP0148,Food pantry visit,1.8
+A001349,2026-09-30 13:00,CP0148,Food pantry visit,1.3
+A001350,2026-09-29 13:30,CP0148,Food pantry visit,2.0
+A001351,2026-06-24 10:15,CP0148,Food pantry visit,1.9
+A001352,2026-07-31 16:15,CP0149,Food pantry visit,1.1
+A001353,2026-10-12 19:45,CP0149,Food pantry visit,1.9
+A001354,2026-08-22 17:30,CP0149,Food pantry visit,1.3
+A001355,2026-11-06 13:15,CP0150,Food pantry visit,1.3
+A001356,2026-08-27 15:15,CP0150,Food pantry visit,1.9
+A001357,2026-08-21 13:45,CP0150,Food pantry visit,1.9
+A001358,2026-10-31 13:45,CP0151,Food pantry visit,1.9
+A001359,2026-08-13 18:00,CP0151,Food pantry visit,1.8
+A001360,2026-08-07 10:30,CP0151,Food pantry visit,1.7
+A001361,2026-09-26 18:00,CP0151,Food pantry visit,1.8
+A001362,2026-05-31 11:00,CP0151,Food pantry visit,1.4
+A001363,2026-08-14 18:00,CP0151,Food pantry visit,1.7
+A001364,2026-10-10 19:15,CP0152,Food pantry visit,1.7
+A001365,2026-08-13 14:00,CP0152,Food pantry visit,1.8
+A001366,2026-05-31 14:00,CP0152,Food pantry visit,1.6
+A001367,2026-10-26 18:45,CP0153,Food pantry visit,1.6
+A001368,2026-06-12 09:15,CP0153,Food pantry visit,1.0
+A001369,2026-11-10 18:15,CP0153,Food pantry visit,1.3
+A001370,2026-07-19 16:15,CP0153,Food pantry visit,1.1
+A001371,2026-06-13 18:15,CP0153,Food pantry visit,1.6
+A001372,2026-06-24 18:15,CP0154,Food pantry visit,1.5
+A001373,2026-05-26 10:30,CP0154,Food pantry visit,1.2
+A001374,2026-07-19 13:45,CP0154,Food pantry visit,1.5
+A001375,2026-09-07 16:30,CP0155,Food pantry visit,2.0
+A001376,2026-06-11 13:45,CP0155,Food pantry visit,1.6
+A001377,2026-06-27 13:45,CP0156,Food pantry visit,1.5
+A001378,2026-10-21 18:45,CP0156,Food pantry visit,1.3
+A001379,2026-10-14 17:45,CP0156,Food pantry visit,1.8
+A001380,2026-06-19 18:45,CP0156,Food pantry visit,1.4
+A001381,2026-10-24 11:00,CP0156,Food pantry visit,1.5
+A001382,2026-06-27 11:45,CP0157,Food pantry visit,1.5
+A001383,2026-09-08 15:30,CP0157,Food pantry visit,1.2
+A001384,2026-10-20 17:15,CP0157,Food pantry visit,1.3
+A001385,2026-05-31 19:45,CP0157,Food pantry visit,1.0
+A001386,2026-06-21 17:30,CP0158,Food pantry visit,1.0
+A001387,2026-05-27 15:15,CP0158,Food pantry visit,1.8
+A001388,2026-10-08 10:45,CP0158,Food pantry visit,2.0
+A001389,2026-09-10 19:00,CP0159,Food pantry visit,1.6
+A001390,2026-08-20 12:30,CP0159,Food pantry visit,1.4
+A001391,2026-11-13 14:15,CP0160,Food pantry visit,1.1
+A001392,2026-09-11 08:00,CP0160,Food pantry visit,1.7
+A001393,2026-10-29 11:15,CP0160,Food pantry visit,1.0
+A001394,2026-08-22 10:15,CP0161,Food pantry visit,1.1
+A001395,2026-09-28 13:15,CP0161,Food pantry visit,1.2
+A001396,2026-07-24 19:00,CP0161,Food pantry visit,1.8
+A001397,2026-07-09 09:30,CP0161,Food pantry visit,1.6
+A001398,2026-09-01 15:15,CP0162,Food pantry visit,1.4
+A001399,2026-09-05 17:30,CP0162,Food pantry visit,2.0
+A001400,2026-08-18 14:45,CP0163,Food pantry visit,1.6
+A001401,2026-08-30 16:45,CP0163,Food pantry visit,1.2
+A001402,2026-09-11 19:00,CP0163,Food pantry visit,1.5
+A001403,2026-06-17 11:15,CP0164,Food pantry visit,1.3
+A001404,2026-06-05 11:00,CP0164,Food pantry visit,1.8
+A001405,2026-08-08 08:30,CP0164,Food pantry visit,1.6
+A001406,2026-08-13 18:15,CP0165,Food pantry visit,1.9
+A001407,2026-10-07 12:00,CP0165,Food pantry visit,1.2
+A001408,2026-06-07 14:45,CP0165,Food pantry visit,1.0
+A001409,2026-06-12 13:00,CP0165,Food pantry visit,1.7
+A001410,2026-07-22 19:45,CP0165,Food pantry visit,1.4
+A001411,2026-09-03 13:30,CP0166,Food pantry visit,2.0
+A001412,2026-08-26 18:30,CP0166,Food pantry visit,1.6
+A001413,2026-10-15 18:45,CP0166,Food pantry visit,1.9
+A001414,2026-08-28 14:00,CP0166,Food pantry visit,1.3
+A001415,2026-07-06 13:00,CP0167,Food pantry visit,1.8
+A001416,2026-07-06 12:45,CP0167,Food pantry visit,1.9
+A001417,2026-10-26 15:45,CP0168,Food pantry visit,1.0
+A001418,2026-10-31 14:15,CP0168,Food pantry visit,1.4
+A001419,2026-08-27 13:30,CP0168,Food pantry visit,1.5
+A001420,2026-06-21 13:30,CP0168,Food pantry visit,1.6
+A001421,2026-08-07 14:45,CP0168,Food pantry visit,1.3
+A001422,2026-07-09 14:00,CP0168,Food pantry visit,1.9
+A001423,2026-06-26 17:15,CP0169,Food pantry visit,1.3
+A001424,2026-10-06 08:30,CP0169,Food pantry visit,1.4
+A001425,2026-08-10 09:45,CP0169,Food pantry visit,1.9
+A001426,2026-06-21 08:15,CP0169,Food pantry visit,1.1
+A001427,2026-05-25 10:30,CP0170,Food pantry visit,1.8
+A001428,2026-05-20 15:15,CP0170,Food pantry visit,1.1
+A001429,2026-06-25 15:30,CP0170,Food pantry visit,1.9
+A001430,2026-06-05 16:00,CP0171,Food pantry visit,1.8
+A001431,2026-11-01 08:00,CP0171,Food pantry visit,1.5
+A001432,2026-10-04 14:30,CP0172,Food pantry visit,1.0
+A001433,2026-05-26 12:00,CP0172,Food pantry visit,1.6
+A001434,2026-07-03 19:00,CP0172,Food pantry visit,1.5
+A001435,2026-08-02 18:00,CP0172,Food pantry visit,1.9
+A001436,2026-06-09 18:30,CP0172,Food pantry visit,1.7
+A001437,2026-10-25 08:30,CP0172,Food pantry visit,2.0
+A001438,2026-06-10 09:30,CP0173,Food pantry visit,1.1
+A001439,2026-09-14 11:00,CP0173,Food pantry visit,1.6
+A001440,2026-11-15 13:45,CP0173,Food pantry visit,1.8
+A001441,2026-09-30 19:00,CP0173,Food pantry visit,1.6
+A001442,2026-09-25 10:00,CP0173,Food pantry visit,1.5
+A001443,2026-07-03 18:00,CP0173,Food pantry visit,1.9
+A001444,2026-09-28 09:15,CP0174,Food pantry visit,1.6
+A001445,2026-09-22 11:00,CP0174,Food pantry visit,1.7
+A001446,2026-10-12 11:00,CP0175,Food pantry visit,1.7
+A001447,2026-10-19 13:30,CP0175,Food pantry visit,1.2
+A001448,2026-11-11 15:45,CP0175,Food pantry visit,1.8
+A001449,2026-08-06 16:30,CP0176,Food pantry visit,1.7
+A001450,2026-11-04 11:45,CP0176,Food pantry visit,1.9
+A001451,2026-06-01 11:00,CP0176,Food pantry visit,1.2
+A001452,2026-07-29 11:15,CP0177,Food pantry visit,1.4
+A001453,2026-07-08 15:00,CP0177,Food pantry visit,1.3
+A001454,2026-10-09 12:00,CP0178,Food pantry visit,1.7
+A001455,2026-10-30 18:45,CP0178,Food pantry visit,1.7
+A001456,2026-07-22 16:30,CP0178,Food pantry visit,1.1
+A001457,2026-11-07 11:30,CP0178,Food pantry visit,1.8
+A001458,2026-08-25 12:45,CP0178,Food pantry visit,1.1
+A001459,2026-10-06 14:15,CP0179,Food pantry visit,1.2
+A001460,2026-06-18 17:30,CP0179,Food pantry visit,1.3
+A001461,2026-09-30 18:15,CP0179,Food pantry visit,1.0
+A001462,2026-09-11 15:00,CP0180,Food pantry visit,1.9
+A001463,2026-10-04 18:15,CP0180,Food pantry visit,1.8
+A001464,2026-09-10 14:15,CP0180,Food pantry visit,1.9
+A001465,2026-09-29 15:00,CP0180,Food pantry visit,1.2
+A001466,2026-08-10 14:00,CP0180,Food pantry visit,1.4
+A001467,2026-05-12 15:00,CP0181,Senior activity,1.7
+A001468,2026-05-06 18:30,CP0182,General workshop,1.7
+A001469,2026-05-25 15:00,CP0182,Senior activity,1.1
+A001470,2026-11-15 13:45,CP0183,Senior activity,1.1
+A001471,2026-06-06 10:00,CP0184,Senior activity,1.6
+A001472,2026-02-14 18:00,CP0185,Senior activity,1.2
+A001473,2026-11-14 19:45,CP0186,General workshop,1.1
+A001474,2026-07-31 15:00,CP0187,General workshop,1.9
+A001475,2026-03-10 11:45,CP0187,Senior activity,1.6
+A001476,2026-03-31 10:15,CP0188,General workshop,1.6
+A001477,2026-01-31 15:15,CP0188,General workshop,1.8
+A001478,2026-06-30 14:00,CP0189,General workshop,1.4
+A001479,2025-12-25 19:45,CP0189,General workshop,1.3
+A001480,2025-11-28 09:15,CP0190,General workshop,1.3
+A001481,2026-03-14 08:30,CP0191,General workshop,1.1
+A001482,2026-11-08 16:30,CP0192,Senior activity,1.2
+A001483,2026-10-20 11:45,CP0193,General workshop,1.6
+A001484,2026-06-12 15:15,CP0194,Senior activity,1.1
+A001485,2026-11-01 08:45,CP0194,Senior activity,2.0
+A001486,2026-08-06 12:00,CP0195,General workshop,1.8
+A001487,2026-10-18 11:15,CP0195,Senior activity,1.9
+A001488,2026-03-22 10:45,CP0196,Senior activity,1.9
+A001489,2026-06-28 18:30,CP0196,General workshop,1.0
+A001490,2026-02-05 14:45,CP0197,General workshop,1.9
+A001491,2026-01-15 08:00,CP0198,Senior activity,1.0
+A001492,2025-11-22 18:45,CP0198,General workshop,1.1
+A001493,2026-05-08 17:15,CP0199,Senior activity,1.4
+A001494,2026-06-26 17:00,CP0199,General workshop,1.9
+A001495,2026-11-03 16:00,CP0200,General workshop,1.9
+A001496,2026-09-19 15:45,CP0200,General workshop,1.9
+A001497,2025-12-08 14:30,CP0201,General workshop,1.8
+A001498,2026-03-20 15:45,CP0201,Senior activity,1.6
+A001499,2026-05-15 15:15,CP0202,Senior activity,1.3
+A001500,2026-08-24 09:45,CP0203,Senior activity,1.5
+A001501,2026-08-16 19:00,CP0203,Senior activity,1.3
+A001502,2026-05-27 12:00,CP0204,General workshop,1.8
+A001503,2026-04-29 18:45,CP0205,Senior activity,1.0
+A001504,2025-12-25 14:30,CP0206,General workshop,1.2
+A001505,2026-04-07 09:45,CP0206,General workshop,1.2
+A001506,2026-07-26 16:00,CP0207,General workshop,1.3
+A001507,2026-07-11 11:30,CP0208,General workshop,1.8
+A001508,2026-03-25 18:30,CP0208,General workshop,1.2
+A001509,2025-11-22 18:45,CP0209,General workshop,1.9
+A001510,2026-07-06 19:45,CP0209,Senior activity,1.9
+A001511,2026-06-28 12:45,CP0210,General workshop,1.1
+A001512,2026-10-04 11:45,CP0211,General workshop,1.9
+A001513,2026-02-28 16:30,CP0211,Senior activity,1.8
+A001514,2026-09-20 12:45,CP0212,Senior activity,1.3
+A001515,2026-01-10 16:15,CP0212,General workshop,1.1
+A001516,2026-01-11 12:30,CP0213,Senior activity,1.0
+A001517,2026-07-11 16:30,CP0214,General workshop,1.1
+A001518,2026-01-02 13:00,CP0214,Senior activity,1.3
+A001519,2026-07-13 09:15,CP0215,Senior activity,1.7
+A001520,2026-08-09 12:45,CP0215,General workshop,1.6
+A001521,2026-05-15 15:30,CP0216,Senior activity,1.8
+A001522,2026-01-16 10:00,CP0217,Senior activity,1.7
+A001523,2026-08-04 11:00,CP0217,General workshop,1.6
+A001524,2026-10-01 17:30,CP0218,Senior activity,1.5
+A001525,2026-05-01 14:45,CP0219,Senior activity,1.6
+A001526,2026-09-13 08:15,CP0219,General workshop,1.3
+A001527,2026-06-02 15:15,CP0220,General workshop,1.6
+A001528,2026-10-19 10:30,CP0220,Senior activity,1.2
+A001529,2026-07-04 10:00,CP0221,General workshop,1.8
+A001530,2026-08-08 10:15,CP0221,General workshop,1.3
+A001531,2026-02-16 14:15,CP0222,Senior activity,1.2
+A001532,2025-12-21 15:00,CP0223,Senior activity,1.2
+A001533,2026-11-10 16:30,CP0224,General workshop,1.3
+A001534,2026-10-11 09:15,CP0224,General workshop,1.9
+A001535,2026-09-18 18:30,CP0225,Senior activity,1.5
+A001536,2026-04-05 18:00,CP0225,General workshop,1.9
+A001537,2026-05-16 12:15,CP0226,General workshop,1.9
+A001538,2026-05-28 13:15,CP0227,Senior activity,1.9
+A001539,2026-11-12 09:15,CP0227,Senior activity,1.9
+A001540,2026-07-16 18:15,CP0228,Senior activity,1.8
+A001541,2026-06-20 15:45,CP0228,General workshop,1.9
+A001542,2026-02-24 13:45,CP0229,General workshop,1.0
+A001543,2026-10-11 12:15,CP0229,Senior activity,1.0
+A001544,2026-11-10 18:00,CP0230,General workshop,1.7
+A001545,2026-11-01 09:30,CP0230,General workshop,1.6
+A001546,2026-02-04 17:00,CP0231,General workshop,1.0
+A001547,2025-11-22 08:15,CP0231,Senior activity,1.9
+A001548,2026-07-14 15:30,CP0232,General workshop,1.9
+A001549,2026-07-25 10:45,CP0232,Senior activity,1.1
+A001550,2025-12-13 16:30,CP0233,Senior activity,1.9
+A001551,2026-08-16 14:15,CP0233,Senior activity,1.7
+A001552,2026-09-02 11:30,CP0234,Senior activity,1.4
+A001553,2026-05-21 14:45,CP0234,Senior activity,1.1
+A001554,2025-11-24 13:15,CP0235,General workshop,1.3
+A001555,2026-08-06 16:30,CP0236,General workshop,1.0
+A001556,2026-09-27 15:00,CP0236,General workshop,1.5
+A001557,2026-05-21 15:30,CP0237,General workshop,1.2
+A001558,2026-08-30 16:30,CP0237,General workshop,2.0
+A001559,2026-09-12 13:45,CP0238,General workshop,1.4
+A001560,2026-02-21 08:30,CP0239,General workshop,1.8
+A001561,2026-02-23 19:15,CP0240,Senior activity,1.8
+A001562,2026-02-03 11:15,CP0240,Senior activity,1.1
+A001563,2026-01-19 09:30,CP0241,Senior activity,1.1
+A001564,2026-05-14 12:00,CP0242,General workshop,1.3
+A001565,2026-04-02 15:00,CP0243,General workshop,1.5
+A001566,2026-07-15 16:45,CP0243,General workshop,1.5
+A001567,2026-09-14 15:45,CP0244,Senior activity,1.7
+A001568,2026-02-02 16:00,CP0245,Senior activity,1.7
+A001569,2026-07-16 19:00,CP0246,General workshop,1.0
+A001570,2026-05-23 19:00,CP0247,General workshop,2.0
+A001571,2026-10-13 15:15,CP0247,Senior activity,1.1
+A001572,2026-05-23 09:45,CP0248,General workshop,1.5
+A001573,2026-02-28 16:45,CP0249,Senior activity,1.3
+A001574,2026-01-05 11:45,CP0250,General workshop,1.6

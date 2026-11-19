@@ -61,6 +61,14 @@ def dayparts(ws: Workspace | None = None) -> list[tuple[str, int, int]]:
     return [(d["label"], d["start"], d["end"]) for d in (ws or pack()).raw["dayparts"]]
 
 
+def metric(metric_id: str, ws: Workspace | None = None) -> dict:
+    ws = ws or pack()
+    for m in ws.raw["metrics"]:
+        if m["id"] == metric_id:
+            return dict(m)
+    raise KeyError(f"No metric '{metric_id}' in this pack")
+
+
 def metric_window(metric_id: str, ws: Workspace | None = None) -> tuple[int, int]:
     """Day offsets (from, to) of a windowed count metric, e.g. (120, 30)."""
     ws = ws or pack()

@@ -189,3 +189,29 @@ optionally `due_date`, `paid_date`, `cost`, `disputed` (0/1).
 Each score carries its raw inputs, the threshold used, a provenance tag
 (observed or inferred), and a one-line reason. Output: `b2b_scorecards.json`
 (full audit) and `b2b_scores.csv` (flat table).
+
+## Domain packs (healthcare, community programs)
+
+Every domain decision for a non-retail run comes from a pack JSON in `packs/`:
+events and field names, segment rules, playbook text, dayparts, categories, metrics,
+the trend trigger, and the narrative wording. Validation runs first.
+
+```
+python -m personas pack-demo --pack healthcare        # synthetic patients, runs end to end
+python -m personas pack-demo --pack community         # synthetic participants
+python -m personas pack-run --pack packs/healthcare.json --input visits.csv --trends feed.csv
+```
+
+- `healthcare` (`packs/healthcare.json`): operational segments from visit patterns only
+  (lapsed, preventive care due, follow-up cohort, urgent-care users, new or occasional).
+  No clinical conditions, diagnoses, or medications are recorded or used. The demo
+  data holds only visit dates, visit type, and charge.
+- `community` (`packs/community.json`): program attendance. Its `service_area` intake is a
+  coarse `geo_region` for planning. It is enabled by `feature_flags.enable_geo_fields`,
+  and no individual location is recorded anywhere.
+- Demo data is generated and labeled synthetic. Segment outputs say nothing about real
+  patients or participants.
+- Retail keeps its full pipeline (report, grounding check, AI narratives).
+  Packs run through `pack-run` produce `personas.json` only, with no HTML report yet.
+- Trend lift can measure dollars (`sum` of amount) or event counts (`count_transactions`),
+  selected by `triggers.correlate.metric`.

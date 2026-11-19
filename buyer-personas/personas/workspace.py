@@ -123,8 +123,13 @@ class Workspace:
         if c.get("metric") not in metrics:
             raise ValueError(f"Trigger metric '{c.get('metric')}' is not a declared metric")
         m = metrics[c["metric"]]
-        if m["agg"] != "sum" or m.get("of") != "amount":
-            raise ValueError("Trigger metric must be a sum of 'amount' (the daily series it is measured on)")
+        is_dollars = m["agg"] == "sum" and m.get("of") == "amount"
+        is_count = m["agg"] == "count_transactions" and "window_days" not in m and "where" not in m
+        if not (is_dollars or is_count):
+            raise ValueError(
+                "Trigger metric must be a plain sum of 'amount' (dollar lift) or an "
+                "unwindowed count_transactions (event-count lift)"
+            )
         if c.get("baseline") not in TRIGGER_BASELINES:
             raise ValueError(f"Unknown trigger baseline '{c.get('baseline')}'")
         if c.get("match") not in TRIGGER_MATCHES:

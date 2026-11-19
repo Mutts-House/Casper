@@ -1,0 +1,374 @@
+{
+  "pack_id": "community_programs",
+  "pack_version": 1,
+  "description": "Community program attendance (library, food support, senior and youth programs). Operational segments only. Synthetic demo data.",
+  "workspace": {
+    "name": "Community Programs (demo)",
+    "domain": "community_services",
+    "timezone": "America/Los_Angeles"
+  },
+  "feature_flags": {
+    "enable_geo_fields": true
+  },
+  "events": {
+    "source": "attendance_export",
+    "entity_key_fields": [
+      "participant_id"
+    ],
+    "fields": {
+      "transaction_id": [
+        "attendance_id",
+        "session_id"
+      ],
+      "timestamp": [
+        "session_date",
+        "timestamp"
+      ],
+      "entity_id": [
+        "participant_id"
+      ],
+      "category": [
+        "program_type"
+      ],
+      "amount": [
+        "hours"
+      ]
+    }
+  },
+  "category_normalization": {
+    "default": "general",
+    "rules": [
+      {
+        "category": "youth_program",
+        "keywords": [
+          "youth",
+          "kids",
+          "teen",
+          "after-school"
+        ]
+      },
+      {
+        "category": "adult_education",
+        "keywords": [
+          "class",
+          "esl",
+          "job",
+          "literacy"
+        ]
+      },
+      {
+        "category": "food_support",
+        "keywords": [
+          "pantry",
+          "food",
+          "meal"
+        ]
+      },
+      {
+        "category": "senior_activity",
+        "keywords": [
+          "senior",
+          "older adult",
+          "elder"
+        ]
+      }
+    ],
+    "restricted_categories": [],
+    "margin_rates": {
+      "general": 0.0,
+      "youth_program": 0.0,
+      "adult_education": 0.0,
+      "food_support": 0.0,
+      "senior_activity": 0.0
+    },
+    "default_margin": 0.0
+  },
+  "dayparts": [
+    {
+      "label": "morning",
+      "start": 8,
+      "end": 12
+    },
+    {
+      "label": "afternoon",
+      "start": 12,
+      "end": 17
+    },
+    {
+      "label": "evening",
+      "start": 17,
+      "end": 21
+    }
+  ],
+  "metrics": [
+    {
+      "id": "visits",
+      "agg": "count_transactions"
+    },
+    {
+      "id": "visits_in_window",
+      "agg": "count_transactions",
+      "window_days": {
+        "from": 365,
+        "to": 90
+      }
+    },
+    {
+      "id": "recency_days",
+      "agg": "days_since_last"
+    },
+    {
+      "id": "hours",
+      "agg": "sum",
+      "of": "amount"
+    },
+    {
+      "id": "share_youth",
+      "agg": "share_of_transactions",
+      "where": {
+        "category": "youth_program"
+      }
+    },
+    {
+      "id": "share_food",
+      "agg": "share_of_transactions",
+      "where": {
+        "category": "food_support"
+      }
+    }
+  ],
+  "entity_types": [
+    {
+      "id": "participant",
+      "label": "Participant",
+      "label_plural": "Participants",
+      "naming": {
+        "prefix": "CP",
+        "pattern": "{prefix}{n}"
+      },
+      "identity_fields": [
+        "participant_id"
+      ],
+      "segments": [
+        {
+          "id": "regular_participants",
+          "label": "Regular Participants",
+          "priority": 1,
+          "when": {
+            "all": [
+              {
+                "metric": "visits",
+                "op": ">=",
+                "value": 12
+              },
+              {
+                "metric": "recency_days",
+                "op": "<",
+                "value": 45
+              }
+            ]
+          }
+        },
+        {
+          "id": "lapsing_participants",
+          "label": "Lapsing Participants",
+          "priority": 2,
+          "when": {
+            "all": [
+              {
+                "metric": "visits_in_window",
+                "op": ">=",
+                "value": 3
+              },
+              {
+                "metric": "recency_days",
+                "op": ">=",
+                "value": 60
+              }
+            ]
+          }
+        },
+        {
+          "id": "youth_program_families",
+          "label": "Youth Program Participants",
+          "priority": 3,
+          "when": {
+            "all": [
+              {
+                "metric": "visits",
+                "op": ">=",
+                "value": 3
+              },
+              {
+                "metric": "share_youth",
+                "op": ">=",
+                "value": 0.6
+              },
+              {
+                "metric": "recency_days",
+                "op": "<",
+                "value": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "food_support_users",
+          "label": "Food-Support Users",
+          "priority": 4,
+          "when": {
+            "all": [
+              {
+                "metric": "visits",
+                "op": ">=",
+                "value": 2
+              },
+              {
+                "metric": "share_food",
+                "op": ">=",
+                "value": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "occasional_participants",
+          "label": "Occasional Participants",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "intake_fields": [
+    {
+      "id": "service_area",
+      "label": "Service area (coarse, for planning)",
+      "type": "geo_region",
+      "usable_in_rules": false,
+      "sensitive": false
+    }
+  ],
+  "playbook": {
+    "fields": [
+      {
+        "id": "summary",
+        "label": "Summary",
+        "required": false
+      },
+      {
+        "id": "goal",
+        "label": "Goal",
+        "required": true
+      },
+      {
+        "id": "offer_angle",
+        "label": "Invitation",
+        "required": false
+      },
+      {
+        "id": "channel",
+        "label": "Channel",
+        "required": false
+      },
+      {
+        "id": "timing",
+        "label": "Timing",
+        "required": false
+      },
+      {
+        "id": "avoid",
+        "label": "Avoid",
+        "required": false
+      },
+      {
+        "id": "tags",
+        "label": "Trigger tags",
+        "required": false
+      }
+    ],
+    "by_segment": {
+      "regular_participants": {
+        "summary": "Attend often and recently.",
+        "goal": "Keep regulars engaged and invite them into volunteer roles.",
+        "offer_angle": "Invitation to a new session or a volunteer shift.",
+        "channel": "Email or text from program staff",
+        "timing": "After every fourth attendance",
+        "avoid": "Implying they need help.",
+        "tags": [
+          "community",
+          "school calendar",
+          "holiday"
+        ]
+      },
+      "lapsing_participants": {
+        "summary": "Attended regularly in the past year, stopped recently.",
+        "goal": "Invite back participants who stopped attending.",
+        "offer_angle": "Personal invitation to the next session, with a schedule option.",
+        "channel": "Phone call or text from a staff member they know",
+        "timing": "Day 60 after the last attendance",
+        "avoid": "Guilt-based messaging without a concrete option.",
+        "tags": [
+          "seasonal",
+          "weather",
+          "community"
+        ]
+      },
+      "youth_program_families": {
+        "summary": "Repeat attendance at youth programs.",
+        "goal": "Keep youth-program families informed about schedule changes.",
+        "offer_angle": "Schedule update and enrollment for the next session.",
+        "channel": "Opt-in parent email or text list",
+        "timing": "Two weeks before each new session",
+        "avoid": "Targeting by household income or perceived need.",
+        "tags": [
+          "school calendar",
+          "seasonal",
+          "holiday"
+        ]
+      },
+      "food_support_users": {
+        "summary": "Repeat use of food-support programs.",
+        "goal": "Share related programs with everyone, without implying need.",
+        "offer_angle": "Open invitation to cooking or nutrition sessions.",
+        "channel": "Posters and the program newsletter",
+        "timing": "Monthly",
+        "avoid": "Any framing that implies poverty or eligibility.",
+        "tags": [
+          "community",
+          "seasonal",
+          "weather"
+        ]
+      },
+      "occasional_participants": {
+        "summary": "Attended once or twice, no pattern yet.",
+        "goal": "Turn a first session into a second one.",
+        "offer_angle": "Sign-up invitation for the next session.",
+        "channel": "Sign-in sheet follow-up",
+        "timing": "Within seven days of the first attendance",
+        "avoid": "Pressure to commit.",
+        "tags": [
+          "new",
+          "community"
+        ]
+      }
+    }
+  },
+  "triggers": {
+    "fields": {
+      "date": "date",
+      "topic": "topic",
+      "scope": "scope",
+      "tags": "tags"
+    },
+    "correlate": {
+      "metric": "visits",
+      "baseline": "same_weekday",
+      "min_events": 3,
+      "z_threshold": 2.0,
+      "match": "tag_overlap_with_segment_playbook"
+    }
+  },
+  "narrative": {
+    "template": "{segment} make up {share_pct}% of recorded program hours ({customers} {entity_plural}). They average {visits} sessions over the period and {avg_amount} hours each. Goal: {goal} Suggested invitation: {offer_angle} Channel: {channel}, timing: {timing}."
+  }
+}

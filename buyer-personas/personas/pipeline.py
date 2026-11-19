@@ -58,11 +58,7 @@ def run(cfg: RunConfig) -> dict:
     # Line-level segment label; anonymous sales are kept as "Unidentified" for trend math.
     seg_map = dict(zip(feats["customer_key"], feats["segment"])) if not feats.empty else {}
     lines = lines.assign(segment=lines["customer_key"].map(seg_map).fillna("Unidentified"))
-    lines["day"] = lines["timestamp"].dt.normalize()
-    daily = lines.groupby("day", as_index=False)["amount"].sum().rename(columns={"day": "date", "amount": "revenue"})
-    daily_seg = lines.groupby(["day", "segment"], as_index=False)["amount"].sum().rename(
-        columns={"day": "date", "amount": "revenue"}
-    )
+    daily, daily_seg = trends.daily_series(lines)
 
     # Trends: match to segments and measure lift on dates they happened.
     trend_hooks: dict[str, list[dict]] = {}

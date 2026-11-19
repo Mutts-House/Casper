@@ -1,0 +1,371 @@
+{
+  "pack_id": "healthcare_outpatient",
+  "pack_version": 1,
+  "description": "Outpatient clinic scheduling and visit data. Operational segments only (visit patterns, never clinical conditions). Synthetic demo data.",
+  "workspace": {
+    "name": "Outpatient Clinic (demo)",
+    "domain": "healthcare",
+    "timezone": "America/Los_Angeles"
+  },
+  "feature_flags": {
+    "enable_geo_fields": false
+  },
+  "events": {
+    "source": "scheduling_export",
+    "entity_key_fields": [
+      "patient_id"
+    ],
+    "fields": {
+      "transaction_id": [
+        "visit_id",
+        "appointment_id"
+      ],
+      "timestamp": [
+        "visit_date",
+        "appointment_date",
+        "timestamp"
+      ],
+      "entity_id": [
+        "patient_id"
+      ],
+      "category": [
+        "visit_type",
+        "appointment_type"
+      ],
+      "amount": [
+        "charge_amount"
+      ]
+    }
+  },
+  "category_normalization": {
+    "default": "routine",
+    "rules": [
+      {
+        "category": "urgent",
+        "keywords": [
+          "urgent",
+          "walk-in",
+          "walk in",
+          "same day"
+        ]
+      },
+      {
+        "category": "preventive",
+        "keywords": [
+          "preventive",
+          "wellness",
+          "annual"
+        ]
+      },
+      {
+        "category": "follow_up",
+        "keywords": [
+          "follow",
+          "recheck"
+        ]
+      }
+    ],
+    "restricted_categories": [],
+    "margin_rates": {
+      "routine": 0.0,
+      "urgent": 0.0,
+      "preventive": 0.0,
+      "follow_up": 0.0
+    },
+    "default_margin": 0.0
+  },
+  "dayparts": [
+    {
+      "label": "morning",
+      "start": 8,
+      "end": 12
+    },
+    {
+      "label": "afternoon",
+      "start": 12,
+      "end": 17
+    },
+    {
+      "label": "evening",
+      "start": 17,
+      "end": 20
+    }
+  ],
+  "metrics": [
+    {
+      "id": "visits",
+      "agg": "count_transactions"
+    },
+    {
+      "id": "visits_in_window",
+      "agg": "count_transactions",
+      "window_days": {
+        "from": 365,
+        "to": 180
+      }
+    },
+    {
+      "id": "recency_days",
+      "agg": "days_since_last"
+    },
+    {
+      "id": "charges",
+      "agg": "sum",
+      "of": "amount"
+    },
+    {
+      "id": "share_urgent",
+      "agg": "share_of_transactions",
+      "where": {
+        "category": "urgent"
+      }
+    },
+    {
+      "id": "share_preventive",
+      "agg": "share_of_transactions",
+      "where": {
+        "category": "preventive"
+      }
+    },
+    {
+      "id": "share_follow_up",
+      "agg": "share_of_transactions",
+      "where": {
+        "category": "follow_up"
+      }
+    }
+  ],
+  "entity_types": [
+    {
+      "id": "patient",
+      "label": "Patient",
+      "label_plural": "Patients",
+      "naming": {
+        "prefix": "PT",
+        "pattern": "{prefix}{n}"
+      },
+      "identity_fields": [
+        "patient_id"
+      ],
+      "segments": [
+        {
+          "id": "lapsed_patients",
+          "label": "Lapsed Patients",
+          "priority": 1,
+          "when": {
+            "all": [
+              {
+                "metric": "visits_in_window",
+                "op": ">=",
+                "value": 2
+              },
+              {
+                "metric": "recency_days",
+                "op": ">=",
+                "value": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "preventive_care_due",
+          "label": "Preventive Care Due",
+          "priority": 2,
+          "when": {
+            "all": [
+              {
+                "metric": "share_preventive",
+                "op": ">=",
+                "value": 0.5
+              },
+              {
+                "metric": "recency_days",
+                "op": ">=",
+                "value": 300
+              }
+            ]
+          }
+        },
+        {
+          "id": "follow_up_cohort",
+          "label": "Follow-up Cohort",
+          "priority": 3,
+          "when": {
+            "all": [
+              {
+                "metric": "visits",
+                "op": ">=",
+                "value": 3
+              },
+              {
+                "metric": "share_follow_up",
+                "op": ">=",
+                "value": 0.5
+              },
+              {
+                "metric": "recency_days",
+                "op": "<",
+                "value": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "urgent_care_users",
+          "label": "Urgent-Care Users",
+          "priority": 4,
+          "when": {
+            "all": [
+              {
+                "metric": "visits",
+                "op": ">=",
+                "value": 2
+              },
+              {
+                "metric": "share_urgent",
+                "op": ">=",
+                "value": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "new_or_occasional",
+          "label": "New or Occasional Patients",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "intake_fields": [
+    {
+      "id": "preferred_contact",
+      "label": "Preferred contact",
+      "type": "category",
+      "usable_in_rules": false,
+      "sensitive": false
+    }
+  ],
+  "playbook": {
+    "fields": [
+      {
+        "id": "summary",
+        "label": "Summary",
+        "required": false
+      },
+      {
+        "id": "goal",
+        "label": "Goal",
+        "required": true
+      },
+      {
+        "id": "offer_angle",
+        "label": "Outreach offer",
+        "required": false
+      },
+      {
+        "id": "channel",
+        "label": "Channel",
+        "required": false
+      },
+      {
+        "id": "timing",
+        "label": "Timing",
+        "required": false
+      },
+      {
+        "id": "avoid",
+        "label": "Avoid",
+        "required": false
+      },
+      {
+        "id": "tags",
+        "label": "Trigger tags",
+        "required": false
+      }
+    ],
+    "by_segment": {
+      "lapsed_patients": {
+        "summary": "Seen regularly in the past year, no visit in the last six months.",
+        "goal": "Re-open scheduling for patients who have not been seen in six months.",
+        "offer_angle": "Offer an open appointment in the next two weeks.",
+        "channel": "Patient portal message or front-desk phone call",
+        "timing": "Day 180 after the last visit",
+        "avoid": "Any message that implies something is wrong with the patient.",
+        "tags": [
+          "seasonal",
+          "flu season",
+          "health awareness"
+        ]
+      },
+      "preventive_care_due": {
+        "summary": "Mostly preventive visits, none recently.",
+        "goal": "Help patients book their next routine preventive visit.",
+        "offer_angle": "Scheduling reminder with two available times.",
+        "channel": "Portal reminder and mailed letter",
+        "timing": "Once, at day 300 without a preventive visit",
+        "avoid": "Claims about specific conditions or medical advice.",
+        "tags": [
+          "health awareness",
+          "seasonal"
+        ]
+      },
+      "follow_up_cohort": {
+        "summary": "Regular scheduled follow-up visits.",
+        "goal": "Keep scheduled follow-up appointments on time.",
+        "offer_angle": "Reminder with a rescheduling link and transport information.",
+        "channel": "Automated text reminder",
+        "timing": "Three days before each scheduled visit",
+        "avoid": "Reminders that arrive on the day of the visit.",
+        "tags": [
+          "school calendar",
+          "seasonal",
+          "weather"
+        ]
+      },
+      "urgent_care_users": {
+        "summary": "Repeated same-day or walk-in visits.",
+        "goal": "Offer a primary-care scheduling option to urgent-care users.",
+        "offer_angle": "Information on booking a primary-care appointment and after-hours options.",
+        "channel": "Printed handout at check-out and a portal message",
+        "timing": "Within seven days of an urgent visit",
+        "avoid": "Blame or cost-shaming language.",
+        "tags": [
+          "weather",
+          "flu season",
+          "holiday"
+        ]
+      },
+      "new_or_occasional": {
+        "summary": "One or two visits so far, no pattern yet.",
+        "goal": "Turn a first visit into a return visit.",
+        "offer_angle": "Welcome message with how to book the next visit online.",
+        "channel": "Portal welcome message",
+        "timing": "Within seven days of the first visit",
+        "avoid": "Sales-style language.",
+        "tags": [
+          "new",
+          "community"
+        ]
+      }
+    }
+  },
+  "triggers": {
+    "fields": {
+      "date": "date",
+      "topic": "topic",
+      "scope": "scope",
+      "tags": "tags"
+    },
+    "correlate": {
+      "metric": "visits",
+      "baseline": "same_weekday",
+      "min_events": 3,
+      "z_threshold": 2.0,
+      "match": "tag_overlap_with_segment_playbook"
+    }
+  },
+  "narrative": {
+    "template": "{segment} make up {share_pct}% of recorded charges ({customers} {entity_plural}). They average {visits} visits over the period and ${avg_amount} in charges each. Goal: {goal} Suggested outreach: {offer_angle} Channel: {channel}, timing: {timing}."
+  }
+}

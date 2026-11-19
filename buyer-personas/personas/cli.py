@@ -5,12 +5,15 @@ Examples:
   python -m personas run --input sales.csv --survey survey.csv --trends trends.csv --store "Main Store #1234"
   python -m personas run --input sales.xlsx --sqlite pos.db --sql "SELECT * FROM sales" --ai ollama:llama3.1
   python -m personas run --input sales.csv --ai file:ai_plugins/my_provider.py
+  python -m personas pack-run --pack packs/healthcare.json --input visits.csv --trends feed.csv
+  python -m personas pack-demo --pack community
 """
 
 from __future__ import annotations
 
 import argparse
 import sys
+from pathlib import Path
 
 from .demo import generate
 from .pipeline import RunConfig, run
@@ -79,6 +82,45 @@ def _b2b_cmd(args: argparse.Namespace) -> int:
     return 0
 
 
+PACKS = {"healthcare": "packs/healthcare.json", "community": "packs/community.json"}
+
+
+def _pack_root(path: str) -> str:
+    p = Path(path)
+    return str(p if p.is_absolute() or p.exists() else Path(__file__).resolve().parent.parent / path)
+
+
+def _pack_run_cmd(args: argparse.Namespace) -> int:
+    from .pack_run import run_pack
+    result = run_pack(_pack_root(args.pack), args.input, args.out, as_of=args.as_of, trends_path=args.trends)
+    print(f"Pack:             {result['pack_id']} v{result['pack_version']}")
+    print(f"Period:           {result['period']}")
+    print(f"{result['entity'].title()}s:         {result['entities']}")
+    for p in result["personas"]:
+        print(f"  {p['id']} {p['segment']:<30} {p['size']['customers']:>5}  {p['size']['share_of_amount_pct']:>5}% of total")
+    for row in result["trend_lift"]:
+        print(f"  trend {row['topic']!r}: {row['evidence']} (events={row['events']}, z={row['avg_z_score']})")
+    print(f"Data:    {args.out}/personas.json")
+    return 0
+
+
+def _pack_demo_cmd(args: argparse.Namespace) -> int:
+    from . import pack_demo
+    from .pack_run import run_pack
+    if args.pack == "healthcare":
+        visits = pack_demo.generate_healthcare(args.data_dir)
+        trends_csv, pack, out = f"{args.data_dir}/health_trends_demo.csv", PACKS["healthcare"], args.out or "output_healthcare"
+        data = visits
+    else:
+        data = pack_demo.generate_community(args.data_dir)
+        trends_csv, pack, out = f"{args.data_dir}/community_trends_demo.csv", PACKS["community"], args.out or "output_community"
+    print(f"Synthetic demo data written to {args.data_dir}/ (labeled SYNTHETIC)")
+    result = run_pack(_pack_root(pack), data, out, trends_path=trends_csv)
+    print(f"Ran pack {result['pack_id']}: {len(result['personas'])} segments over {result['entities']} {result['entity']}s.")
+    print(f"Data:    {out}/personas.json")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="personas", description="Buyer persona engine")
     sub = parser.add_subparsers(dest="cmd", required=True)
@@ -113,6 +155,20 @@ def main(argv: list[str] | None = None) -> int:
     b.add_argument("--as-of", help="Analysis date YYYY-MM-DD (default: latest invoice)")
     b.add_argument("--out", default="output_b2b", help="Output folder")
     b.set_defaults(func=_b2b_cmd)
+
+    pr = sub.add_parser("pack-run", help="Run a domain pack (healthcare, community, ...) on a transaction CSV")
+    pr.add_argument("--pack", required=True, help="Path to a pack JSON, e.g. packs/healthcare.json")
+    pr.add_argument("--input", required=True, help="Transaction CSV using the pack's field names")
+    pr.add_argument("--trends", help="Optional trend feed CSV (mapped by the pack's triggers.fields)")
+    pr.add_argument("--as-of", help="Analysis date YYYY-MM-DD (default: latest row)")
+    pr.add_argument("--out", default="output_pack", help="Output folder")
+    pr.set_defaults(func=_pack_run_cmd)
+
+    pd_ = sub.add_parser("pack-demo", help="Generate synthetic data for a demo pack and run it")
+    pd_.add_argument("--pack", choices=sorted(PACKS), required=True)
+    pd_.add_argument("--data-dir", default="sample_data")
+    pd_.add_argument("--out", help="Output folder (default: output_<pack>)")
+    pd_.set_defaults(func=_pack_demo_cmd)
 
     args = parser.parse_args(argv)
     try:

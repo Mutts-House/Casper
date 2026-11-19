@@ -53,17 +53,49 @@ class CsvTrendSource(TrendSource):
         return df[(df["date"] >= start) & (df["date"] <= end)].reset_index(drop=True)
 
 
+def daily_series(lines: pd.DataFrame, metric_id: str | None = None, ws=None) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Daily series the trend lift is measured on, for the pack's trigger metric.
+
+    Dollar metric (sum of amount): revenue per day, as before.
+    Event-count metric (count_transactions): distinct transactions per day.
+    Returns (daily: date, revenue) and (daily_seg: date, segment, revenue).
+    """
+    if metric_id is None:
+        metric_id = engine.trigger_settings(ws)["metric"]
+    m = engine.metric(metric_id, ws)
+    lines = lines.assign(day=lines["timestamp"].dt.normalize())
+    if m["agg"] == "count_transactions":
+        daily = lines.groupby("day", as_index=False)["transaction_id"].nunique().rename(
+            columns={"day": "date", "transaction_id": "revenue"})
+        daily_seg = lines.groupby(["day", "segment"], as_index=False)["transaction_id"].nunique().rename(
+            columns={"day": "date", "transaction_id": "revenue"})
+    else:
+        daily = lines.groupby("day", as_index=False)["amount"].sum().rename(
+            columns={"day": "date", "amount": "revenue"})
+        daily_seg = lines.groupby(["day", "segment"], as_index=False)["amount"].sum().rename(
+            columns={"day": "date", "amount": "revenue"})
+    return daily, daily_seg
+
+
 def _tags(raw: object) -> set[str]:
     if not isinstance(raw, str):
         return set()
     return {t.strip().lower() for t in raw.split(";") if t.strip()}
 
 
-def match_trends_to_segments(trends: pd.DataFrame, segments: list[str]) -> dict[str, list[dict]]:
-    """For each segment, list trends whose tags overlap the segment's playbook tags."""
+def match_trends_to_segments(
+    trends: pd.DataFrame,
+    segments: list[str],
+    ws=None,
+    entity_id: str = "customer",
+) -> dict[str, list[dict]]:
+    """For each segment, list trends whose tags overlap the segment's playbook tags.
+
+    ws and entity_id select the pack; they default to the retail pack.
+    """
     out: dict[str, list[dict]] = {}
     for seg in segments:
-        seg_tags = {t.lower() for t in engine.playbook_for(seg).get("tags", [])}
+        seg_tags = {t.lower() for t in engine.playbook_for(seg, ws, entity_id).get("tags", [])}
         hits = []
         for _, row in trends.iterrows():
             overlap = seg_tags & _tags(row.get("tags"))
