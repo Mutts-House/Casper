@@ -118,3 +118,19 @@ def assign_segment(row, entity_id: str = "customer", ws: Workspace | None = None
 
 def segment_labels(entity_id: str = "customer", ws: Workspace | None = None) -> list[str]:
     return [s["label"] for s in (ws or pack()).entity(entity_id)["segments"]]
+
+
+# ---- trigger (trend-correlation) settings ---------------------------------
+
+def trigger_settings(ws: Workspace | None = None) -> dict:
+    """Trend-feed column mapping and lift-evidence settings from the pack."""
+    t = (ws or pack()).raw["triggers"]
+    c = t["correlate"]
+    return {
+        "fields": dict(t["fields"]),
+        "metric": c["metric"],
+        "baseline": c["baseline"],
+        "min_events": int(c["min_events"]),
+        "z_threshold": float(c["z_threshold"]),
+        "match": c["match"],
+    }

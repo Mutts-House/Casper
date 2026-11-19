@@ -71,7 +71,7 @@ def run(cfg: RunConfig) -> dict:
     warnings: list[str] = []
     frames = []
     if cfg.trends_path:
-        frames.append(pd.read_csv(cfg.trends_path))
+        frames.append(trends.load_feed(cfg.trends_path))
     if cfg.events_postal_code:
         # Fetch the whole data period so lift has history; hooks use the window below.
         try:

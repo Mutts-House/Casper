@@ -23,6 +23,8 @@ SENSITIVE_IDS = {
 
 INTAKE_TYPES = {"category", "text", "number", "geo_region"}
 ALLOWED_OPS = {">=", ">", "<=", "<", "==", "!="}
+TRIGGER_BASELINES = {"same_weekday"}
+TRIGGER_MATCHES = {"tag_overlap_with_segment_playbook"}
 ALLOWED_AGGS = {
     "count_transactions", "days_since_last", "sum", "sum_margin_weighted",
     "share_of_transactions", "share_of_amount",
@@ -65,13 +67,14 @@ class Workspace:
 
     # ---- validation --------------------------------------------------------
     def validate(self) -> None:
-        for key in ("pack_id", "pack_version", "workspace", "events", "metrics", "entity_types", "playbook"):
+        for key in ("pack_id", "pack_version", "workspace", "events", "metrics", "entity_types", "playbook", "triggers"):
             if key not in self.raw:
                 raise ValueError(f"Workspace config is missing required section '{key}'")
 
         self._validate_flags()
         self._validate_metrics()
         self._validate_intake()
+        self._validate_triggers()
         for et in self.raw["entity_types"]:
             self._validate_entity(et)
 
@@ -109,6 +112,30 @@ class Workspace:
             sensitive = fid in SENSITIVE_IDS or f.get("sensitive", False)
             if sensitive and f.get("usable_in_rules", False):
                 raise ValueError(f"Sensitive intake field '{fid}' cannot be used in segment rules")
+
+    def _validate_triggers(self) -> None:
+        t = self.raw["triggers"]
+        for key in ("fields", "correlate"):
+            if key not in t:
+                raise ValueError(f"Triggers section is missing '{key}'")
+        c = t["correlate"]
+        metrics = {m["id"]: m for m in self.raw["metrics"]}
+        if c.get("metric") not in metrics:
+            raise ValueError(f"Trigger metric '{c.get('metric')}' is not a declared metric")
+        m = metrics[c["metric"]]
+        if m["agg"] != "sum" or m.get("of") != "amount":
+            raise ValueError("Trigger metric must be a sum of 'amount' (the daily series it is measured on)")
+        if c.get("baseline") not in TRIGGER_BASELINES:
+            raise ValueError(f"Unknown trigger baseline '{c.get('baseline')}'")
+        if c.get("match") not in TRIGGER_MATCHES:
+            raise ValueError(f"Unknown trigger match mode '{c.get('match')}'")
+        if not isinstance(c.get("min_events"), int) or c["min_events"] < 1:
+            raise ValueError("Trigger min_events must be a whole number of at least 1")
+        if not isinstance(c.get("z_threshold"), (int, float)) or c["z_threshold"] <= 0:
+            raise ValueError("Trigger z_threshold must be a positive number")
+        for canon in ("date", "topic"):
+            if canon not in t["fields"]:
+                raise ValueError(f"Trigger fields must map '{canon}' to a feed column")
 
     def _validate_entity(self, et: dict) -> None:
         segments = et["segments"]

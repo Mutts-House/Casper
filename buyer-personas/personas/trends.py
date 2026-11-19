@@ -18,7 +18,19 @@ import pandas as pd
 
 from . import engine
 
-MIN_EVENTS_FOR_EVIDENCE = 3  # below this, a lift number is anecdote, not evidence
+CANONICAL_FEED_COLUMNS = ("date", "topic", "scope", "tags", "source", "url")
+
+
+def load_feed(path: str, fields: dict[str, str] | None = None) -> pd.DataFrame:
+    """Read a trend CSV, renaming its columns to canonical names.
+
+    fields maps canonical name -> the feed's column name, e.g. {"date": "event_date"}.
+    Columns not mapped keep their own names. Defaults to the pack's trigger fields.
+    """
+    fields = fields if fields is not None else engine.trigger_settings()["fields"]
+    df = pd.read_csv(path)
+    rename = {feed_col: canon for canon, feed_col in fields.items() if feed_col in df.columns}
+    return df.rename(columns=rename)
 
 
 class TrendSource(ABC):
@@ -30,11 +42,12 @@ class TrendSource(ABC):
 
 
 class CsvTrendSource(TrendSource):
-    def __init__(self, path: str):
+    def __init__(self, path: str, fields: dict[str, str] | None = None):
         self.path = path
+        self.fields = fields
 
     def fetch(self, start, end) -> pd.DataFrame:
-        df = pd.read_csv(self.path)
+        df = load_feed(self.path, self.fields)
         df["date"] = pd.to_datetime(df["date"], errors="coerce")
         df = df.dropna(subset=["date"])
         return df[(df["date"] >= start) & (df["date"] <= end)].reset_index(drop=True)
@@ -70,6 +83,8 @@ def measure_trend_lift(
     daily_revenue: pd.DataFrame,
     trends: pd.DataFrame,
     segment_daily: pd.DataFrame | None = None,
+    min_events: int | None = None,
+    z_threshold: float | None = None,
 ) -> pd.DataFrame:
     """Compare revenue on each trend date to the usual revenue for that weekday.
 
@@ -78,8 +93,13 @@ def measure_trend_lift(
     segment_daily (optional): columns date, segment, revenue.
     Returns one row per trend topic with lift %, a z-score against normal day-to-day
     variation for that weekday, and an evidence flag. A lift only counts as a signal
-    when the average z-score is at least 2 AND there are at least 3 events.
+    when the average z-score reaches z_threshold AND there are at least min_events events.
+    min_events and z_threshold default to the workspace pack's triggers.correlate settings.
     """
+    settings = engine.trigger_settings()
+    min_events = settings["min_events"] if min_events is None else min_events
+    z_threshold = settings["z_threshold"] if z_threshold is None else z_threshold
+
     if daily_revenue.empty or trends.empty:
         return pd.DataFrame(columns=["topic", "events", "avg_lift_pct", "avg_z_score", "evidence", "top_segment"])
 
@@ -128,9 +148,9 @@ def measure_trend_lift(
         if seg_lifts:
             top_seg = max(seg_lifts, key=lambda s: sum(seg_lifts[s]) / len(seg_lifts[s]))
         avg_z = sum(zs) / len(zs) if zs else 0.0
-        if len(lifts) < MIN_EVENTS_FOR_EVIDENCE:
+        if len(lifts) < min_events:
             evidence = "too few events"
-        elif abs(avg_z) >= 2:
+        elif abs(avg_z) >= z_threshold:
             evidence = "outside normal range"
         else:
             evidence = "within normal variation"
