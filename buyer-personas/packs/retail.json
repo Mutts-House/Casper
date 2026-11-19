@@ -1,0 +1,230 @@
+{
+  "pack_id": "retail",
+  "pack_version": 1,
+  "description": "Convenience-store POS data. Segments and playbook mirror the original hardcoded retail engine.",
+
+  "workspace": {
+    "name": "Store",
+    "domain": "retail",
+    "timezone": "America/Los_Angeles"
+  },
+
+  "feature_flags": {
+    "enable_geo_fields": false
+  },
+
+  "events": {
+    "source": "pos_export",
+    "entity_key_fields": ["customer_id", "email", "phone"],
+    "fields": {
+      "transaction_id": ["transaction_id", "transactionid", "receipt", "receipt_id", "trans_id", "ticket", "ticket_number"],
+      "timestamp": ["timestamp", "datetime", "date_time", "sale_time", "transaction_time", "date", "sale_date"],
+      "customer_id": ["customer_id", "customerid", "loyalty_id", "member_id", "card_id", "rewards_id"],
+      "email": ["email", "email_address", "e_mail"],
+      "phone": ["phone", "phone_number", "mobile", "cell"],
+      "product": ["product", "item", "item_name", "description", "sku_name", "product_name"],
+      "category": ["category", "department", "dept", "product_category", "class"],
+      "quantity": ["quantity", "qty", "units"],
+      "amount": ["amount", "line_total", "total", "sales", "revenue", "ext_price", "extended_price", "net_sales"]
+    }
+  },
+
+  "category_normalization": {
+    "default": "other",
+    "rules": [
+      {"category": "restricted", "keywords": ["tobacco", "cigarette", "vape", "nicotine", "lottery", "lotto", "beer", "wine", "alcohol", "liquor"]},
+      {"category": "fuel", "keywords": ["fuel", "gas", "gasoline", "diesel", "pump"]},
+      {"category": "food_service", "keywords": ["food", "hot", "pizza", "sandwich", "breakfast", "grill", "taquito", "entree", "bakery"]},
+      {"category": "beverage", "keywords": ["beverage", "drink", "soda", "coffee", "energy", "water", "juice", "tea"]},
+      {"category": "snack", "keywords": ["snack", "candy", "chip", "chocolate", "gum", "cookie"]}
+    ],
+    "restricted_categories": ["restricted"],
+    "margin_rates": {
+      "fuel": 0.09,
+      "food_service": 0.55,
+      "beverage": 0.40,
+      "snack": 0.35,
+      "other": 0.30,
+      "restricted": 0.15
+    },
+    "default_margin": 0.30
+  },
+
+  "dayparts": [
+    {"label": "late_night", "start": 22, "end": 24},
+    {"label": "late_night", "start": 0, "end": 5},
+    {"label": "commute_am", "start": 5, "end": 9},
+    {"label": "midday", "start": 9, "end": 14},
+    {"label": "afternoon", "start": 14, "end": 17},
+    {"label": "commute_pm", "start": 17, "end": 22}
+  ],
+
+  "metrics": [
+    {"id": "visits", "agg": "count_transactions"},
+    {"id": "visits_regular_period", "agg": "count_transactions", "window_days": {"from": 120, "to": 30}},
+    {"id": "recency_days", "agg": "days_since_last"},
+    {"id": "spend", "agg": "sum", "of": "amount"},
+    {"id": "gross_profit", "agg": "sum_margin_weighted", "of": "amount"},
+    {"id": "share_late_night", "agg": "share_of_transactions", "where": {"daypart": "late_night"}},
+    {"id": "share_commute", "agg": "share_of_transactions", "where": {"daypart_in": ["commute_am", "commute_pm"]}},
+    {"id": "share_midday", "agg": "share_of_transactions", "where": {"daypart": "midday"}},
+    {"id": "share_fuel", "agg": "share_of_amount", "where": {"category": "fuel"}},
+    {"id": "share_food_service", "agg": "share_of_amount", "where": {"category": "food_service"}}
+  ],
+
+  "entity_types": [
+    {
+      "id": "customer",
+      "label": "Customer",
+      "label_plural": "Customers",
+      "naming": {"prefix": "P", "pattern": "{prefix}{n}"},
+      "identity_fields": ["customer_id", "email", "phone"],
+      "segments": [
+        {
+          "id": "lapsing_regulars", "label": "Lapsing Regulars", "priority": 1,
+          "when": {"all": [
+            {"metric": "visits_regular_period", "op": ">=", "value": 3},
+            {"metric": "recency_days", "op": ">=", "value": 30}
+          ]}
+        },
+        {
+          "id": "loyal_core", "label": "Loyal Core", "priority": 2,
+          "when": {"all": [
+            {"metric": "visits", "op": ">=", "value": 12},
+            {"metric": "recency_days", "op": "<", "value": 30}
+          ]}
+        },
+        {
+          "id": "late_night_regulars", "label": "Late-Night Regulars", "priority": 3,
+          "when": {"all": [
+            {"metric": "visits", "op": ">=", "value": 3},
+            {"metric": "share_late_night", "op": ">=", "value": 0.35}
+          ]}
+        },
+        {
+          "id": "fuel_and_go_commuters", "label": "Fuel-and-Go Commuters", "priority": 4,
+          "when": {"all": [
+            {"metric": "visits", "op": ">=", "value": 3},
+            {"metric": "share_fuel", "op": ">=", "value": 0.40},
+            {"metric": "share_commute", "op": ">=", "value": 0.50}
+          ]}
+        },
+        {
+          "id": "lunch_grab_and_go", "label": "Lunch Grab-and-Go", "priority": 5,
+          "when": {"all": [
+            {"metric": "visits", "op": ">=", "value": 3},
+            {"metric": "share_food_service", "op": ">=", "value": 0.40},
+            {"metric": "share_midday", "op": ">=", "value": 0.40}
+          ]}
+        },
+        {
+          "id": "occasional_visitors", "label": "Occasional Visitors", "priority": 6,
+          "default": true
+        }
+      ]
+    }
+  ],
+
+  "intake_fields": [
+    {"id": "age_band", "label": "Age band", "type": "category", "usable_in_rules": false, "sensitive": false},
+    {"id": "household", "label": "Household", "type": "category", "usable_in_rules": false, "sensitive": false},
+    {"id": "routine", "label": "Weekly routine", "type": "category", "usable_in_rules": false, "sensitive": false}
+  ],
+
+  "playbook": {
+    "fields": [
+      {"id": "summary", "label": "Summary", "required": false},
+      {"id": "goal", "label": "Goal", "required": true},
+      {"id": "offer_angle", "label": "Offer angle", "required": false},
+      {"id": "channel", "label": "Channel", "required": false},
+      {"id": "timing", "label": "Timing", "required": false},
+      {"id": "avoid", "label": "Avoid", "required": false},
+      {"id": "tags", "label": "Trigger tags", "required": false}
+    ],
+    "by_segment": {
+      "loyal_core": {
+        "summary": "High-frequency, recent visitors who already trust the store.",
+        "goal": "Protect frequency and grow basket size.",
+        "offer_angle": "Reward loyalty: bonus points on their most-bought category, early access to promotions.",
+        "channel": "App push / loyalty SMS",
+        "timing": "Weekly, aligned to their peak daypart",
+        "avoid": "Deep discounts that train them to wait for offers.",
+        "tags": ["loyalty", "routine", "rewards"]
+      },
+      "lapsing_regulars": {
+        "summary": "Were visiting regularly but have gone quiet.",
+        "goal": "Win back within 30 to 60 days before they become one-time visitors.",
+        "offer_angle": "Win-back offer on the product they bought most, time-limited.",
+        "channel": "SMS or email with a reason to return",
+        "timing": "Trigger on day 30 without a visit",
+        "avoid": "Generic 'we miss you' messages with no offer.",
+        "tags": ["comeback", "value", "deal"]
+      },
+      "late_night_regulars": {
+        "summary": "Shop after 10 pm; likely shift workers, students, or night drivers.",
+        "goal": "Own the late-night occasion.",
+        "offer_angle": "Late-night bundles (drink + snack), hot-food timing, safety and convenience messaging.",
+        "channel": "In-store signage, app geofence near closing hours",
+        "timing": "Evenings and weekends, 9 pm to close",
+        "avoid": "Daytime-oriented promotions that hit when they are asleep.",
+        "tags": ["late night", "shift work", "nightlife", "event"]
+      },
+      "fuel_and_go_commuters": {
+        "summary": "Fill up and grab something on the way to or from work.",
+        "goal": "Turn fuel visits into in-store purchases.",
+        "offer_angle": "Fuel-plus-item bundle (coffee or drink with a fill-up); commute-time offers.",
+        "channel": "Pump-side screens, app offers at fueling",
+        "timing": "Weekday mornings and evenings",
+        "avoid": "Long-form messaging; they decide in seconds.",
+        "tags": ["commute", "gas prices", "traffic", "weather"]
+      },
+      "lunch_grab_and_go": {
+        "summary": "Buy food-service items at midday.",
+        "goal": "Make the store the default lunch option on workdays.",
+        "offer_angle": "Lunch combo or meal deal; hot-food availability and speed messaging.",
+        "channel": "In-store menu boards, nearby-office digital ads",
+        "timing": "Weekdays 10 am to 1 pm",
+        "avoid": "Weekend-only promos for a weekday audience.",
+        "tags": ["lunch", "office", "work week", "food trend"]
+      },
+      "occasional_visitors": {
+        "summary": "Visit a few times, with no dominant pattern yet.",
+        "goal": "Convert to a second and third visit.",
+        "offer_angle": "Sign-up incentive for the loyalty program; first-visit-to-second-visit reward.",
+        "channel": "Receipt QR code, in-store sign-up",
+        "timing": "Within 7 days of first visit",
+        "avoid": "Heavy discounting to people who would have paid full price.",
+        "tags": ["new", "sign up", "community", "local event"]
+      }
+    }
+  },
+
+  "triggers": {
+    "fields": {"date": "date", "topic": "topic", "scope": "scope", "tags": "tags"},
+    "correlate": {
+      "metric": "spend",
+      "baseline": "same_weekday",
+      "min_events": 3,
+      "z_threshold": 2.0,
+      "match": "tag_overlap_with_segment_playbook"
+    }
+  },
+
+  "narrative": {
+    "template": "{segment} make up {share_pct}% of identified revenue ({customers} {entity_plural}). They average {visits} visits in the window, with a ${avg_basket} average basket, and most often shop during {peak_daypart}. Goal: {goal} Suggested offer: {offer_angle} Channel: {channel}, timing: {timing}."
+  },
+
+  "rules_thresholds": {
+    "lapse_recency_days": 30,
+    "lapse_min_visits": 3,
+    "lapse_regular_window": [120, 30],
+    "pattern_min_visits": 3,
+    "loyal_min_visits": 12,
+    "loyal_max_recency_days": 30,
+    "late_night_share": 0.35,
+    "fuel_share": 0.40,
+    "commute_share": 0.50,
+    "food_share": 0.40,
+    "lunch_share": 0.40
+  }
+}

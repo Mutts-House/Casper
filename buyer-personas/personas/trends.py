@@ -16,7 +16,7 @@ from abc import ABC, abstractmethod
 
 import pandas as pd
 
-from .config import PLAYBOOK
+from . import engine
 
 MIN_EVENTS_FOR_EVIDENCE = 3  # below this, a lift number is anecdote, not evidence
 
@@ -50,7 +50,7 @@ def match_trends_to_segments(trends: pd.DataFrame, segments: list[str]) -> dict[
     """For each segment, list trends whose tags overlap the segment's playbook tags."""
     out: dict[str, list[dict]] = {}
     for seg in segments:
-        seg_tags = {t.lower() for t in PLAYBOOK.get(seg, {}).get("tags", [])}
+        seg_tags = {t.lower() for t in engine.playbook_for(seg).get("tags", [])}
         hits = []
         for _, row in trends.iterrows():
             overlap = seg_tags & _tags(row.get("tags"))

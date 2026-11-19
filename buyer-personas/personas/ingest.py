@@ -15,7 +15,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from .config import CATEGORY_RULES, COLUMN_ALIASES, DEFAULT_CATEGORY
+from . import engine
 
 CANONICAL_COLUMNS = [
     "transaction_id", "timestamp", "customer_key", "product",
@@ -32,7 +32,7 @@ def load_mapping(path: str | None) -> dict[str, list[str]]:
 
     JSON format: {"amount": ["Net Price"], "timestamp": ["Sale Date"]}
     """
-    mapping = {k: list(v) for k, v in COLUMN_ALIASES.items()}
+    mapping = engine.column_aliases()
     if path:
         custom = json.loads(Path(path).read_text())
         for canon, aliases in custom.items():
@@ -48,11 +48,11 @@ def hash_identifier(value: str) -> str:
 def normalize_category(raw: object) -> str:
     text = str(raw or "").lower()
     if not text or text == "nan":
-        return DEFAULT_CATEGORY
-    for label, keywords in CATEGORY_RULES:
+        return engine.default_category()
+    for label, keywords in engine.category_rules():
         if any(k in text for k in keywords):
             return label
-    return DEFAULT_CATEGORY
+    return engine.default_category()
 
 
 def _map_columns(df: pd.DataFrame, mapping: dict[str, list[str]]) -> pd.DataFrame:
@@ -136,8 +136,8 @@ def load_sql_engine(url: str, query: str, mapping: dict[str, list[str]]) -> pd.D
         from sqlalchemy import create_engine
     except ImportError as exc:
         raise RuntimeError("Install sqlalchemy to use --db-url") from exc
-    engine = create_engine(url)
-    raw = pd.read_sql_query(query, engine, dtype=object)
+    db = create_engine(url)
+    raw = pd.read_sql_query(query, db, dtype=object)
     return _standardize(_map_columns(raw, mapping), source="sql:engine")
 
 
@@ -178,7 +178,7 @@ def load_survey(path: str) -> pd.DataFrame:
     # so a survey row links to the same hashed key that the transactions use.
     id_cols = []
     for canon in ("customer_id", "email", "phone"):
-        for alias in COLUMN_ALIASES[canon]:
+        for alias in engine.column_aliases()[canon]:
             if _norm(alias) in lookup:
                 id_cols.append(lookup[_norm(alias)])
                 break

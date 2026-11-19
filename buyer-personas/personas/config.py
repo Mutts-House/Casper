@@ -1,4 +1,11 @@
-"""Canonical schema, column aliases, category rules, and dayparts.
+"""FROZEN REFERENCE COPY. The engine no longer reads this module.
+
+The authoritative values live in packs/retail.json (read via personas/engine.py).
+This file is kept as the oracle for drift tests in tests/test_workspace.py and
+tests/test_engine.py. Edit the pack, then update these values only if the test
+expectation itself is meant to change.
+
+Canonical schema, column aliases, category rules, and dayparts.
 
 Every input source (POS export, Excel, SQL, PDF table) is mapped onto these
 canonical fields before anything else runs. Add aliases here when a new

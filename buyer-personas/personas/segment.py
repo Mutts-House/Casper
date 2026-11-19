@@ -10,10 +10,13 @@ from __future__ import annotations
 
 import pandas as pd
 
-from .config import DAYPARTS, DEFAULT_MARGIN, MARGIN_RATES, RULES
+from . import engine
+
+DEFAULT_MARGIN = engine.default_margin()
+MARGIN_RATES = engine.margin_rates()
 
 DAYPART_LABEL = {}
-for label, start, end in DAYPARTS:
+for label, start, end in engine.dayparts():
     for h in range(start, end):
         DAYPART_LABEL[h] = label
 
@@ -65,7 +68,7 @@ def customer_features(
 
     # Visits during the "regular period" (before the quiet period). Used to tell
     # a customer who used to come often from one who was never a regular.
-    start_days, end_days = RULES["lapse_regular_window"]
+    start_days, end_days = engine.metric_window("visits_regular_period")
     in_window = tx["timestamp"].between(as_of - pd.Timedelta(days=start_days), as_of - pd.Timedelta(days=end_days))
     feats["visits_regular_period"] = tx[in_window].groupby("customer_key").size()
     feats["visits_regular_period"] = feats["visits_regular_period"].reindex(feats.index).fillna(0).astype(int)
@@ -96,20 +99,8 @@ def customer_features(
 
 
 def assign_segment(row: pd.Series) -> str:
-    """Priority-ordered rules. The first match wins."""
-    r = RULES
-    if row["visits_regular_period"] >= r["lapse_min_visits"] and row["recency_days"] >= r["lapse_recency_days"]:
-        return "Lapsing Regulars"
-    if row["visits"] >= r["loyal_min_visits"] and row["recency_days"] < r["loyal_max_recency_days"]:
-        return "Loyal Core"
-    enough = row["visits"] >= r["pattern_min_visits"]
-    if enough and row["share_late_night"] >= r["late_night_share"]:
-        return "Late-Night Regulars"
-    if enough and row["share_fuel"] >= r["fuel_share"] and row["share_commute"] >= r["commute_share"]:
-        return "Fuel-and-Go Commuters"
-    if enough and row["share_food_service"] >= r["food_share"] and row["share_midday"] >= r["lunch_share"]:
-        return "Lunch Grab-and-Go"
-    return "Occasional Visitors"
+    """Priority-ordered rules from the workspace pack. The first match wins."""
+    return engine.assign_segment(row)
 
 
 def segment_customers(feats: pd.DataFrame) -> pd.DataFrame:

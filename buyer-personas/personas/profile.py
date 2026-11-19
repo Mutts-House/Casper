@@ -12,7 +12,7 @@ import re
 
 import pandas as pd
 
-from .config import PLAYBOOK
+from . import engine
 from .plugins import AIProvider
 
 MIN_GROUP_FOR_STATED = 5  # survey answers from fewer people are not shown
@@ -67,7 +67,7 @@ def build_personas(
     ordered = grouped["gross_profit"].sum().sort_values(ascending=False).index
     for i, seg in enumerate(ordered, start=1):
         g = grouped.get_group(seg)
-        pb = PLAYBOOK.get(seg, {})
+        pb = engine.playbook_for(seg)
         top_cat = g["top_category"].mode().iloc[0] if not g["top_category"].empty else "other"
         peak = g["peak_daypart"].mode().iloc[0] if not g["peak_daypart"].empty else "other"
         personas.append({
@@ -137,13 +137,20 @@ SYSTEM_PROMPT = (
 
 
 def template_narrative(p: dict) -> str:
+    """Deterministic narrative, worded by the workspace pack's narrative template."""
     b = p["behavior"]
-    return (
-        f"{p['segment']} make up {p['size']['share_of_identified_revenue_pct']}% of identified revenue "
-        f"({p['size']['customers']} customers). They average {b['avg_visits_in_window']} visits in the window, "
-        f"with a ${b['avg_basket_usd']} average basket, and most often shop during {b['peak_daypart']}. "
-        f"Goal: {p['playbook']['goal']} Suggested offer: {p['playbook']['offer_angle']} "
-        f"Channel: {p['playbook']['channel']}, timing: {p['playbook']['timing']}."
+    return engine.narrative_template().format(
+        segment=p["segment"],
+        share_pct=p["size"]["share_of_identified_revenue_pct"],
+        customers=p["size"]["customers"],
+        entity_plural=engine.entity_plural(),
+        visits=b["avg_visits_in_window"],
+        avg_basket=b["avg_basket_usd"],
+        peak_daypart=b["peak_daypart"],
+        goal=p["playbook"]["goal"],
+        offer_angle=p["playbook"]["offer_angle"],
+        channel=p["playbook"]["channel"],
+        timing=p["playbook"]["timing"],
     )
 
 
